@@ -177,7 +177,6 @@ By Helmic
    </subset>
 
     <subset name="wall" displayName="${lang.wall}">
-        <include name="wallSynthwave3" displayName="${lang.wallSynthwave3}">./_inc/wallpapers/wallSynthwave3.xml</include>
 		<include name="wallDefault" displayName="${lang.wallDefault}">./_inc/wallpapers/wall.xml</include>
 		<include name="wallBrushedPlate" displayName="${lang.wallBrushedPlate}">./_inc/wallpapers/wallBrushedPlate.xml</include>
         <include name="wallPlates" displayName="${lang.wallPlates}">./_inc/wallpapers/wallPlates.xml</include>
@@ -208,6 +207,7 @@ By Helmic
         <include name="wallFuturePurple" displayName="${lang.wallFuturePurple}">./_inc/wallpapers/wallFuturePurple.xml</include>
         <include name="wallSynthwave" displayName="${lang.wallSynthwave}">./_inc/wallpapers/wallSynthwave.xml</include>
         <include name="wallSynthwave2" displayName="${lang.wallSynthwave2}">./_inc/wallpapers/wallSynthwave2.xml</include>
+        <include name="wallSynthwave3" displayName="${lang.wallSynthwave3}">./_inc/wallpapers/wallSynthwave3.xml</include>
     </subset>
 
 	<subset name="randomArt" displayName="${lang.randomArt}">

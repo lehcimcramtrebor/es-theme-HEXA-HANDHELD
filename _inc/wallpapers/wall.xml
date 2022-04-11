@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+
+<formatVersion>7</formatVersion>
+
+	<variables>
+<!---->	<_paintSubset.allow>_paintSubset</_paintSubset.allow><!--Allow Paint Menu-->
+		<wallpaper>wall</wallpaper>
+	</variables>
+	
+</theme>

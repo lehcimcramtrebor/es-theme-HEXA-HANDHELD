@@ -57,6 +57,111 @@ By Helmic
 
         <lang.yes>yes</lang.yes>
         <lang.yes lang="fr">oui</lang.yes>
+
+		<lang.randomArt>random marquees</lang.randomArt>
+		<lang.randomArt lang="fr">logos aléatoires</lang.randomArt>
+
+		<lang.ambiance>carousel ambiance (need videos)</lang.ambiance>
+		<lang.ambiance lang="fr">ambiance sonore (nécessite vidéos)</lang.ambiance>
+
+		<!--wall choice-->
+
+        <lang.wall>wallpaper</lang.wall>
+        <lang.wall lang="fr">papier peint</lang.wall>
+
+		<lang.wallDefault>wall</lang.wallDefault>
+		<lang.wallDefault lang="fr">mur</lang.wallDefault>
+
+		<lang.wallLight>lighter wall</lang.wallLight>
+		<lang.wallLight lang="fr">mur plur clair</lang.wallLight>
+
+		<lang.wallDark>darker wall</lang.wallDark>
+		<lang.wallDark lang="fr">mur plur sombre</lang.wallDark>
+
+		<lang.wallFlatGrey>flat style</lang.wallFlatGrey>
+		<lang.wallFlatGrey lang="fr">design plat</lang.wallFlatGrey>
+
+		<lang.wallFlatDark>dark flat style</lang.wallFlatDark>
+		<lang.wallFlatDark lang="fr">design plat plus sombre</lang.wallFlatDark>
+
+		<lang.wallStain>steel</lang.wallStain>
+		<lang.wallStain lang="fr">métal</lang.wallStain>
+
+		<lang.wallSteelX>steel x</lang.wallSteelX>
+		<lang.wallSteelX lang="fr">x métal</lang.wallSteelX>
+
+		<lang.wallAlu>alu</lang.wallAlu>
+		<lang.wallAlu lang="fr">aluminium</lang.wallAlu>
+
+		<lang.wallPlates>steel plates</lang.wallPlates>
+		<lang.wallPlates lang="fr">plaques de métal</lang.wallPlates>
+
+		<lang.wallBrushedPlate>scratched steel plate</lang.wallBrushedPlate>
+		<lang.wallBrushedPlate lang="fr">plaque de métal griffée</lang.wallBrushedPlate>
+
+		<lang.wallStainBroke>broken steel</lang.wallStainBroke>
+		<lang.wallStainBroke lang="fr">métal cassé</lang.wallStainBroke>
+
+		<lang.wallSteelHoles>holes grid</lang.wallSteelHoles>
+		<lang.wallSteelHoles lang="fr">métal troué</lang.wallSteelHoles>
+
+		<lang.wallFuture>futuristic steel</lang.wallFuture>
+		<lang.wallFuture lang="fr">métal futuriste</lang.wallFuture>
+
+		<lang.wallFutureRed> red futuristic steel</lang.wallFutureRed>
+		<lang.wallFutureRed lang="fr">métal futuriste rouge</lang.wallFutureRed>
+
+		<lang.wallFutureBlue> blue futuristic steel</lang.wallFutureBlue>
+		<lang.wallFutureBlue lang="fr">métal futuriste bleu</lang.wallFutureBlue>
+
+		<lang.wallFutureGreen> green futuristic steel</lang.wallFutureGreen>
+		<lang.wallFutureGreen lang="fr">métal futuriste vert</lang.wallFutureGreen>
+
+		<lang.wallFutureOrange> orange futuristic steel</lang.wallFutureOrange>
+		<lang.wallFutureOrange lang="fr">métal futuriste orange</lang.wallFutureOrange>
+
+		<lang.wallFutureYellow> yellow futuristic steel</lang.wallFutureYellow>
+		<lang.wallFutureYellow lang="fr">métal futuriste jaune</lang.wallFutureYellow>
+
+		<lang.wallFuturePink> pink futuristic steel</lang.wallFuturePink>
+		<lang.wallFuturePink lang="fr">métal futuriste rose</lang.wallFuturePink>
+
+		<lang.wallFuturePurple> purple futuristic steel</lang.wallFuturePurple>
+		<lang.wallFuturePurple lang="fr">métal futuriste violet</lang.wallFuturePurple>
+
+		<lang.wallColorBlue>solid blue</lang.wallColorBlue>
+		<lang.wallColorBlue lang="fr">uni bleu</lang.wallColorBlue>
+
+		<lang.wallColorGreen>solid green</lang.wallColorGreen>
+		<lang.wallColorGreen lang="fr">uni vert</lang.wallColorGreen>
+
+		<lang.wallColorRed>solid red</lang.wallColorRed>
+		<lang.wallColorRed lang="fr">uni rouge</lang.wallColorRed>
+
+		<lang.wallColorPurple>solid purple</lang.wallColorPurple>
+		<lang.wallColorPurple lang="fr">uni violet</lang.wallColorPurple>
+
+		<lang.wallColorOcean>solid ocean blue</lang.wallColorOcean>
+		<lang.wallColorOcean lang="fr">uni bleu océan</lang.wallColorOcean>
+
+		<lang.wallSynthwave>synthwave</lang.wallSynthwave>
+		<lang.wallSynthwave lang="fr">synthwave</lang.wallSynthwave>
+
+		<lang.wallSynthwave2>synthwave 2</lang.wallSynthwave2>
+		<lang.wallSynthwave2 lang="fr">synthwave 2</lang.wallSynthwave2>
+
+		<lang.wallSynthwave3>synthwave 3</lang.wallSynthwave3>
+		<lang.wallSynthwave3 lang="fr">synthwave 3</lang.wallSynthwave3>
+
+		<lang.wallCarbon>carbon</lang.wallCarbon>
+		<lang.wallCarbon lang="fr">carbone</lang.wallCarbon>
+
+		<lang.wallDiagonalPlates>diagonal steel plates</lang.wallDiagonalPlates>
+		<lang.wallDiagonalPlates lang="fr">plaques de métal obliques</lang.wallDiagonalPlates>
+
+		<lang.wallDiagonalPlates2>diagonal steel plates inversed</lang.wallDiagonalPlates2>
+		<lang.wallDiagonalPlates2 lang="fr">plaques de métal obliques inversé</lang.wallDiagonalPlates2>
+
 	
     </variables>
 
@@ -70,10 +175,54 @@ By Helmic
         <include name="yellow" displayName="${lang.yellow}"/>
         <include name="noColor" displayName="${lang.noColor}"/>
    </subset>
+
+    <subset name="wall" displayName="${lang.wall}">
+		<include name="wallDefault" displayName="${lang.wallDefault}">./_inc/wallpapers/wall.xml</include>
+		<include name="wallBrushedPlate" displayName="${lang.wallBrushedPlate}">./_inc/wallpapers/wallBrushedPlate.xml</include>
+        <include name="wallPlates" displayName="${lang.wallPlates}">./_inc/wallpapers/wallPlates.xml</include>
+        <include name="wallStainBroke" displayName="${lang.wallStainBroke}">./_inc/wallpapers/wallStainBroke.xml</include>
+        <include name="wallSteelX" displayName="${lang.wallSteelX}">./_inc/wallpapers/wallSteelX.xml</include>
+        <include name="wallDiagonalPlates" displayName="${lang.wallDiagonalPlates}">./_inc/wallpapers/wallDiagonalPlates.xml</include>
+        <include name="wallDiagonalPlates2" displayName="${lang.wallDiagonalPlates2}">./_inc/wallpapers/wallDiagonalPlates2.xml</include>
+		<include name="wallLight" displayName="${lang.wallLight}">./_inc/wallpapers/wallLight.xml</include>
+		<include name="wallDark" displayName="${lang.wallDark}">./_inc/wallpapers/wallDark.xml</include>
+        <include name="wallFlatGrey" displayName="${lang.wallFlatGrey}">./_inc/wallpapers/wallFlatGrey.xml</include>
+        <include name="wallFlatDark" displayName="${lang.wallFlatDark}">./_inc/wallpapers/wallFlatDark.xml</include>
+        <include name="wallColorBlue" displayName="${lang.wallColorBlue}">./_inc/wallpapers/wallColorBlue.xml</include>
+        <include name="wallColorGreen" displayName="${lang.wallColorGreen}">./_inc/wallpapers/wallColorGreen.xml</include>
+        <include name="wallColorRed" displayName="${lang.wallColorRed}">./_inc/wallpapers/wallColorRed.xml</include>
+        <include name="wallColorPurple" displayName="${lang.wallColorPurple}">./_inc/wallpapers/wallColorPurple.xml</include>
+        <include name="wallColorOcean" displayName="${lang.wallColorOcean}">./_inc/wallpapers/wallColorOcean.xml</include>
+        <include name="wallStain" displayName="${lang.wallStain}">./_inc/wallpapers/wallStain.xml</include>
+        <include name="wallAlu" displayName="${lang.wallAlu}">./_inc/wallpapers/wallAlu.xml</include>
+        <include name="wallCarbon" displayName="${lang.wallCarbon}">./_inc/wallpapers/wallCarbon.xml</include>
+        <include name="wallSteelHoles" displayName="${lang.wallSteelHoles}">./_inc/wallpapers/wallSteelHoles.xml</include>
+        <include name="wallFuture" displayName="${lang.wallFuture}">./_inc/wallpapers/wallFuture.xml</include>
+        <include name="wallFutureRed" displayName="${lang.wallFutureRed}">./_inc/wallpapers/wallFutureRed.xml</include>
+        <include name="wallFutureBlue" displayName="${lang.wallFutureBlue}">./_inc/wallpapers/wallFutureBlue.xml</include>
+        <include name="wallFutureGreen" displayName="${lang.wallFutureGreen}">./_inc/wallpapers/wallFutureGreen.xml</include>
+        <include name="wallFutureOrange" displayName="${lang.wallFutureOrange}">./_inc/wallpapers/wallFutureOrange.xml</include>
+        <include name="wallFutureYellow" displayName="${lang.wallFutureYellow}">./_inc/wallpapers/wallFutureYellow.xml</include>
+        <include name="wallFuturePink" displayName="${lang.wallFuturePink}">./_inc/wallpapers/wallFuturePink.xml</include>
+        <include name="wallFuturePurple" displayName="${lang.wallFuturePurple}">./_inc/wallpapers/wallFuturePurple.xml</include>
+        <include name="wallSynthwave" displayName="${lang.wallSynthwave}">./_inc/wallpapers/wallSynthwave.xml</include>
+        <include name="wallSynthwave2" displayName="${lang.wallSynthwave2}">./_inc/wallpapers/wallSynthwave2.xml</include>
+        <include name="wallSynthwave3" displayName="${lang.wallSynthwave3}">./_inc/wallpapers/wallSynthwave3.xml</include>
+    </subset>
+
+	<subset name="randomArt" displayName="${lang.randomArt}">
+		<include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+	</subset>
+ 
+	<subset name="ambiance" displayName="${lang.ambiance}">
+		<include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+	</subset>
  
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="detailed">
-        <include name="no" displayName="${lang.no}"/>
         <include name="yes" displayName="${lang.yes}"/>
+        <include name="no" displayName="${lang.no}"/>
    </subset>
  
 	<view name="screen">
@@ -153,12 +302,159 @@ By Helmic
             <opacity>0</opacity>
         </text>
 
+	
+        <video name="randomAudio" extra="true" ifSubset="ambiance:yes">
+            <path>{random}</path>
+            <opacity>0</opacity>
+            <origin>0.5 0.5</origin>
+            <pos>0.5 0.5</pos>
+            <delay>0.25</delay>
+            <effect>none</effect>
+			<size>0 0</size>
+            <zIndex>0</zIndex>
+		</video>
+
+		
+        <sound name="bgsound" ifSubset="ambiance:yes">		
+            <path>./_inc/silence.ogg</path>
+        </sound>
+ 
+
+<!-----------------------------------------------------------------------RANDOM ARTS----------------------------------------------------------------------------------------------->
+
+		<image name="randomArt01,randomArt02,randomArt03,randomArt04,randomArt05,randomArt06,randomArt07,randomArt08,randomArt09,randomArt10,randomArt11,randomArt12,randomArt13" extra="true" ifSubset="randomArt:yes">
+			<linearSmooth>true</linearSmooth>
+            <maxSize>0.3 0.3</maxSize>
+            <pos>0.99 0.95</pos>
+			<origin>1 1</origin>
+			<zIndex>115</zIndex>
+			<path>{random:marquee}</path>
+			<color>ffffff</color>
+			<offsetX>0.31</offsetX>
+		</image>
+ 
+		<image name="randomArt01" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="4250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="4250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="5750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="24000" mode="linear" begin="6000"/>
+            </storyboard>
+		</image>
+ 
+		<image name="randomArt02" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="6250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="6250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="7750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="22000" mode="linear" begin="8000"/>
+            </storyboard>
+		</image>
+  
+		<image name="randomArt03" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="8250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="8250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="9750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="20000" mode="linear" begin="10000"/>
+            </storyboard>
+		</image>
+  
+		<image name="randomArt04" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="10250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="10250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="11750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="18000" mode="linear" begin="12000"/>
+            </storyboard>
+		</image>
+  
+		<image name="randomArt05" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="12250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="12250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="13750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="16000" mode="linear" begin="14000"/>
+            </storyboard>
+		</image>
+   
+		<image name="randomArt06" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="14250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="14250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="15750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="14000" mode="linear" begin="16000"/>
+            </storyboard>
+		</image>
+   
+		<image name="randomArt07" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="16250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="16250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="17750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="12000" mode="linear" begin="18000"/>
+            </storyboard>
+		</image>
+    
+		<image name="randomArt08" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="18250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="18250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="19750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="10000" mode="linear" begin="20000"/>
+            </storyboard>
+		</image>
+     
+		<image name="randomArt09" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="20250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="20250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="21750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="8000" mode="linear" begin="22000"/>
+            </storyboard>
+		</image>
+     
+		<image name="randomArt10" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="22250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="22250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="23750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="6000" mode="linear" begin="24000"/>
+            </storyboard>
+		</image>
+      
+		<image name="randomArt11" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="24250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="24250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="25750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="4000" mode="linear" begin="26000"/>
+            </storyboard>
+		</image>
+      
+		<image name="randomArt12" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="26250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="26250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="27750"/>
+                <animation property="offsetX" from="0.31" to="0.31" duration="2000" mode="linear" begin="28000"/>
+            </storyboard>
+		</image>
+       
+		<image name="randomArt13" extra="true">
+			<storyboard repeatAt="1">
+                <animation property="offsetX" from="0.31" to="0.31" duration="28250" mode="linear"/>
+                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="28250"/>
+                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="29750"/>
+            </storyboard>
+		</image>
+
 	</view>
 
 		<view name="basic,detailed">
  
         <image name="transition" extra="true">
-            <path>./_inc/wall.jpg</path>
+            <path>./_inc/wallpapers/${wallpaper}.jpg</path>
             <minSize>1 1</minSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -193,7 +489,7 @@ By Helmic
 	<view name="system,basic,detailed">
  
         <image name="background" extra="true">
-            <path>./_inc/wall.jpg</path>
+            <path>./_inc/wallpapers/${wallpaper}.jpg</path>
             <minSize>1 1</minSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>

@@ -1,0 +1,374 @@
+<!--
+HEXA Theme for Retrobat 4+ / Batocera v32+
+By Helmic
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+    <!--REGION DEFAULT (CHANGE "eu" to "jp" or "us")-->
+ 
+    <variables><defaultRegion region="eu">Choose your default region</defaultRegion></variables>
+
+    <variables>
+
+        <overlay.colorset ifSubset="overlayColorset:noColor">dddddd</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:green">4dbb90</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:orange">ff6600</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:purple">c175ff</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:pink">ff69b4</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:yellow">f2d600</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:blue">0062cc</overlay.colorset>
+        <overlay.colorset ifSubset="overlayColorset:red">b53737</overlay.colorset>
+
+		<lang.overlayColorset>colorset</lang.overlayColorset>
+        <lang.overlayColorset lang="fr">jeu de couleurs</lang.overlayColorset>
+          
+        <lang.noColor>monochrome</lang.noColor>
+        <lang.noColor lang="fr">monochrome</lang.noColor>
+            
+        <lang.red>red</lang.red>
+        <lang.red lang="fr">rouge</lang.red>
+            
+        <lang.green>green</lang.green>
+        <lang.green lang="fr">vert</lang.green>
+
+        <lang.blue>blue</lang.blue>
+        <lang.blue lang="fr">bleu</lang.blue>
+
+        <lang.orange>orange</lang.orange>
+        <lang.orange lang="fr">orange</lang.orange>
+
+        <lang.purple>purple</lang.purple>
+        <lang.purple lang="fr">violet</lang.purple>
+
+        <lang.pink>pink</lang.pink>
+        <lang.pink lang="fr">rose</lang.pink>
+
+        <lang.yellow>yellow</lang.yellow>
+        <lang.yellow lang="fr">jaune</lang.yellow>
+
+        <lang.mdVideo>gamelist videos</lang.mdVideo>
+        <lang.mdVideo lang="fr">vidéos de gamelist</lang.mdVideo>
+
+        <lang.no>no</lang.no>
+        <lang.no lang="fr">non</lang.no>
+
+        <lang.yes>yes</lang.yes>
+        <lang.yes lang="fr">oui</lang.yes>
+	
+    </variables>
+
+    <subset name="overlayColorset" displayName="${lang.overlayColorset}">
+        <include name="red" displayName="${lang.red}"/>
+        <include name="blue" displayName="${lang.blue}"/>
+        <include name="green" displayName="${lang.green}"/>
+        <include name="orange" displayName="${lang.orange}"/>
+        <include name="purple" displayName="${lang.purple}"/>
+        <include name="pink" displayName="${lang.pink}"/>
+        <include name="yellow" displayName="${lang.yellow}"/>
+        <include name="noColor" displayName="${lang.noColor}"/>
+   </subset>
+ 
+    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="detailed">
+        <include name="no" displayName="${lang.no}"/>
+        <include name="yes" displayName="${lang.yes}"/>
+   </subset>
+ 
+	<view name="screen">
+	
+		<text name="clock">
+			<color>00000000</color>
+		</text>
+
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.94 0.004</pos>
+			<size>0.050 0.050</size>
+			<color>cccccc</color>
+		</batteryIndicator>
+
+	</view>
+
+	<view name="system">
+
+        <carousel name="systemcarousel">
+            <type>horizontal</type>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <origin>0 0</origin>
+            <color>00000000</color>
+            <logoScale>1</logoScale>
+            <logoSize>1 0.92962963</logoSize>
+            <logoRotation>15</logoRotation>
+            <logoRotationOrigin>4.1 0.5</logoRotationOrigin>
+            <logoAlignment>left</logoAlignment>
+            <maxLogoCount>2</maxLogoCount>
+            <zIndex>110</zIndex>
+            <defaultTransition>instant</defaultTransition>
+            <scrollSound>./_inc/scroll/wheel.wav</scrollSound>
+        </carousel>
+
+        <image name="logo">
+            <linearSmooth>true</linearSmooth>
+            <path>./default/color.png</path>
+            <path>./default/color-${lang}.png</path>
+            <path>./${system.theme}/color.png</path>
+            <path>./${system.theme}/color-${lang}.png</path>
+
+			<storyboard event="activate" repeatAt="950">
+        		<animation property="offsetY" to="-0.03" autoreverse="true" duration="200" mode="easeOutCubic" begin="5950"/>
+           </storyboard>
+            <storyboard event="scroll" repeatAt="1">
+                <animation property="scale" from="1" to="0.9" duration="1" mode="EaseOut"/>
+                <animation property="color" from="999999" to="999999" duration="1" mode="Linear"/>
+                <animation property="opacity" from="1" to="1" duration="1" mode="Linear"/>
+            </storyboard>
+            <storyboard event="deactivate" repeatAt="1">
+                <animation property="scale" from="1" to="0.9" duration="1" mode="EaseOut"/>
+                <animation property="color" from="999999" to="999999" duration="1" mode="Linear"/>
+                <animation property="opacity" from="1" to="1" duration="1" mode="Linear"/>
+            </storyboard>
+  		</image>
+
+        <image name="logo" region="eu"></image>
+
+        <image name="logo" region="us">
+            <path>./${system.theme}/us/color.png</path>
+        </image>
+
+
+        <image name="logo" region="jp">
+            <path>./${system.theme}/jp/color.png</path>
+        </image>
+
+        <text name="systemInfo">     
+            <pos>0 -0.01</pos>
+            <backgroundColor>00000000</backgroundColor>
+            <color>ffffff</color>
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.030</fontSize>
+            <glowColor>00000005</glowColor>
+            <zIndex>120</zIndex>
+            <opacity>0</opacity>
+        </text>
+
+	</view>
+
+		<view name="basic,detailed">
+ 
+        <image name="transition" extra="true">
+            <path>./_inc/wall.jpg</path>
+            <minSize>1 1</minSize>
+            <pos>0.5 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <color>808080</color>
+            <colorEnd>303030</colorEnd>
+            <gradientType>vertical</gradientType>
+            <opacity>1</opacity>
+            <zIndex>1000</zIndex>
+			<storyboard>
+                <animation property="opacity" to="0" duration="350" mode="linear" begin="850"/>
+             </storyboard>
+       </image>
+ 
+        <image name="transitionLogo" extra="true">
+            <path>./default/color.png</path>
+            <path>./default/color-${lang}.png</path>
+            <path>./${system.theme}/color.png</path>
+            <path>./${system.theme}/color-${lang}.png</path>
+            <maxSize>1 0.92962963</maxSize>
+            <pos>0.5 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <color>ffffff</color>
+            <opacity>1</opacity>
+            <zIndex>1001</zIndex>
+			<storyboard>
+                <animation property="opacity" to="0" duration="350" mode="linear" begin="750"/>
+             </storyboard>
+       </image>
+
+	</view>
+	
+	<view name="system,basic,detailed">
+ 
+        <image name="background" extra="true">
+            <path>./_inc/wall.jpg</path>
+            <minSize>1 1</minSize>
+            <pos>0.5 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <color>808080</color>
+            <colorEnd>303030</colorEnd>
+            <gradientType>vertical</gradientType>
+            <opacity>1</opacity>
+            <zIndex>100</zIndex>
+       </image>
+	
+	</view>
+
+    <view name="screen,menu,system,basic,detailed">
+    
+		<helpsystem name="help">
+			<textColor>dddddd</textColor>
+			<fontSize>0.030</fontSize>
+			<origin>0 0.5</origin>
+			<pos>0.004 0.982</pos>
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<iconColor>${overlay.colorset}</iconColor>
+		</helpsystem>
+
+	</view>
+
+	<view name="detailed">
+
+			<textlist name="gamelist">
+			<origin>0.5 1</origin>
+			<pos>0.5 0.92</pos>
+			<size>1 0.27</size>
+			<selectedColor>ffffff</selectedColor>
+            <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
+			<primaryColor>dddddd</primaryColor>
+			<secondaryColor>dddddd</secondaryColor>
+			<selectorColor>${overlay.colorset}ea</selectorColor>	  		
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<fontSize>0.036</fontSize>
+			<alignment>center</alignment>
+			<horizontalMargin>0.005</horizontalMargin>
+			<forceUppercase>true</forceUppercase>
+			<scrollSound>./_inc/scroll/gamelist.wav</scrollSound>
+			<zIndex>113</zIndex>
+			<lines>3</lines>
+ 			</textlist>
+
+		<image name="md_thumbnail">
+            <linearSmooth>true</linearSmooth>
+			<maxSize>1 99</maxSize>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.325</pos>
+			<zIndex>114</zIndex>
+			<color>ffffff</color>
+			<opacity>1</opacity>			
+			<reflexion>0.125 0</reflexion>
+			<storyboard event="open">
+                <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="opacity" from="1" to="1" duration="1" mode="linear"/>
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="2500"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="2550"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="2550"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="opacity" from="O" duration="350" mode="easeOut"/>
+                <animation property="offsetX" from="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="opacity" from="O" duration="350" mode="easeOut"/>
+                <animation property="offsetX" from="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+
+		</image>
+
+        <video name="md_video" ifSubset="mdVideo:yes">
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+            <delay>3.5</delay>
+            <effect>none</effect>
+            <zIndex>200</zIndex>
+            <color>ffffff</color>
+			<size>1 1</size>
+		</video>
+
+	</view>
+
+	<view name="basic">
+
+		<textlist name="gamelist">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<size>1 0.88</size>
+			<selectedColor>ffffff</selectedColor>
+            <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
+			<primaryColor>dddddd</primaryColor>
+			<secondaryColor>dddddd</secondaryColor>
+			<selectorColor>${overlay.colorset}ea</selectorColor>	  		
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<fontSize>0.036</fontSize>
+			<alignment>center</alignment>
+			<horizontalMargin>0.005</horizontalMargin>
+			<forceUppercase>true</forceUppercase>
+			<scrollSound>./_inc/scroll/gamelist.wav</scrollSound>
+			<zIndex>113</zIndex>
+			<lines>9</lines>
+ 		</textlist>
+
+	</view>
+    <view name="menu">
+
+        <menuText name="menutitle">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>cccccc</color>
+        </menuText>
+
+        <menuText name="menufooter">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+        </menuText>
+
+        <menuText name="menutext">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+            <separatorColor>161616</separatorColor>
+            <selectorColor>${overlay.colorset}</selectorColor>
+            <selectedColor>ffffff</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:yellow">202020</selectedColor>		
+            <selectorColor ifSubset="overlayColorset:noColor">202020</selectorColor>
+        </menuText>
+	
+        <menuTextSmall name="menutextsmall">
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+        </menuTextSmall>
+
+        <menuBackground name="menubg">
+            <color>d7d4cccc</color>
+            <cornerSize>21 21</cornerSize>
+            <path>./_inc/menubgDarkGlass.png</path>
+        </menuBackground>
+
+        <menuGroup name="menugroup">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+            <separatorColor>00000000</separatorColor>
+            <backgroundColor>303030</backgroundColor>
+            <lineSpacing>1.2</lineSpacing>
+        </menuGroup>	
+
+
+    </view>
+</theme>

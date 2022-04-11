@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme>
+	<formatVersion>7</formatVersion>
+
+
+	<view name="splash">
+	
+	<splash name="splash">
+		<backgroundColor>303030FF</backgroundColor>
+	</splash>
+
+	<image name="background" extra="true">
+		<linearSmooth>true</linearSmooth>
+		<path>./_inc/splash.jpg</path>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+        <color>808080</color>
+        <colorEnd>303030</colorEnd>
+        <gradientType>vertical</gradientType>
+   		<maxSize>99 1</maxSize>
+		<zIndex>1</zIndex>
+	</image>
+
+	<text name="theme" extra="true">
+		<text>hexa</text>
+		<color>dddddd</color>
+		<alignment>center</alignment>
+		<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+		<pos>0.5 0.5</pos>
+		<origin>0.5 0.5</origin>
+		<alignment>center</alignment>
+		<fontSize>0.080</fontSize>
+		<glowSize>1</glowSize>
+		<glowColor>00000015</glowColor>
+		<glowOffset>0</glowOffset>
+		<forceUppercase>true</forceUppercase>
+		<zIndex>9</zIndex>
+		<reflexion>0.1 1</reflexion>
+	</text>
+
+	<text name="compatibility" extra="true">
+		<text>Handheld edition</text>
+
+		<color>cccccc</color>
+		<alignment>center</alignment>
+		<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+		<pos>0.5 0.78</pos>
+		<origin>0.5 0.5</origin>
+		<alignment>center</alignment>
+		<fontSize>0.030</fontSize>
+		<glowSize>1</glowSize>
+		<glowColor>00000015</glowColor>
+		<glowOffset>0</glowOffset>
+		<forceUppercase>true</forceUppercase>
+		<zIndex>9</zIndex>
+	</text>
+
+	<text name="label">
+		<color>dddddd</color>
+		<alignment>center</alignment>
+		<fontPath>./_inc/DJB Get Digital.ttf</fontPath>
+		<pos>0 0.94</pos>
+		<fontSize>0.03</fontSize>
+		<glowSize>1</glowSize>
+		<glowColor>00000015</glowColor>
+		<glowOffset>0</glowOffset>
+		<zIndex>9</zIndex>
+	</text>
+
+	</view>
+
+</theme>

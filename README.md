@@ -1,2 +1,5 @@
 # es-theme-HEXA-HANDHELD
-Handheld Edition HEXA theme for batocera.
+Emulationstation handheld theme for Batocera V32+
+
+
+

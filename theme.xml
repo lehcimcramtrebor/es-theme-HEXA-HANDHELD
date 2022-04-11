@@ -226,6 +226,12 @@ By Helmic
    </subset>
  
 	<view name="screen">
+
+		<controllerActivity name="controllerActivity">
+			<color>00000000</color>
+			<activityColor>00000000</activityColor>
+			<hotkeyColor>00000000</hotkeyColor>
+		</controllerActivity>
 	
 		<text name="clock">
 			<color>00000000</color>

@@ -519,7 +519,7 @@ By Helmic
 	
 	</view>
 
-    <view name="screen,menu,system,basic,detailed">
+    <view name="screen,menu,system,basic,detailed,gamecarousel">
     
 		<helpsystem name="help">
 			<textColor>dddddd</textColor>

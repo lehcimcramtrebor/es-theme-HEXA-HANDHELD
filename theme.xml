@@ -618,7 +618,6 @@ By Helmic
         <text name="gamecarouselLogoText">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.09</fontSize>
-            <text>${system.fullName}</text>
             <color>dddddd</color>
             <glowColor>12121233</glowColor>
         </text>     

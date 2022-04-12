@@ -11,6 +11,10 @@ By Helmic
  
     <variables><defaultRegion region="eu">Choose your default region</defaultRegion></variables>
 
+    <!--DEVELOPERS FINANCIAL SUPPORT-->
+
+	<include>./_support/support.xml</include>
+
     <variables>
 
         <overlay.colorset ifSubset="overlayColorset:noColor">dddddd</overlay.colorset>

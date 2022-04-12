@@ -308,7 +308,8 @@ By Helmic
         </image>
 
         <text name="systemInfo">     
-            <pos>0 -0.02</pos>
+            <origin>0 0</origin>
+            <pos>0 -0.016</pos>
             <backgroundColor>00000000</backgroundColor>
             <color>ffffff</color>
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>

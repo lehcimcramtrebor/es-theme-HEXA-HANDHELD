@@ -468,7 +468,7 @@ By Helmic
 
 	</view>
 
-		<view name="basic,detailed">
+		<view name="basic,detailed,gamecarousel">
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>

@@ -4,7 +4,7 @@ By Helmic
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
-<theme>
+<theme defaultView="detailedFullBox">
 <formatVersion>7</formatVersion>
 
     <!--REGION DEFAULT (CHANGE "eu" to "jp" or "us")-->
@@ -67,6 +67,12 @@ By Helmic
 
 		<lang.ambiance>carousel ambiance (need videos)</lang.ambiance>
 		<lang.ambiance lang="fr">ambiance sonore (nécessite vidéos)</lang.ambiance>
+
+		<lang.detailedFullBox>detailed + full box</lang.detailedFullBox>
+		<lang.detailedFullBox lang="fr">détaillée + boîte plein écran</lang.detailedFullBox>
+
+		<lang.gamecarouselFullBox>gamecarousel + full box</lang.gamecarouselFullBox>
+		<lang.gamecarouselFullBox lang="fr">gamecarousel + boîte plein écran</lang.gamecarouselFullBox>
 
 		<!--wall choice-->
 
@@ -265,7 +271,7 @@ By Helmic
             <maxLogoCount>2</maxLogoCount>
             <zIndex>110</zIndex>
             <defaultTransition>instant</defaultTransition>
-            <scrollSound>./_inc/scroll/wheel.wav</scrollSound>
+            <scrollSound>./_inc/wheel.wav</scrollSound>
         </carousel>
 
         <image name="logo">
@@ -302,7 +308,7 @@ By Helmic
         </image>
 
         <text name="systemInfo">     
-            <pos>0 -0.01</pos>
+            <pos>0 -0.02</pos>
             <backgroundColor>00000000</backgroundColor>
             <color>ffffff</color>
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
@@ -496,7 +502,7 @@ By Helmic
 
 	</view>
 	
-	<view name="system,basic,detailed">
+	<view name="system,basic,detailed,gamecarousel">
  
         <image name="background" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
@@ -516,10 +522,10 @@ By Helmic
     
 		<helpsystem name="help">
 			<textColor>dddddd</textColor>
-			<fontSize>0.030</fontSize>
+			<fontSize>0.0312</fontSize>
 			<origin>0 0.5</origin>
 			<pos>0.004 0.982</pos>
-			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<fontPath>./_inc/DJB Get Digital.ttf</fontPath>
 			<iconColor>${overlay.colorset}</iconColor>
 		</helpsystem>
 
@@ -542,10 +548,96 @@ By Helmic
 			<alignment>center</alignment>
 			<horizontalMargin>0.005</horizontalMargin>
 			<forceUppercase>true</forceUppercase>
-			<scrollSound>./_inc/scroll/gamelist.wav</scrollSound>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<zIndex>113</zIndex>
 			<lines>3</lines>
  			</textlist>
+
+        <video name="md_video" ifSubset="mdVideo:yes">
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+            <delay>1</delay>
+            <effect>none</effect>
+            <zIndex>200</zIndex>
+            <color>ffffff</color>
+			<size>1 1</size>
+		</video>
+
+		<image name="md_thumbnail">
+            <linearSmooth>true</linearSmooth>
+			<maxSize>0.4 0.55</maxSize>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.325</pos>
+			<zIndex>114</zIndex>
+			<color>ffffff</color>
+			<opacity>1</opacity>			
+			<reflexion>0.125 0</reflexion>
+			<storyboard event="open">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" from="O" duration="350" mode="easeOut"/>
+                <animation property="offsetX" from="1" duration="350" mode="easeOut"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" from="O" duration="350" mode="easeOut"/>
+                <animation property="offsetX" from="-1" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+
+		</image>
+
+	</view>
+
+	<view name="gamecarousel">
+
+		<gamecarousel name="gamecarousel">
+			<type>vertical</type>
+			<pos>0.5 0.5</pos>
+			<size>1 1</size>
+			<origin>0.5 0.5</origin>
+			<logoScale>3</logoScale>
+			<logoSize>0.300 0.24</logoSize>
+			<logoAlignment>center</logoAlignment>
+			<maxLogoCount>3</maxLogoCount>
+			<zIndex>113</zIndex>
+			<imageSource>marquee</imageSource>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
+			</gamecarousel>    
+
+        <text name="gamecarouselLogoText">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.09</fontSize>
+            <text>${system.fullName}</text>
+            <color>dddddd</color>
+            <glowColor>12121233</glowColor>
+        </text>     
+  
+        <video name="md_video" ifSubset="mdVideo:yes">
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+            <delay>1</delay>
+            <effect>none</effect>
+            <zIndex>200</zIndex>
+            <color>ffffff</color>
+			<size>1 1</size>
+		</video>
+	
+	</view>
+
+	<customView name="detailedFullBox" inherits="detailed" displayName="${lang.detailedFullBox}">
+	
 
 		<image name="md_thumbnail">
             <linearSmooth>true</linearSmooth>
@@ -594,19 +686,46 @@ By Helmic
 		</image>
 
         <video name="md_video" ifSubset="mdVideo:yes">
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
+            <delay>3.5</delay>
+		</video>
+	
+	</customView>
+
+	<customView name="gamecarouselFullBox" inherits="gamecarousel" displayName="${lang.gamecarouselFullBox}">
+
+		<image name="md_thumbnail">
+            <linearSmooth>true</linearSmooth>
+			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
+			<zIndex>114</zIndex>
+			<color>ffffff</color>
+			<opacity>0</opacity>			
+			<reflexion>0.125 0</reflexion>
+			<storyboard event="open">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+
+		</image>
+  
+        <video name="md_video" ifSubset="mdVideo:yes">
             <delay>3.5</delay>
-            <effect>none</effect>
-            <zIndex>200</zIndex>
-            <color>ffffff</color>
-			<size>1 1</size>
 		</video>
 
-	</view>
-
+	</customView>
+	
 	<view name="basic">
 
 		<textlist name="gamelist">
@@ -624,7 +743,7 @@ By Helmic
 			<alignment>center</alignment>
 			<horizontalMargin>0.005</horizontalMargin>
 			<forceUppercase>true</forceUppercase>
-			<scrollSound>./_inc/scroll/gamelist.wav</scrollSound>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<zIndex>113</zIndex>
 			<lines>9</lines>
  		</textlist>

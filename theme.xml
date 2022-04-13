@@ -550,7 +550,7 @@ By Helmic
 
 			<textlist name="gamelist">
 			<origin>0.5 1</origin>
-			<pos>0.5 0.92</pos>
+			<pos>0.5 0.935</pos>
 			<size>1 0.27</size>
 			<selectedColor>ffffff</selectedColor>
             <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
@@ -612,6 +612,17 @@ By Helmic
 
 		</image>
 
+		<rating name="md_rating">
+            <color>ffff00</color>
+            <x>0.445</x>
+            <y>0.63</y>
+            <origin>0 0.5</origin>
+            <zIndex>110</zIndex>
+			<w>0.5</w>
+            <h>0.036</h>
+			<opacity>0</opacity>
+		</rating>
+
 	</view>
 
 	<view name="gamecarousel">
@@ -649,6 +660,17 @@ By Helmic
 			<size ifSubset="mdVideoRatio:stretched">1 1</size>
 			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
 		</video>
+
+		<rating name="md_rating">
+            <color>ffff00</color>
+            <x>0.445</x>
+            <y>0.025</y>
+            <origin>0 0.5</origin>
+            <zIndex>110</zIndex>
+			<w>0.5</w>
+            <h>0.036</h>
+			<opacity>0</opacity>
+		</rating>
 	
 	</view>
 

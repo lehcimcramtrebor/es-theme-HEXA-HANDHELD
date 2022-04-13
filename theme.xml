@@ -74,6 +74,15 @@ By Helmic
 		<lang.gamecarouselFullBox>gamecarousel + full box</lang.gamecarouselFullBox>
 		<lang.gamecarouselFullBox lang="fr">gamecarousel + boîte plein écran</lang.gamecarouselFullBox>
 
+		<lang.mdVideoRatio>video ratio</lang.mdVideoRatio>
+		<lang.mdVideoRatio lang="fr">ratio vidéo</lang.mdVideoRatio>
+
+		<lang.stretched>stretched</lang.stretched>
+		<lang.stretched lang="fr">étiré</lang.stretched>
+
+		<lang.original>respected</lang.original>
+		<lang.original lang="fr">respecté</lang.original>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -233,6 +242,11 @@ By Helmic
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="detailed">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
+   </subset>
+  
+    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="detailed" ifSubset="mdVideo:yes">
+        <include name="stretched" displayName="${lang.stretched}"/>
+        <include name="original" displayName="${lang.original}"/>
    </subset>
  
 	<view name="screen">
@@ -563,7 +577,8 @@ By Helmic
             <effect>none</effect>
             <zIndex>200</zIndex>
             <color>ffffff</color>
-			<size>1 1</size>
+			<size ifSubset="mdVideoRatio:stretched">1 1</size>
+			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
 		</video>
 
 		<image name="md_thumbnail">
@@ -631,7 +646,8 @@ By Helmic
             <effect>none</effect>
             <zIndex>200</zIndex>
             <color>ffffff</color>
-			<size>1 1</size>
+			<size ifSubset="mdVideoRatio:stretched">1 1</size>
+			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
 		</video>
 	
 	</view>
@@ -641,7 +657,7 @@ By Helmic
 
 		<image name="md_thumbnail">
             <linearSmooth>true</linearSmooth>
-			<maxSize>1 99</maxSize>
+			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.325</pos>
 			<zIndex>114</zIndex>

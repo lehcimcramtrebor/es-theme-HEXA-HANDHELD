@@ -80,9 +80,6 @@ By Helmic
 		<lang.boxCarousel>cover flow</lang.boxCarousel>
 		<lang.boxCarousel lang="fr">cover flow</lang.boxCarousel>
 
-		<lang.boxCarouselFullBox>cover flow + full box</lang.boxCarouselFullBox>
-		<lang.boxCarouselFullBox lang="fr">cover flow + boîte plein écran</lang.boxCarouselFullBox>
-
 		<lang.mdVideoRatio>video ratio</lang.mdVideoRatio>
 		<lang.mdVideoRatio lang="fr">ratio vidéo</lang.mdVideoRatio>
 
@@ -908,9 +905,11 @@ By Helmic
 	<customView name="boxCarousel" inherits="grid" displayName="${lang.boxCarousel}">
 
 		<imagegrid name="gamegrid">
+			<size>1 0.85</size>
 			<autoLayout>3 1</autoLayout>
-			<margin>0.08 0.1</margin>
-			<autoLayoutSelectedZoom>1.2</autoLayoutSelectedZoom>
+			<padding>-0.2 0.02 -0.2 0</padding>
+			<margin>0 0.1</margin>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<imageSource>thumbnail</imageSource>
 			<scrollDirection>horizontal</scrollDirection>
 			<centerSelection>true</centerSelection>
@@ -942,77 +941,6 @@ By Helmic
 		<text name="md_name">
            <pos>0.5 0.875</pos>
 		</text>
-
-	</customView>
-
-		
-	<customView name="boxCarouselFullBox" inherits="grid" displayName="${lang.boxCarouselFullBox}">
-
-		<imagegrid name="gamegrid">
-			<autoLayout>3 1</autoLayout>
-			<margin>0.08 0.1</margin>
-			<autoLayoutSelectedZoom>1.2</autoLayoutSelectedZoom>
-			<imageSource>thumbnail</imageSource>
-			<scrollDirection>horizontal</scrollDirection>
-			<centerSelection>true</centerSelection>
-			<scrollLoop>true</scrollLoop>
- 		</imagegrid>
-
-
-		<gridtile name="default">
-			<imageColor>ddddddaa</imageColor>
-			<reflexion>0.1 0</reflexion>	  
-		</gridtile>
-	
-
-		<gridtile name="selected">
-			<backgroundCenterColor>00000000</backgroundCenterColor>
-			<backgroundEdgeColor>00000000</backgroundEdgeColor>	
-			<reflexion>0.1 0</reflexion>	  
-		</gridtile>
-
-
-		<ninepatch name="gridtile.background:selected">
-			<animateColor>00000000</animateColor>
-		</ninepatch>
-
-		<rating name="md_rating">
-            <y>0.91</y>
-		</rating>
-
-		<text name="md_name">
-           <pos>0.5 0.875</pos>
-		</text>
-
-		<image name="md_thumbnail">
-            <linearSmooth>true</linearSmooth>
-			<maxSize>1 1</maxSize>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
-			<color>ffffff</color>
-			<opacity>0</opacity>			
-			<reflexion>0.125 0</reflexion>
-			<storyboard event="open">
-                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
-             </storyboard>
-			<storyboard event="activateNext">
-                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
-            </storyboard>
-			<storyboard event="activatePrev">
-                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
-            </storyboard>
-			<storyboard event="deactivateNext">
-                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
-            </storyboard>
-			<storyboard event="deactivatePrev">
-                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
-            </storyboard>
-		</image>
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-            <delay>3.5</delay>
-		</video>
 
 	</customView>
 

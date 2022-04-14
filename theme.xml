@@ -688,7 +688,7 @@ By Helmic
 			<size>1 1</size>
 			<autoLayout>3 2</autoLayout>
 			<margin>0.02 0.1</margin>
-			<padding>0.02 0.02 0.02 0.12</padding>
+			<padding>0.02 0.02 0.02 0.115</padding>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<animateSelection>false</animateSelection>
 			<zIndex>105</zIndex>

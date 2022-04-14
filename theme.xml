@@ -704,6 +704,7 @@ By Helmic
 			<padding>5 5</padding>
 			<imageColor>dddddd</imageColor>
 			<reflexion>0 0</reflexion>	  
+			<imageSizeMode>minSize</imageSizeMode>
 		</gridtile>
 	
 
@@ -716,6 +717,9 @@ By Helmic
 
 		<ninepatch name="gridtile.background:selected">
 			<animateColor>${overlay.colorset}</animateColor>
+			<path>./_inc/framewsel.png</path>
+			<cornerSize>36 36</cornerSize>
+			<padding>-18 -18</padding>
 		</ninepatch>
 
 		<rating name="md_rating">
@@ -920,6 +924,7 @@ By Helmic
 		<gridtile name="default">
 			<imageColor>ddddddaa</imageColor>
 			<reflexion>0.1 0</reflexion>	  
+			<imageSizeMode>maxSize</imageSizeMode>
 		</gridtile>
 	
 

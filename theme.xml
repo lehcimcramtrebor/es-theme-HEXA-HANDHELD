@@ -717,9 +717,7 @@ By Helmic
 
 		<ninepatch name="gridtile.background:selected">
 			<animateColor>${overlay.colorset}</animateColor>
-			<path>./_inc/framewsel.png</path>
-			<cornerSize>36 36</cornerSize>
-			<padding>-18 -18</padding>
+			<cornerSize>0 0</cornerSize>
 		</ninepatch>
 
 		<rating name="md_rating">

@@ -1,5 +1,5 @@
 <!--
-HEXA Theme for Retrobat 4+ / Batocera v32+
+HEXA HANDHELD EDITION Theme for Batocera v32+
 By Helmic
 -->
 
@@ -14,6 +14,9 @@ By Helmic
     <!--DEVELOPERS FINANCIAL SUPPORT-->
 
 	<include>./_support/support.xml</include>
+
+
+
 
     <variables>
 
@@ -74,8 +77,14 @@ By Helmic
 		<lang.gamecarouselFullBox>gamecarousel + full box</lang.gamecarouselFullBox>
 		<lang.gamecarouselFullBox lang="fr">gamecarousel + boîte plein écran</lang.gamecarouselFullBox>
 
+		<lang.gridBoxes>grid (boxes)</lang.gridBoxes>
+		<lang.gridBoxes lang="fr">grille (boîtes)</lang.gridBoxes>
+
+		<lang.gridBoxesFullBox>grid (boxes) + full box</lang.gridBoxesFullBox>
+		<lang.gridBoxesFullBox lang="fr">grille (boîtes) + boîte plein écran</lang.gridBoxesFullBox>
+
 		<lang.gridFullBox>grid + full box</lang.gridFullBox>
-		<lang.gridFullBox lang="fr">grid + boîte plein écran</lang.gridFullBox>
+		<lang.gridFullBox lang="fr">grille + boîte plein écran</lang.gridFullBox>
 
 		<lang.boxCarousel>cover flow</lang.boxCarousel>
 		<lang.boxCarousel lang="fr">cover flow</lang.boxCarousel>
@@ -190,6 +199,10 @@ By Helmic
 	
     </variables>
 
+
+
+
+
     <subset name="overlayColorset" displayName="${lang.overlayColorset}">
         <include name="red" displayName="${lang.red}"/>
         <include name="blue" displayName="${lang.blue}"/>
@@ -254,6 +267,88 @@ By Helmic
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
    </subset>
+
+
+
+
+
+	<view name="system,basic,detailed,gamecarousel,grid">
+ 
+        <image name="background" extra="true">
+			<linearSmooth>true</linearSmooth>
+            <path>./_inc/wallpapers/${wallpaper}.jpg</path>
+            <minSize>1 1</minSize>
+            <pos>0.5 0.5</pos>
+            <origin>0.5 0.5</origin>
+            <color>808080</color>
+            <colorEnd>303030</colorEnd>
+            <gradientType>vertical</gradientType>
+            <opacity>1</opacity>
+            <zIndex>100</zIndex>
+       </image>
+	
+	</view>
+
+    <view name="screen,menu,system,basic,detailed,gamecarousel,grid">
+    
+		<helpsystem name="help">
+			<textColor>dddddd</textColor>
+			<fontSize>0.0312</fontSize>
+			<origin>0 0.5</origin>
+			<pos>0.004 0.982</pos>
+			<fontPath>./_inc/DJB Get Digital.ttf</fontPath>
+			<iconColor>${overlay.colorset}</iconColor>
+		</helpsystem>
+
+	</view>
+
+    <view name="menu">
+
+        <menuText name="menutitle">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>cccccc</color>
+        </menuText>
+
+        <menuText name="menufooter">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+        </menuText>
+
+        <menuText name="menutext">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+            <separatorColor>161616</separatorColor>
+            <selectorColor>${overlay.colorset}</selectorColor>
+            <selectedColor>ffffff</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:yellow">202020</selectedColor>		
+            <selectorColor ifSubset="overlayColorset:noColor">202020</selectorColor>
+        </menuText>
+	
+        <menuTextSmall name="menutextsmall">
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+        </menuTextSmall>
+
+        <menuBackground name="menubg">
+            <color>d7d4cccc</color>
+            <cornerSize>21 21</cornerSize>
+            <path>./_inc/menubgDarkGlass.png</path>
+        </menuBackground>
+
+        <menuGroup name="menugroup">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.032</fontSize>
+            <color>aaaaaa</color>
+            <separatorColor>00000000</separatorColor>
+            <backgroundColor>303030</backgroundColor>
+            <lineSpacing>1.2</lineSpacing>
+        </menuGroup>	
+
+
+    </view>
  
 	<view name="screen">
 
@@ -274,6 +369,10 @@ By Helmic
 		</batteryIndicator>
 
 	</view>
+
+
+
+
 
 	<view name="system">
 
@@ -488,7 +587,11 @@ By Helmic
 
 	</view>
 
-		<view name="basic,detailed,gamecarousel,grid">
+
+
+
+
+	<view name="basic,detailed,gamecarousel,grid">
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
@@ -522,37 +625,35 @@ By Helmic
        </image>
 
 	</view>
-	
-	<view name="system,basic,detailed,gamecarousel,grid">
- 
-        <image name="background" extra="true">
-			<linearSmooth>true</linearSmooth>
-            <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <minSize>1 1</minSize>
-            <pos>0.5 0.5</pos>
-            <origin>0.5 0.5</origin>
-            <color>808080</color>
-            <colorEnd>303030</colorEnd>
-            <gradientType>vertical</gradientType>
-            <opacity>1</opacity>
-            <zIndex>100</zIndex>
-       </image>
-	
-	</view>
 
-    <view name="screen,menu,system,basic,detailed,gamecarousel,grid">
-    
-		<helpsystem name="help">
-			<textColor>dddddd</textColor>
-			<fontSize>0.0312</fontSize>
-			<origin>0 0.5</origin>
-			<pos>0.004 0.982</pos>
-			<fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-			<iconColor>${overlay.colorset}</iconColor>
-		</helpsystem>
+
+
+
+
+	<view name="basic">
+
+		<textlist name="gamelist">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<size>1 0.88</size>
+			<selectedColor>ffffff</selectedColor>
+            <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
+			<primaryColor>dddddd</primaryColor>
+			<secondaryColor>dddddd</secondaryColor>
+			<selectorColor>${overlay.colorset}ea</selectorColor>	  		
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<fontSize>0.036</fontSize>
+			<alignment>center</alignment>
+			<horizontalMargin>0.005</horizontalMargin>
+			<forceUppercase>true</forceUppercase>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
+			<zIndex>113</zIndex>
+			<lines>9</lines>
+ 		</textlist>
 
 	</view>
-
+	
 	<view name="detailed">
 
 			<textlist name="gamelist">
@@ -632,55 +733,6 @@ By Helmic
 
 	</view>
 
-	<view name="gamecarousel">
-
-		<gamecarousel name="gamecarousel">
-			<type>vertical</type>
-			<pos>0.5 0.5</pos>
-			<size>1 1</size>
-			<origin>0.5 0.5</origin>
-			<logoScale>3</logoScale>
-			<logoSize>0.300 0.24</logoSize>
-			<logoAlignment>center</logoAlignment>
-			<maxLogoCount>3</maxLogoCount>
-			<zIndex>113</zIndex>
-			<imageSource>marquee</imageSource>
-			<scrollSound>./_inc/gamelist.wav</scrollSound>
-			</gamecarousel>    
-
-        <text name="gamecarouselLogoText">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.09</fontSize>
-            <color>dddddd</color>
-            <glowColor>12121233</glowColor>
-        </text>     
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-            <delay>1</delay>
-            <effect>none</effect>
-            <zIndex>200</zIndex>
-            <color>ffffff</color>
-			<size ifSubset="mdVideoRatio:stretched">1 1</size>
-			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
-		</video>
-
-		<rating name="md_rating">
-            <color>ffff00</color>
-            <x>0.445</x>
-            <y>0.025</y>
-            <origin>0 0.5</origin>
-            <zIndex>110</zIndex>
-			<w>0.5</w>
-            <h>0.036</h>
-			<opacity>0</opacity>
-		</rating>
-	
-	</view>
-
 	<view name="grid">
 
 		<imagegrid name="gamegrid">
@@ -694,6 +746,7 @@ By Helmic
 			<zIndex>105</zIndex>
 			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<imageSource>image</imageSource>
+			<scrollLoop>true</scrollLoop>
 		</imagegrid>
 
 
@@ -707,18 +760,25 @@ By Helmic
 			<imageSizeMode>minSize</imageSizeMode>
 		</gridtile>
 	
-
 		<gridtile name="selected">
 			<backgroundCenterColor>${overlay.colorset}</backgroundCenterColor>
 			<backgroundEdgeColor>${overlay.colorset}</backgroundEdgeColor>	
 			<imageColor>ffffff</imageColor>
 		</gridtile>
 
-
 		<ninepatch name="gridtile.background:selected">
 			<animateColor>${overlay.colorset}</animateColor>
 			<cornerSize>0 0</cornerSize>
 		</ninepatch>
+
+		<image name="gridtile.favorite">
+			<path>./_inc/favorite.png</path>
+			<pos>0.95 0.05</pos>
+			<maxSize>0.28 0.28</maxSize>
+			<origin>0.5 0.5</origin>
+			<horizontalAlignment>right</horizontalAlignment>
+			<color>ffffff</color>
+    </image>
 
 		<rating name="md_rating">
             <color>ffff00</color>
@@ -778,7 +838,59 @@ By Helmic
 		</video>
 	
 	</view>
+
+	<view name="gamecarousel">
+
+		<gamecarousel name="gamecarousel">
+			<type>vertical</type>
+			<pos>0.5 0.5</pos>
+			<size>1 1</size>
+			<origin>0.5 0.5</origin>
+			<logoScale>3</logoScale>
+			<logoSize>0.300 0.24</logoSize>
+			<logoAlignment>center</logoAlignment>
+			<maxLogoCount>3</maxLogoCount>
+			<zIndex>113</zIndex>
+			<imageSource>marquee</imageSource>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
+			</gamecarousel>    
+
+        <text name="gamecarouselLogoText">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.09</fontSize>
+            <color>dddddd</color>
+            <glowColor>12121233</glowColor>
+        </text>     
+  
+        <video name="md_video" ifSubset="mdVideo:yes">
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+            <delay>1</delay>
+            <effect>none</effect>
+            <zIndex>200</zIndex>
+            <color>ffffff</color>
+			<size ifSubset="mdVideoRatio:stretched">1 1</size>
+			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
+		</video>
+
+		<rating name="md_rating">
+            <color>ffff00</color>
+            <x>0.445</x>
+            <y>0.025</y>
+            <origin>0 0.5</origin>
+            <zIndex>110</zIndex>
+			<w>0.5</w>
+            <h>0.036</h>
+			<opacity>0</opacity>
+		</rating>
 	
+	</view>
+
+	
+
+
 	
 	<customView name="detailedFullBox" inherits="detailed" displayName="${lang.detailedFullBox}">
 	
@@ -870,7 +982,85 @@ By Helmic
 
 	</customView>
 
+	<customView name="gridBoxes" inherits="grid" displayName="${lang.gridBoxes}">
+
+		<imagegrid name="gamegrid">
+			<imageSource>thumbnail</imageSource>
+		</imagegrid>
+
+
+		<gridtile name="default">
+			<imageSizeMode>maxSize</imageSizeMode>
+			<imageColor>aaaaaaaa</imageColor>
+		</gridtile>
+	
+		<gridtile name="selected">
+			<backgroundCenterColor>${overlay.colorset}00</backgroundCenterColor>
+			<backgroundEdgeColor>${overlay.colorset}00</backgroundEdgeColor>	
+			<imageColor>ffffff</imageColor>
+		</gridtile>
+
+		<ninepatch name="gridtile.background:selected">
+			<animateColor>${overlay.colorset}00</animateColor>
+		</ninepatch>
+
+	</customView>
+
 	<customView name="gridFullBox" inherits="grid" displayName="${lang.gridFullBox}">
+
+		<image name="md_thumbnail">
+            <linearSmooth>true</linearSmooth>
+			<maxSize>1 1</maxSize>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<zIndex>114</zIndex>
+			<color>ffffff</color>
+			<opacity>0</opacity>			
+			<reflexion>0.125 0</reflexion>
+			<storyboard event="open">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+		</image>
+  
+        <video name="md_video" ifSubset="mdVideo:yes">
+            <delay>3.5</delay>
+		</video>
+
+	</customView>
+
+	<customView name="gridBoxesFullBox" inherits="grid" displayName="${lang.gridBoxesFullBox}">
+
+		<imagegrid name="gamegrid">
+			<imageSource>thumbnail</imageSource>
+		</imagegrid>
+
+
+		<gridtile name="default">
+			<imageSizeMode>maxSize</imageSizeMode>
+			<imageColor>aaaaaaaa</imageColor>
+		</gridtile>
+	
+		<gridtile name="selected">
+			<backgroundCenterColor>${overlay.colorset}00</backgroundCenterColor>
+			<backgroundEdgeColor>${overlay.colorset}00</backgroundEdgeColor>	
+			<imageColor>ffffff</imageColor>
+		</gridtile>
+
+		<ninepatch name="gridtile.background:selected">
+			<animateColor>${overlay.colorset}00</animateColor>
+		</ninepatch>
 
 		<image name="md_thumbnail">
             <linearSmooth>true</linearSmooth>
@@ -932,6 +1122,14 @@ By Helmic
 			<reflexion>0.1 0</reflexion>	  
 		</gridtile>
 
+		<image name="gridtile.favorite">
+			<path>./_inc/favoriteBar.png</path>
+			<pos>0.5 1</pos>
+			<maxSize>1 99</maxSize>
+			<origin>0.5 1</origin>
+			<horizontalAlignment>center</horizontalAlignment>
+			<color>ffffff</color>
+    </image>
 
 		<ninepatch name="gridtile.background:selected">
 			<animateColor>00000000</animateColor>
@@ -948,74 +1146,4 @@ By Helmic
 	</customView>
 
 	
-	<view name="basic">
-
-		<textlist name="gamelist">
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<size>1 0.88</size>
-			<selectedColor>ffffff</selectedColor>
-            <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
-            <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
-			<primaryColor>dddddd</primaryColor>
-			<secondaryColor>dddddd</secondaryColor>
-			<selectorColor>${overlay.colorset}ea</selectorColor>	  		
-			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
-			<fontSize>0.036</fontSize>
-			<alignment>center</alignment>
-			<horizontalMargin>0.005</horizontalMargin>
-			<forceUppercase>true</forceUppercase>
-			<scrollSound>./_inc/gamelist.wav</scrollSound>
-			<zIndex>113</zIndex>
-			<lines>9</lines>
- 		</textlist>
-
-	</view>
-    <view name="menu">
-
-        <menuText name="menutitle">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>cccccc</color>
-        </menuText>
-
-        <menuText name="menufooter">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>aaaaaa</color>
-        </menuText>
-
-        <menuText name="menutext">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>aaaaaa</color>
-            <separatorColor>161616</separatorColor>
-            <selectorColor>${overlay.colorset}</selectorColor>
-            <selectedColor>ffffff</selectedColor>		
-            <selectedColor ifSubset="overlayColorset:yellow">202020</selectedColor>		
-            <selectorColor ifSubset="overlayColorset:noColor">202020</selectorColor>
-        </menuText>
-	
-        <menuTextSmall name="menutextsmall">
-            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-        </menuTextSmall>
-
-        <menuBackground name="menubg">
-            <color>d7d4cccc</color>
-            <cornerSize>21 21</cornerSize>
-            <path>./_inc/menubgDarkGlass.png</path>
-        </menuBackground>
-
-        <menuGroup name="menugroup">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>aaaaaa</color>
-            <separatorColor>00000000</separatorColor>
-            <backgroundColor>303030</backgroundColor>
-            <lineSpacing>1.2</lineSpacing>
-        </menuGroup>	
-
-
-    </view>
 </theme>

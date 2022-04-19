@@ -277,7 +277,7 @@ By Helmic
         <image name="background" extra="true">
 			<linearSmooth>true</linearSmooth>
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <minSize>1 1</minSize>
+            <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
             <color>808080</color>
@@ -595,7 +595,7 @@ By Helmic
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <minSize>1 1</minSize>
+            <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
             <color>808080</color>

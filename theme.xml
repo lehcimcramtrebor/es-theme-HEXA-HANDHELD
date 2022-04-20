@@ -899,36 +899,42 @@ By Helmic
             <linearSmooth>true</linearSmooth>
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
-			<pos>0.5 0.325</pos>
+			<pos>0.5 0.5</pos>
 			<zIndex>114</zIndex>
 			<color>ffffff</color>
 			<opacity>1</opacity>			
 			<reflexion>0.125 0</reflexion>
 			<storyboard event="open">
                 <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="pos" to="0.5 0.325" duration="1" mode="linear"/>
                 <animation property="opacity" from="1" to="1" duration="1" mode="linear"/>
                 <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="2500"/>
                 <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="2550"/>
                 <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="2550"/>
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
              </storyboard>
 			<storyboard event="activateNext">
                 <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="pos" to="0.5 0.325" duration="1" mode="linear"/>
                 <animation property="opacity" from="O" duration="350" mode="easeOut"/>
                 <animation property="offsetX" from="1" duration="350" mode="easeOut"/>
                 <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
                 <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
                 <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="activatePrev">
                 <animation property="maxSize" to="0.4 0.55" duration="1" mode="linear"/>
+                <animation property="pos" to="0.5 0.325" duration="1" mode="linear"/>
                 <animation property="opacity" from="O" duration="350" mode="easeOut"/>
                 <animation property="offsetX" from="-1" duration="350" mode="easeOut"/>
                 <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
                 <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
                 <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="deactivateNext">
                 <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
@@ -960,12 +966,15 @@ By Helmic
 			<reflexion>0.125 0</reflexion>
 			<storyboard event="open">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
              </storyboard>
 			<storyboard event="activateNext">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="activatePrev">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050z"/>
             </storyboard>
 			<storyboard event="deactivateNext">
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>
@@ -1019,12 +1028,15 @@ By Helmic
 			<reflexion>0.125 0</reflexion>
 			<storyboard event="open">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
              </storyboard>
 			<storyboard event="activateNext">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
-            </storyboard>
+                 <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
+           </storyboard>
 			<storyboard event="activatePrev">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="deactivateNext">
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>
@@ -1073,12 +1085,15 @@ By Helmic
 			<reflexion>0.125 0</reflexion>
 			<storyboard event="open">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
              </storyboard>
 			<storyboard event="activateNext">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="activatePrev">
                 <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
             </storyboard>
 			<storyboard event="deactivateNext">
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>

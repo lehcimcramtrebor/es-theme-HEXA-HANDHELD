@@ -444,7 +444,7 @@ By Helmic
             <opacity>0</opacity>
             <origin>0.5 0.5</origin>
             <pos>0.5 0.5</pos>
-            <delay>0.25</delay>
+            <delay>1</delay>
             <effect>none</effect>
 			<size>0 0</size>
             <zIndex>0</zIndex>

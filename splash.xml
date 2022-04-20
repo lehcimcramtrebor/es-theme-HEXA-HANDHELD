@@ -40,7 +40,8 @@
 	</text>
 
 	<text name="compatibility" extra="true">
-		<text>Handheld edition</text>
+		<text>handheld edition
+batocera  -  emuelec  -  amberelec</text>
 
 		<color>cccccc</color>
 		<alignment>center</alignment>

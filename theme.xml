@@ -65,8 +65,8 @@ By Helmic
         <lang.logoVisualAssistance>system visual assistance</lang.logoVisualAssistance>
         <lang.logoVisualAssistance lang="fr">assistance visuelle systèmes</lang.logoVisualAssistance>
 
-        <lang.logoAnime>gamelists logos (+++ power)</lang.logoAnime>
-        <lang.logoAnime lang="fr">logos gamelists (+++ gourmand)</lang.logoAnime>
+        <lang.logoAnime>gamelists logo anime</lang.logoAnime>
+        <lang.logoAnime lang="fr">animer logos gamelists</lang.logoAnime>
 
         <lang.no>no</lang.no>
         <lang.no lang="fr">non</lang.no>
@@ -286,12 +286,10 @@ By Helmic
         <include name="original" displayName="${lang.original}"/>
    </subset>
 
-<!-- TO HEAVY FOR ACTUAL HANDHELD
  	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel">
-		<include name="no" displayName="${lang.no}"/>
         <include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
     </subset>
--->
 
 
 
@@ -404,14 +402,15 @@ By Helmic
 
 	<text name="logoAssist" extra="true">
         <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-		<fontSize>0.036</fontSize>
+		<fontSize>0.05</fontSize>
+		<forceUppercase>true</forceUppercase>
 		<text>${system.fullName}</text>
-		<size>1 0.04</size>
+		<size>0.90 1</size>
 		<alignment>center</alignment>
 		<linearSmooth>true</linearSmooth>
 		<zIndex>199</zIndex>
 		<origin>0.5 0.5</origin>
-		<pos>0.5 0.75</pos>
+		<pos>0.5 0.7</pos>
 		<color>ffffff</color>
 		<opacity>0</opacity>
 
@@ -433,113 +432,30 @@ By Helmic
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!-- TO HEAVY FOR ACTUAL HANDHELD
-
 	<view name="basic,detailed,grid,gamecarousel" ifSubset="logoAnime:yes">
 	
-		<image name="logoAnime" extra="true">
+			<text name="logoAnime" extra="true">
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<fontSize>0.225</fontSize>
+			<forceUppercase>true</forceUppercase>
+			<text>${system.fullName}</text>
+			<alignment>center</alignment>
 			<linearSmooth>true</linearSmooth>
 			<zIndex>103</zIndex>
 			<maxSize>99 0.5</maxSize>
 			<origin>0 0.5</origin>
 			<pos>0 0</pos>
-			<color>ffffff66</color>
-			<colorEnd>ffffff66</colorEnd>
+			<color>${overlay.colorset}4d</color>
 			<opacity>0</opacity>
-			<gradientType>vertical</gradientType>
 
 			<storyboard repeatAt="1">
-                <animation property="maxSize" to="99 0.5" duration="1" mode="linear" begin="2"/>
                 <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear" begin="2"/>
                 <animation property="opacity" from="0" to="1" duration="75" mode="linear" begin="2"/>
                 <animation property="origin" from="0 0" to="1 0" duration="39998" mode="linear" begin ="2"/>
                 <animation property="pos" from="1 0" to="0 0" duration="39998" mode="linear" begin="2"/>
-        		<animation property="w" to="0" begin="10000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="15000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="20000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="25000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="30000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
-
-                <animation property="maxSize" to="1 99" duration="1" mode="linear" begin="40000"/>
-                <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear" begin="40000"/>
-                <animation property="origin" from="0.5 0" to="0.5 1" duration="40000" mode="linear" begin="40000"/>
-                <animation property="pos" from="0.5 1" to="0.5 0" duration="40000" mode="linear" begin="40000"/>
-        		<animation property="w" to="0" begin="50000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="55000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="60000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="65000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="w" to="0" begin="70000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
-        		<animation property="opacity" to="0" duration="2500" mode="easeIn" begin="77500"/>				
+                <animation property="opacity" to="0 0" duration="250" autoreverse="true" mode="linear" begin="40000"/>
              </storyboard>
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
-
-		<path>./_inc/logos/${system.theme}.png</path>
-		<path>./_inc/logos/${system.theme}.svg</path>
-		<path>./_inc/logos/${system.theme}-${lang}.png</path>
-		<path>./_inc/logos/${system.theme}-${lang}.svg</path>
-	</image>
-
-	<image name="logoAnime" region="us" extra="true">
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
-
-		<path>./_inc/logos/us/${system.theme}.png</path>
-		<path>./_inc/logos/us/${system.theme}.svg</path>
-	</image>
-
-	<image name="logoAnime" region="jp" extra="true">
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
-
-		<path>./_inc/logos/jp/${system.theme}.png</path>
-		<path>./_inc/logos/jp/${system.theme}.svg</path>
-	</image>
-
-		<image name="logoAnime" extra="true" ifSubset="logoCustom:yes">
-		<path>./logo.png</path>
-		<path>./logo.svg</path>
-        <path ifArch="windows" ifSubset="transitionCustom:yes">./../../../../logo.png</path>
-        <path ifArch="windows" ifSubset="transitionCustom:yes">./../../../../logo.svg</path>
-        <path ifNotArch="windows" ifSubset="transitionCustom:yes">./../../logo.png</path>
-        <path ifNotArch="windows" ifSubset="transitionCustom:yes">./../../logo.svg</path>
-	</image>
-
-
-	<image name="logoAnime" extra="true">
-
-		<path>./_inc/logos/test.png</path>
-		<path>./_inc/logos/test.svg</path>
-
-	</image>
+	</text>
 
 	</view>
 
@@ -597,7 +513,7 @@ By Helmic
             <path>./${system.theme}/color-${lang}.png</path>
 
 			<storyboard event="activate" repeatAt="950">
-        		<animation property="offsetY" to="-0.03" autoreverse="true" duration="200" mode="easeOutCubic" begin="5950"/>
+        		<animation property="offsetY" to="-0.015" autoreverse="true" duration="200" mode="easeOutCubic" begin="5950"/>
            </storyboard>
             <storyboard event="scroll" repeatAt="1">
                 <animation property="scale" from="1" to="0.9" duration="1" mode="EaseOut"/>
@@ -609,7 +525,8 @@ By Helmic
                 <animation property="color" from="999999" to="999999" duration="1" mode="Linear"/>
                 <animation property="opacity" from="1" to="1" duration="1" mode="Linear"/>
             </storyboard>
-  		</image>
+
+ 		</image>
 
         <image name="logo" region="eu"></image>
 
@@ -624,7 +541,7 @@ By Helmic
 
         <text name="systemInfo">     
             <origin>0 0</origin>
-            <pos>0 -0.016</pos>
+            <pos>0 0.004</pos>
             <backgroundColor>00000000</backgroundColor>
             <color>ffffff</color>
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>

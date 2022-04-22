@@ -392,7 +392,7 @@ By Helmic
 		<pos>0.5 0.5</pos>
 		<path>./_inc/white.png</path>
 		<color>00000000</color>
-		<colorEnd>000000aa</colorEnd>
+		<colorEnd>00000066</colorEnd>
 		<gradientType>vertical</gradientType>
 		<opacity>0</opacity>
 			<storyboard>

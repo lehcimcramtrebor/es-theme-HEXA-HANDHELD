@@ -62,11 +62,11 @@ By Helmic
         <lang.transition>gamelist transitions</lang.transition>
         <lang.transition lang="fr">transitions gamelist</lang.transition>
 
-        <lang.logoVisualAssistance>system logos (++ memory)</lang.logoVisualAssistance>
-        <lang.logoVisualAssistance lang="fr">logos systèmes (++ mémoire)</lang.logoVisualAssistance>
+        <lang.logoVisualAssistance>system logos (+++ power)</lang.logoVisualAssistance>
+        <lang.logoVisualAssistance lang="fr">logos systèmes (+++ gourmand)</lang.logoVisualAssistance>
 
-        <lang.logoAnime>gamelist logos anime</lang.logoAnime>
-        <lang.logoAnime lang="fr">animer logos gamelist</lang.logoAnime>
+        <lang.logoAnime>gamelists logos (+++ power)</lang.logoAnime>
+        <lang.logoAnime lang="fr">logos gamelists (+++ gourmand)</lang.logoAnime>
 
         <lang.no>no</lang.no>
         <lang.no lang="fr">non</lang.no>
@@ -74,8 +74,8 @@ By Helmic
         <lang.yes>yes</lang.yes>
         <lang.yes lang="fr">oui</lang.yes>
 
-		<lang.randomArt>random marquees (+ memory)</lang.randomArt>
-		<lang.randomArt lang="fr">logos aléatoires (+ memory)</lang.randomArt>
+		<lang.randomArt>random marquees (+ power)</lang.randomArt>
+		<lang.randomArt lang="fr">logos aléatoires (+ gourmand)</lang.randomArt>
 
 		<lang.ambiance>carousel ambiance (need videos)</lang.ambiance>
 		<lang.ambiance lang="fr">ambiance sonore (nécessite vidéos)</lang.ambiance>
@@ -210,7 +210,11 @@ By Helmic
 
 
 
-
+ 
+	<subset name="ambiance" displayName="${lang.ambiance}">
+		<include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+	</subset>
 
     <subset name="overlayColorset" displayName="${lang.overlayColorset}">
         <include name="red" displayName="${lang.red}"/>
@@ -261,11 +265,6 @@ By Helmic
 		<include name="no" displayName="${lang.no}"/>
 		<include name="yes" displayName="${lang.yes}"/>
 	</subset>
- 
-	<subset name="ambiance" displayName="${lang.ambiance}">
-		<include name="yes" displayName="${lang.yes}"/>
-		<include name="no" displayName="${lang.no}"/>
-	</subset>
 
     <subset name="logoVisualAssistance" displayName="${lang.logoVisualAssistance}">
 		<include name="no" displayName="${lang.no}"/>
@@ -288,8 +287,8 @@ By Helmic
    </subset>
 
  	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel">
-        <include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
+        <include name="yes" displayName="${lang.yes}"/>
     </subset>
 
 

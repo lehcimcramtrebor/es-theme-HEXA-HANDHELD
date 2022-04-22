@@ -62,8 +62,8 @@ By Helmic
         <lang.transition>gamelist transitions</lang.transition>
         <lang.transition lang="fr">transitions gamelist</lang.transition>
 
-        <lang.logoVisualAssistance>system logos (+++ power)</lang.logoVisualAssistance>
-        <lang.logoVisualAssistance lang="fr">logos systèmes (+++ gourmand)</lang.logoVisualAssistance>
+        <lang.logoVisualAssistance>system visual assistance</lang.logoVisualAssistance>
+        <lang.logoVisualAssistance lang="fr">assistance visuelle systèmes</lang.logoVisualAssistance>
 
         <lang.logoAnime>gamelists logos (+++ power)</lang.logoAnime>
         <lang.logoAnime lang="fr">logos gamelists (+++ gourmand)</lang.logoAnime>
@@ -266,12 +266,10 @@ By Helmic
 		<include name="yes" displayName="${lang.yes}"/>
 	</subset>
 
-<!-- TO HEAVY FOR ACTUAL HANDHELD
     <subset name="logoVisualAssistance" displayName="${lang.logoVisualAssistance}">
-		<include name="no" displayName="${lang.no}"/>
         <include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
     </subset>
- -->
  
 	<subset name="transition" displayName="${lang.transition}">
 		<include name="yes" displayName="${lang.yes}"/>
@@ -383,7 +381,6 @@ By Helmic
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<!-- TO HEAVY FOR ACTUAL HANDHELD
 
     <view name="system" ifSubset="logoVisualAssistance:yes">
 
@@ -395,7 +392,7 @@ By Helmic
 		<pos>0.5 0.5</pos>
 		<path>./_inc/white.png</path>
 		<color>00000000</color>
-		<colorEnd>00000080</colorEnd>
+		<colorEnd>000000aa</colorEnd>
 		<gradientType>vertical</gradientType>
 		<opacity>0</opacity>
 			<storyboard>
@@ -405,10 +402,14 @@ By Helmic
             </storyboard>
 	</image>
 
-	<image name="logoAssist" extra="true">
+	<text name="logoAssist" extra="true">
+        <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+		<fontSize>0.036</fontSize>
+		<text>${system.fullName}</text>
+		<size>1 0.04</size>
+		<alignment>center</alignment>
 		<linearSmooth>true</linearSmooth>
 		<zIndex>199</zIndex>
-		<maxSize>0.5 0.3</maxSize>
 		<origin>0.5 0.5</origin>
 		<pos>0.5 0.75</pos>
 		<color>ffffff</color>
@@ -418,73 +419,12 @@ By Helmic
                 <animation property="opacity" from="0" to="1" duration="75" mode="linear"/>
                 <animation property="opacity" from="1" to="1" duration="175" mode="linear" begin="75"/>
                 <animation property="opacity" from="1" to="0" duration="250" mode="easeOutQuint" begin="250"/>
-
-                <animation property="scale" from="0.9" to="1" duration="250" mode="linear"/>
-                <animation property="scale" from="1" to="2" duration="250" mode="easeOut" begin="250"/>
             </storyboard>
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
-
-		<path>./_inc/logos/${system.theme}.png</path>
-		<path>./_inc/logos/${system.theme}.svg</path>
-		<path>./_inc/logos/${system.theme}-${lang}.png</path>
-		<path>./_inc/logos/${system.theme}-${lang}.svg</path>
-	</image>
-
-	<image name="logoAssist" region="us" extra="true">
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
-
-		<path>./_inc/logos/us/${system.theme}.png</path>
-		<path>./_inc/logos/us/${system.theme}.svg</path>
-	</image>
-
-	<image name="logoAssist" region="jp" extra="true">
-
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
-		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
-
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
-		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
-
-		<path>./_inc/logos/jp/${system.theme}.png</path>
-		<path>./_inc/logos/jp/${system.theme}.svg</path>
-	</image>
-
-	<image name="logoAssist" extra="true">
-
-		<path>./_inc/logos/test.png</path>
-		<path>./_inc/logos/test.svg</path>
-
-	</image>
+	</text>
 
 	</view>
 
--->
+
 <!-------------------------------------------------------------------END OF LOGO VISUAL ASSISTANCE--------------------------------------------------------------------------------->
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->

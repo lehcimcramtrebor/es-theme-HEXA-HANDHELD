@@ -498,26 +498,32 @@ By Helmic
 			<pos>0 0</pos>
 			<color>ffffff66</color>
 			<colorEnd>ffffff66</colorEnd>
-			<opacity>1</opacity>
+			<opacity>0</opacity>
 			<gradientType>vertical</gradientType>
 
 			<storyboard repeatAt="1">
-                <animation property="maxSize" to="99 0.5" duration="1" mode="linear"/>
-                <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear"/>
-                <animation property="opacity" from="0" to="1" duration="75" mode="linear"/>
-                <animation property="origin" from="0 0" to="1 0" duration="40000" autoreverse="true" mode="linear"/>
-                <animation property="pos" from="1 0" to="0 0" duration="40000" autoreverse="true" mode="linear"/>
+                <animation property="maxSize" to="99 0.5" duration="1" mode="linear" begin="2"/>
+                <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear" begin="2"/>
+                <animation property="opacity" from="0" to="1" duration="75" mode="linear" begin="2"/>
+                <animation property="origin" from="0 0" to="1 0" duration="39998" mode="linear" begin ="2"/>
+                <animation property="pos" from="1 0" to="0 0" duration="39998" mode="linear" begin="2"/>
         		<animation property="w" to="0" begin="10000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="15000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="20000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="25000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="30000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
+
+                <animation property="maxSize" to="1 99" duration="1" mode="linear" begin="40000"/>
+                <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear" begin="40000"/>
+                <animation property="origin" from="0.5 0" to="0.5 1" duration="40000" mode="linear" begin="40000"/>
+                <animation property="pos" from="0.5 1" to="0.5 0" duration="40000" mode="linear" begin="40000"/>
         		<animation property="w" to="0" begin="50000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="55000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="60000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="65000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
         		<animation property="w" to="0" begin="70000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
-            </storyboard>
+        		<animation property="opacity" to="0" duration="2500" mode="easeIn" begin="77500"/>				
+             </storyboard>
 
 		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.png</path>
 		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.svg</path>

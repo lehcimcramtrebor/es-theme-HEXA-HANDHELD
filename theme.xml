@@ -59,14 +59,23 @@ By Helmic
         <lang.mdVideo>gamelist videos</lang.mdVideo>
         <lang.mdVideo lang="fr">vidéos de gamelist</lang.mdVideo>
 
+        <lang.transition>gamelist transitions</lang.transition>
+        <lang.transition lang="fr">transitions gamelist</lang.transition>
+
+        <lang.logoVisualAssistance>system logos (++ memory)</lang.logoVisualAssistance>
+        <lang.logoVisualAssistance lang="fr">logos systèmes (++ mémoire)</lang.logoVisualAssistance>
+
+        <lang.logoAnime>gamelist logos anime</lang.logoAnime>
+        <lang.logoAnime lang="fr">animer logos gamelist</lang.logoAnime>
+
         <lang.no>no</lang.no>
         <lang.no lang="fr">non</lang.no>
 
         <lang.yes>yes</lang.yes>
         <lang.yes lang="fr">oui</lang.yes>
 
-		<lang.randomArt>random marquees</lang.randomArt>
-		<lang.randomArt lang="fr">logos aléatoires</lang.randomArt>
+		<lang.randomArt>random marquees (+ memory)</lang.randomArt>
+		<lang.randomArt lang="fr">logos aléatoires (+ memory)</lang.randomArt>
 
 		<lang.ambiance>carousel ambiance (need videos)</lang.ambiance>
 		<lang.ambiance lang="fr">ambiance sonore (nécessite vidéos)</lang.ambiance>
@@ -249,24 +258,39 @@ By Helmic
     </subset>
 
 	<subset name="randomArt" displayName="${lang.randomArt}">
-		<include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
+		<include name="yes" displayName="${lang.yes}"/>
 	</subset>
  
 	<subset name="ambiance" displayName="${lang.ambiance}">
 		<include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
 	</subset>
+
+    <subset name="logoVisualAssistance" displayName="${lang.logoVisualAssistance}">
+		<include name="no" displayName="${lang.no}"/>
+        <include name="yes" displayName="${lang.yes}"/>
+    </subset>
  
-    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="detailed">
+	<subset name="transition" displayName="${lang.transition}">
+		<include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+	</subset>
+
+    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
    </subset>
   
-    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="detailed" ifSubset="mdVideo:yes">
+    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel" ifSubset="mdVideo:yes">
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
    </subset>
+
+ 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel">
+        <include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+    </subset>
 
 
 
@@ -350,6 +374,223 @@ By Helmic
 
     </view>
  
+ 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------LOGO VISUAL ASSISTANCE-------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <view name="system" ifSubset="logoVisualAssistance:yes">
+
+	<image name="logoAssistFocus" extra="true">
+		<linearSmooth>true</linearSmooth>
+		<zIndex>198</zIndex>
+		<size>1 1</size>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+		<path>./_inc/white.png</path>
+		<color>00000000</color>
+		<colorEnd>00000080</colorEnd>
+		<gradientType>vertical</gradientType>
+		<opacity>0</opacity>
+			<storyboard>
+                <animation property="opacity" from="0" to="1" duration="100" mode="linear"/>
+                <animation property="opacity" from="1" to="1" duration="150" mode="linear" begin="100"/>
+                <animation property="opacity" from="1" to="0" duration="250" mode="easeIn" begin="250"/>
+            </storyboard>
+	</image>
+
+	<image name="logoAssist" extra="true">
+		<linearSmooth>true</linearSmooth>
+		<zIndex>199</zIndex>
+		<maxSize>0.5 0.3</maxSize>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.75</pos>
+		<color>ffffff</color>
+		<opacity>0</opacity>
+
+			<storyboard>
+                <animation property="opacity" from="0" to="1" duration="75" mode="linear"/>
+                <animation property="opacity" from="1" to="1" duration="175" mode="linear" begin="75"/>
+                <animation property="opacity" from="1" to="0" duration="250" mode="easeOutQuint" begin="250"/>
+
+                <animation property="scale" from="0.9" to="1" duration="250" mode="linear"/>
+                <animation property="scale" from="1" to="2" duration="250" mode="easeOut" begin="250"/>
+            </storyboard>
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
+
+		<path>./_inc/logos/${system.theme}.png</path>
+		<path>./_inc/logos/${system.theme}.svg</path>
+		<path>./_inc/logos/${system.theme}-${lang}.png</path>
+		<path>./_inc/logos/${system.theme}-${lang}.svg</path>
+	</image>
+
+	<image name="logoAssist" region="us" extra="true">
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
+
+		<path>./_inc/logos/us/${system.theme}.png</path>
+		<path>./_inc/logos/us/${system.theme}.svg</path>
+	</image>
+
+	<image name="logoAssist" region="jp" extra="true">
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
+
+		<path>./_inc/logos/jp/${system.theme}.png</path>
+		<path>./_inc/logos/jp/${system.theme}.svg</path>
+	</image>
+
+	<image name="logoAssist" extra="true">
+
+		<path>./_inc/logos/test.png</path>
+		<path>./_inc/logos/test.svg</path>
+
+	</image>
+
+	</view>
+	
+<!-------------------------------------------------------------------END OF LOGO VISUAL ASSISTANCE--------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------LOGOS ANIME------------------------------------------------------------------------------------------>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+	<view name="basic,detailed,grid,gamecarousel" ifSubset="logoAnime:yes">
+	
+		<image name="logoAnime" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<zIndex>103</zIndex>
+			<maxSize>99 0.5</maxSize>
+			<origin>0 0.5</origin>
+			<pos>0 0</pos>
+			<color>ffffff66</color>
+			<colorEnd>ffffff66</colorEnd>
+			<opacity>1</opacity>
+			<gradientType>vertical</gradientType>
+
+			<storyboard repeatAt="1">
+                <animation property="maxSize" to="99 0.5" duration="1" mode="linear"/>
+                <animation property="reflexion" to="0.5 0.05" duration="1" mode="linear"/>
+                <animation property="opacity" from="0" to="1" duration="75" mode="linear"/>
+                <animation property="origin" from="0 0" to="1 0" duration="40000" autoreverse="true" mode="linear"/>
+                <animation property="pos" from="1 0" to="0 0" duration="40000" autoreverse="true" mode="linear"/>
+        		<animation property="w" to="0" begin="10000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="15000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="20000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="25000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="30000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="50000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="55000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="60000" duration="15" repeat="5" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="65000" duration="10" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="w" to="0" begin="70000" duration="8" repeat="2" autoreverse="true" mode="easeInOut"/>				
+            </storyboard>
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-w.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-w.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/${system.theme}-${lang}.svg</path>
+
+		<path>./_inc/logos/${system.theme}.png</path>
+		<path>./_inc/logos/${system.theme}.svg</path>
+		<path>./_inc/logos/${system.theme}-${lang}.png</path>
+		<path>./_inc/logos/${system.theme}-${lang}.svg</path>
+	</image>
+
+	<image name="logoAnime" region="us" extra="true">
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/us/${system.theme}-w.svg</path>
+
+		<path>./_inc/logos/us/${system.theme}.png</path>
+		<path>./_inc/logos/us/${system.theme}.svg</path>
+	</image>
+
+	<image name="logoAnime" region="jp" extra="true">
+
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
+		<path ifArch="windows">./../es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
+
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}.svg</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.png</path>
+		<path ifNotArch="windows">./../../../usr/share/emulationstation/themes/es-theme-carbon/art/logos/jp/${system.theme}-w.svg</path>
+
+		<path>./_inc/logos/jp/${system.theme}.png</path>
+		<path>./_inc/logos/jp/${system.theme}.svg</path>
+	</image>
+
+		<image name="logoAnime" extra="true" ifSubset="logoCustom:yes">
+		<path>./logo.png</path>
+		<path>./logo.svg</path>
+        <path ifArch="windows" ifSubset="transitionCustom:yes">./../../../../logo.png</path>
+        <path ifArch="windows" ifSubset="transitionCustom:yes">./../../../../logo.svg</path>
+        <path ifNotArch="windows" ifSubset="transitionCustom:yes">./../../logo.png</path>
+        <path ifNotArch="windows" ifSubset="transitionCustom:yes">./../../logo.svg</path>
+	</image>
+
+
+	<image name="logoAnime" extra="true">
+
+		<path>./_inc/logos/test.png</path>
+		<path>./_inc/logos/test.svg</path>
+
+	</image>
+
+	</view>
+<!----------------------------------------------------------------------END OF ANIME------------------------------------------------------------------------------------------------>
+
 	<view name="screen">
 
 		<controllerActivity name="controllerActivity">
@@ -591,7 +832,7 @@ By Helmic
 
 
 
-	<view name="basic,detailed,gamecarousel,grid">
+	<view name="basic,detailed,gamecarousel,grid" ifSubset="transition:yes">
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
@@ -1000,7 +1241,7 @@ By Helmic
 
 		<gridtile name="default">
 			<imageSizeMode>maxSize</imageSizeMode>
-			<imageColor>aaaaaaaa</imageColor>
+			<imageColor>aaaaaa</imageColor>
 		</gridtile>
 	
 		<gridtile name="selected">
@@ -1061,7 +1302,7 @@ By Helmic
 
 		<gridtile name="default">
 			<imageSizeMode>maxSize</imageSizeMode>
-			<imageColor>aaaaaaaa</imageColor>
+			<imageColor>aaaaaa</imageColor>
 		</gridtile>
 	
 		<gridtile name="selected">
@@ -1125,7 +1366,7 @@ By Helmic
 
 
 		<gridtile name="default">
-			<imageColor>ddddddaa</imageColor>
+			<imageColor>aaaaaa</imageColor>
 			<reflexion>0.1 0</reflexion>	  
 			<imageSizeMode>maxSize</imageSizeMode>
 		</gridtile>

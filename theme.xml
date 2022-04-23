@@ -107,6 +107,9 @@ By Helmic
 		<lang.original>respected</lang.original>
 		<lang.original lang="fr">respecté</lang.original>
 
+		<lang.regionChoice>allow region settings</lang.regionChoice>
+		<lang.regionChoice lang="fr">autoriser le paramètre région</lang.regionChoice>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -210,6 +213,11 @@ By Helmic
 
 
 
+    <subset name="regionChoice" displayName="${lang.regionChoice}" appliesTo="system,basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
+		<include name="yes" displayName="${lang.yes}"/>
+        <include name="no" displayName="${lang.no}"/>
+    </subset>
+
  
 	<subset name="ambiance" displayName="${lang.ambiance}">
 		<include name="yes" displayName="${lang.yes}"/>
@@ -276,17 +284,17 @@ By Helmic
 		<include name="no" displayName="${lang.no}"/>
 	</subset>
 
-    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel">
+    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
    </subset>
   
-    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel" ifSubset="mdVideo:yes">
+    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel" ifSubset="mdVideo:yes">
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
    </subset>
 
- 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel">
+ 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
         <include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
     </subset>
@@ -530,12 +538,12 @@ By Helmic
 
         <image name="logo" region="eu"></image>
 
-        <image name="logo" region="us">
+        <image name="logo" region="us" ifSubset="regionChoice:yes">
             <path>./${system.theme}/us/color.png</path>
         </image>
 
 
-        <image name="logo" region="jp">
+        <image name="logo" region="jp" ifSubset="regionChoice:yes">
             <path>./${system.theme}/jp/color.png</path>
         </image>
 
@@ -736,6 +744,15 @@ By Helmic
                 <animation property="opacity" to="0" duration="350" mode="linear" begin="750"/>
              </storyboard>
        </image>
+
+        <image name="transitionLogo" region="us" ifSubset="regionChoice:yes">
+            <path>./${system.theme}/us/color.png</path>
+        </image>
+
+
+        <image name="transitionLogo" region="jp" ifSubset="regionChoice:yes">
+            <path>./${system.theme}/jp/color.png</path>
+        </image>
 
 	</view>
 

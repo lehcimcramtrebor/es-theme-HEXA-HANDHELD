@@ -443,7 +443,7 @@ By Helmic
 
 	<image name="logoAssist" extra="true" ifSubset="logoVisualAssistance:visualLogo">
 
-		<maxSize>0.7 0.3</maxSize>
+		<maxSize>0.6 0.25</maxSize>
 		<linearSmooth>true</linearSmooth>
 		<zIndex>199</zIndex>
 		<origin>0.5 0.5</origin>

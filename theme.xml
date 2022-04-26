@@ -66,7 +66,7 @@ By Helmic
         <lang.logoVisualAssistance lang="fr">assistance visuelle systèmes</lang.logoVisualAssistance>
 
         <lang.visualLogo>logos (+ resources)</lang.visualLogo>
-        <lang.visualLogo lang="fr">logos (+ ressources)</lang.visualLogo>
+        <lang.visualLogo lang="fr">logos (+ gourmand)</lang.visualLogo>
 
         <lang.visualName>text</lang.visualName>
         <lang.visualName lang="fr">texte</lang.visualName>
@@ -78,7 +78,7 @@ By Helmic
         <lang.animeName lang="fr">texte</lang.animeName>
 
         <lang.animeLogo>logos (+ resources)</lang.animeLogo>
-        <lang.animeLogo lang="fr">logos (+ ressources)</lang.animeLogo>
+        <lang.animeLogo lang="fr">logos (+ gourmand)</lang.animeLogo>
 
         <lang.no>no</lang.no>
         <lang.no lang="fr">non</lang.no>
@@ -86,7 +86,7 @@ By Helmic
         <lang.yes>yes</lang.yes>
         <lang.yes lang="fr">oui</lang.yes>
 
-		<lang.randomArt>random marquees (+ power)</lang.randomArt>
+		<lang.randomArt>random marquees (+ resources)</lang.randomArt>
 		<lang.randomArt lang="fr">logos aléatoires (+ gourmand)</lang.randomArt>
 
 		<lang.ambiance>carousel ambiance (need videos)</lang.ambiance>
@@ -287,8 +287,8 @@ By Helmic
 	</subset>
 
     <subset name="logoVisualAssistance" displayName="${lang.logoVisualAssistance}">
-        <include name="visualLogo" displayName="${lang.visualLogo}"/>
 		<include name="visualName" displayName="${lang.visualName}"/>
+        <include name="visualLogo" displayName="${lang.visualLogo}"/>
     </subset>
  
 	<subset name="transition" displayName="${lang.transition}">

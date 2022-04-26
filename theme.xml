@@ -248,21 +248,6 @@ By Helmic
    </subset>
 
     <subset name="wall" displayName="${lang.wall}">
-		<include name="wallDefault" displayName="${lang.wallDefault}">./_inc/wallpapers/wall.xml</include>
-		<include name="wallBrushedPlate" displayName="${lang.wallBrushedPlate}">./_inc/wallpapers/wallBrushedPlate.xml</include>
-        <include name="wallPlates" displayName="${lang.wallPlates}">./_inc/wallpapers/wallPlates.xml</include>
-        <include name="wallStainBroke" displayName="${lang.wallStainBroke}">./_inc/wallpapers/wallStainBroke.xml</include>
-        <include name="wallSteelX" displayName="${lang.wallSteelX}">./_inc/wallpapers/wallSteelX.xml</include>
-        <include name="wallDiagonalPlates" displayName="${lang.wallDiagonalPlates}">./_inc/wallpapers/wallDiagonalPlates.xml</include>
-        <include name="wallDiagonalPlates2" displayName="${lang.wallDiagonalPlates2}">./_inc/wallpapers/wallDiagonalPlates2.xml</include>
-		<include name="wallLight" displayName="${lang.wallLight}">./_inc/wallpapers/wallLight.xml</include>
-		<include name="wallDark" displayName="${lang.wallDark}">./_inc/wallpapers/wallDark.xml</include>
-        <include name="wallFlatGrey" displayName="${lang.wallFlatGrey}">./_inc/wallpapers/wallFlatGrey.xml</include>
-        <include name="wallFlatDark" displayName="${lang.wallFlatDark}">./_inc/wallpapers/wallFlatDark.xml</include>
-        <include name="wallColorBlue" displayName="${lang.wallColorBlue}">./_inc/wallpapers/wallColorBlue.xml</include>
-        <include name="wallColorGreen" displayName="${lang.wallColorGreen}">./_inc/wallpapers/wallColorGreen.xml</include>
-        <include name="wallColorRed" displayName="${lang.wallColorRed}">./_inc/wallpapers/wallColorRed.xml</include>
-        <include name="wallColorPurple" displayName="${lang.wallColorPurple}">./_inc/wallpapers/wallColorPurple.xml</include>
         <include name="wallColorOcean" displayName="${lang.wallColorOcean}">./_inc/wallpapers/wallColorOcean.xml</include>
         <include name="wallStain" displayName="${lang.wallStain}">./_inc/wallpapers/wallStain.xml</include>
         <include name="wallAlu" displayName="${lang.wallAlu}">./_inc/wallpapers/wallAlu.xml</include>
@@ -279,6 +264,21 @@ By Helmic
         <include name="wallSynthwave" displayName="${lang.wallSynthwave}">./_inc/wallpapers/wallSynthwave.xml</include>
         <include name="wallSynthwave2" displayName="${lang.wallSynthwave2}">./_inc/wallpapers/wallSynthwave2.xml</include>
         <include name="wallSynthwave3" displayName="${lang.wallSynthwave3}">./_inc/wallpapers/wallSynthwave3.xml</include>
+		<include name="wallDefault" displayName="${lang.wallDefault}">./_inc/wallpapers/wall.xml</include>
+		<include name="wallBrushedPlate" displayName="${lang.wallBrushedPlate}">./_inc/wallpapers/wallBrushedPlate.xml</include>
+        <include name="wallPlates" displayName="${lang.wallPlates}">./_inc/wallpapers/wallPlates.xml</include>
+        <include name="wallStainBroke" displayName="${lang.wallStainBroke}">./_inc/wallpapers/wallStainBroke.xml</include>
+        <include name="wallSteelX" displayName="${lang.wallSteelX}">./_inc/wallpapers/wallSteelX.xml</include>
+        <include name="wallDiagonalPlates" displayName="${lang.wallDiagonalPlates}">./_inc/wallpapers/wallDiagonalPlates.xml</include>
+        <include name="wallDiagonalPlates2" displayName="${lang.wallDiagonalPlates2}">./_inc/wallpapers/wallDiagonalPlates2.xml</include>
+		<include name="wallLight" displayName="${lang.wallLight}">./_inc/wallpapers/wallLight.xml</include>
+		<include name="wallDark" displayName="${lang.wallDark}">./_inc/wallpapers/wallDark.xml</include>
+        <include name="wallFlatGrey" displayName="${lang.wallFlatGrey}">./_inc/wallpapers/wallFlatGrey.xml</include>
+        <include name="wallFlatDark" displayName="${lang.wallFlatDark}">./_inc/wallpapers/wallFlatDark.xml</include>
+        <include name="wallColorBlue" displayName="${lang.wallColorBlue}">./_inc/wallpapers/wallColorBlue.xml</include>
+        <include name="wallColorGreen" displayName="${lang.wallColorGreen}">./_inc/wallpapers/wallColorGreen.xml</include>
+        <include name="wallColorRed" displayName="${lang.wallColorRed}">./_inc/wallpapers/wallColorRed.xml</include>
+        <include name="wallColorPurple" displayName="${lang.wallColorPurple}">./_inc/wallpapers/wallColorPurple.xml</include>
     </subset>
 
 	<subset name="randomArt" displayName="${lang.randomArt}">

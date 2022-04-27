@@ -372,15 +372,17 @@ By Helmic
             <fontSize>0.031</fontSize>
             <color>aaaaaa</color>
             <separatorColor>161616</separatorColor>
-            <selectorColor>${overlay.colorset}33</selectorColor>
+            <selectorColor>${overlay.colorset}</selectorColor>
             <selectedColor>ffffff</selectedColor>		
-            <selectedColor ifSubset="overlayColorset:yellow">202020</selectedColor>		
-            <selectorColor ifSubset="overlayColorset:noColor">202020</selectorColor>
+            <selectedColor ifSubset="overlayColorset:yellow">000000</selectedColor>		
+            <selectedColor ifSubset="overlayColorset:noColor">000000</selectedColor>		
+            <selectorColor ifSubset="overlayColorset:noColor">${overlay.colorset}</selectorColor>
         </menuText>
 	
         <menuTextSmall name="menutextsmall">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <fontSize>0.031</fontSize>
+            <fontSize>0.026</fontSize>
+			<color>ffffff</color>
         </menuTextSmall>
 
         <menuBackground name="menubg">
@@ -397,6 +399,17 @@ By Helmic
             <backgroundColor>00000000</backgroundColor>
             <lineSpacing>1.2</lineSpacing>
         </menuGroup>	
+
+		<menuTextEdit name="menutextedit">
+			<inactive>./_inc/textinput_ninepatch.png</inactive>
+			<active>./_inc/textinput_ninepatch_active.png</active>
+		</menuTextEdit>
+		
+		<menuButton name="menubutton">
+			<path>./_inc/button.png</path>
+			<filledPath>./_inc/button_filled.png</filledPath>
+			<cornerSize>8 8</cornerSize>
+		</menuButton>
 
 
     </view>

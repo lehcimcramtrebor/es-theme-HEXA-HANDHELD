@@ -357,14 +357,14 @@ By Helmic
 
         <menuText name="menutitle">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>cccccc</color>
+            <fontSize>0.028</fontSize>
+            <color>${overlay.colorset}</color>
         </menuText>
 
         <menuText name="menufooter">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
-            <color>aaaaaa</color>
+            <fontSize>0.026</fontSize>
+            <color>${overlay.colorset}</color>
         </menuText>
 
         <menuText name="menutext">
@@ -372,7 +372,7 @@ By Helmic
             <fontSize>0.032</fontSize>
             <color>aaaaaa</color>
             <separatorColor>161616</separatorColor>
-            <selectorColor>${overlay.colorset}</selectorColor>
+            <selectorColor>${overlay.colorset}33</selectorColor>
             <selectedColor>ffffff</selectedColor>		
             <selectedColor ifSubset="overlayColorset:yellow">202020</selectedColor>		
             <selectorColor ifSubset="overlayColorset:noColor">202020</selectorColor>
@@ -392,7 +392,7 @@ By Helmic
         <menuGroup name="menugroup">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.032</fontSize>
-            <color>aaaaaa</color>
+            <color>${overlay.colorset}</color>
             <separatorColor>00000000</separatorColor>
             <backgroundColor>303030</backgroundColor>
             <lineSpacing>1.2</lineSpacing>

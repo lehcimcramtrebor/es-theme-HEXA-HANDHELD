@@ -381,7 +381,7 @@ By Helmic
 	
         <menuTextSmall name="menutextsmall">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <fontSize>0.026</fontSize>
+            <fontSize>0.03</fontSize>
 			<color>ffffff</color>
         </menuTextSmall>
 

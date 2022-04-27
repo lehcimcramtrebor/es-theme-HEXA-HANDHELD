@@ -891,9 +891,9 @@ By Helmic
 			<h>0.1</h>
 			<storyboard>
 				<animation property="opacity" from="0" to="1" duration="100" mode="easeIn"/>
-				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="1000"/>
-				<animation property="offsetX" from="0.02" to="0" duration="1000" mode="linear" begin="0"/>
-				<animation property="offsetX" from="0" to="-2" duration="300" mode="easeIn" begin="1000"/>
+				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="850"/>
+				<animation property="offsetX" from="0.02" to="0" duration="850" mode="linear" begin="0"/>
+				<animation property="offsetX" from="0" to="-2" duration="300" mode="easeIn" begin="850"/>
 			</storyboard>
 		</text>
 
@@ -914,9 +914,9 @@ By Helmic
 			<h>0.1</h>
 			<storyboard>
 				<animation property="opacity" from="0" to="1" duration="100" mode="easeIn"/>
-				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="1000"/>
-				<animation property="offsetX" from="-0.02" to="0" duration="1000" mode="linear" begin="0"/>
-				<animation property="offsetX" from="0" to="2" duration="300" mode="easeIn" begin="1000"/>
+				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="850"/>
+				<animation property="offsetX" from="-0.02" to="0" duration="850" mode="linear" begin="0"/>
+				<animation property="offsetX" from="0" to="2" duration="300" mode="easeIn" begin="850"/>
 			</storyboard>
 		</text>
 

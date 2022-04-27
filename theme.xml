@@ -122,6 +122,15 @@ By Helmic
 		<lang.regionChoice>allow region settings</lang.regionChoice>
 		<lang.regionChoice lang="fr">autoriser le paramètre région</lang.regionChoice>
 
+		<lang.retroachievements>retroachievements</lang.retroachievements>
+		<lang.retroachievements lang="fr">succès</lang.retroachievements>
+
+		<lang.cheevosFalse>not available</lang.cheevosFalse>
+		<lang.cheevosFalse lang="fr">non disponibles</lang.cheevosFalse>
+
+		<lang.releasedYear>year</lang.releasedYear>
+		<lang.releasedYear lang="fr">année</lang.releasedYear>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -422,7 +431,7 @@ By Helmic
 
 	<text name="logoAssist" extra="true" ifSubset="logoVisualAssistance:visualName">
         <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-		<fontSize>0.05</fontSize>
+		<fontSize>0.046</fontSize>
 		<forceUppercase>true</forceUppercase>
 		<text>${system.fullName}</text>
 		<size>0.90 1</size>
@@ -847,9 +856,9 @@ By Helmic
             <path>./default/color-${lang}.png</path>
             <path>./${system.theme}/color.png</path>
             <path>./${system.theme}/color-${lang}.png</path>
-            <maxSize>1 0.92962963</maxSize>
-            <pos>0.5 0.5</pos>
-            <origin>0.5 0.5</origin>
+            <maxSize>1 0.8</maxSize>
+            <pos>0.5 0</pos>
+            <origin>0.5 0</origin>
             <color>ffffff</color>
             <opacity>1</opacity>
             <zIndex>1001</zIndex>
@@ -866,6 +875,50 @@ By Helmic
         <image name="transitionLogo" region="jp" ifSubset="regionChoice:yes">
             <path>./${system.theme}/jp/color.png</path>
         </image>
+
+		<text name="transitionText1" extra="true">
+			<text>${system.fullName}</text>
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>dddddd</color>
+            <glowColor>00000080</glowColor>
+            <fontSize>0.03</fontSize>
+            <pos>0.5 0.82</pos>
+            <origin>0.5 0.5</origin>
+            <zIndex>1002</zIndex>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.9</w>
+			<h>0.1</h>
+			<storyboard>
+				<animation property="opacity" from="0" to="1" duration="100" mode="easeIn"/>
+				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="1000"/>
+				<animation property="offsetX" from="0.02" to="0" duration="1000" mode="linear" begin="0"/>
+				<animation property="offsetX" from="0" to="-2" duration="300" mode="easeIn" begin="1000"/>
+			</storyboard>
+		</text>
+
+		<text name="transitionText2" extra="true">
+			<text>${cheevos.username}</text>
+			<text ifCheevos="false">${lang.retroachievements} ${lang.cheevosFalse}</text>
+			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>dddddd</color>
+            <glowColor>00000080</glowColor>
+            <fontSize>0.036</fontSize>
+            <fontSize ifCheevos="false">0.026</fontSize>
+            <pos>0.5 0.88</pos>
+            <origin>0.5 0.5</origin>
+            <zIndex>1002</zIndex>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.9</w>
+			<h>0.1</h>
+			<storyboard>
+				<animation property="opacity" from="0" to="1" duration="100" mode="easeIn"/>
+				<animation property="opacity" to="0" duration="150" mode="easeIn" begin="1000"/>
+				<animation property="offsetX" from="-0.02" to="0" duration="1000" mode="linear" begin="0"/>
+				<animation property="offsetX" from="0" to="2" duration="300" mode="easeIn" begin="1000"/>
+			</storyboard>
+		</text>
 
 	</view>
 
@@ -896,6 +949,35 @@ By Helmic
  		</textlist>
 
 	</view>
+
+
+	<view name="detailed,grid,gamecarousel">
+
+        <video name="md_video" ifSubset="mdVideo:yes">
+			<showSnapshotNoVideo>false</showSnapshotNoVideo>
+			<showSnapshotDelay>false</showSnapshotDelay>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+            <delay>1</delay>
+            <effect>none</effect>
+            <zIndex>200</zIndex>
+            <color>ffffff</color>
+			<size ifSubset="mdVideoRatio:stretched">1 1</size>
+			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
+		</video>
+
+		<rating name="md_rating">
+            <color>ffff00</color>
+            <x>0.445</x>
+            <origin>0 0.5</origin>
+            <zIndex>110</zIndex>
+			<w>0.5</w>
+            <h>0.036</h>
+			<opacity>0</opacity>
+		</rating>
+	
+	</view>
+	
 	
 	<view name="detailed">
 
@@ -918,19 +1000,6 @@ By Helmic
 			<zIndex>113</zIndex>
 			<lines>3</lines>
  			</textlist>
-
-        <video name="md_video" ifSubset="mdVideo:yes">
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-            <delay>1</delay>
-            <effect>none</effect>
-            <zIndex>200</zIndex>
-            <color>ffffff</color>
-			<size ifSubset="mdVideoRatio:stretched">1 1</size>
-			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
-		</video>
 
 		<image name="md_thumbnail">
             <linearSmooth>true</linearSmooth>
@@ -964,14 +1033,7 @@ By Helmic
 		</image>
 
 		<rating name="md_rating">
-            <color>ffff00</color>
-            <x>0.445</x>
             <y>0.63</y>
-            <origin>0 0.5</origin>
-            <zIndex>110</zIndex>
-			<w>0.5</w>
-            <h>0.036</h>
-			<opacity>0</opacity>
 		</rating>
 
 	</view>
@@ -1024,14 +1086,7 @@ By Helmic
     </image>
 
 		<rating name="md_rating">
-            <color>ffff00</color>
-            <x>0.445</x>
             <y>0.94</y>
-            <origin>0 0.5</origin>
-            <zIndex>110</zIndex>
-			<w>0.5</w>
-            <h>0.036</h>
-			<opacity>0</opacity>
 		</rating>
 
 		<text name="md_name">
@@ -1066,19 +1121,6 @@ By Helmic
                 <animation property="opacity" to="0" duration="1" mode="easeIn"/>
             </storyboard>
 		</text>
-
-        <video name="md_video" ifSubset="mdVideo:yes">
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-            <delay>1</delay>
-            <effect>none</effect>
-            <zIndex>200</zIndex>
-            <color>ffffff</color>
-			<size ifSubset="mdVideoRatio:stretched">1 1</size>
-			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
-		</video>
 	
 	</view>
 
@@ -1104,29 +1146,9 @@ By Helmic
             <color>dddddd</color>
             <glowColor>12121233</glowColor>
         </text>     
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-			<showSnapshotNoVideo>false</showSnapshotNoVideo>
-			<showSnapshotDelay>false</showSnapshotDelay>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-            <delay>1</delay>
-            <effect>none</effect>
-            <zIndex>200</zIndex>
-            <color>ffffff</color>
-			<size ifSubset="mdVideoRatio:stretched">1 1</size>
-			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
-		</video>
 
 		<rating name="md_rating">
-            <color>ffff00</color>
-            <x>0.445</x>
             <y>0.025</y>
-            <origin>0 0.5</origin>
-            <zIndex>110</zIndex>
-			<w>0.5</w>
-            <h>0.036</h>
-			<opacity>0</opacity>
 		</rating>
 	
 	</view>

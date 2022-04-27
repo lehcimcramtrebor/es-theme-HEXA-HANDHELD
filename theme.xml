@@ -369,7 +369,7 @@ By Helmic
 
         <menuText name="menutext">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
+            <fontSize>0.031</fontSize>
             <color>aaaaaa</color>
             <separatorColor>161616</separatorColor>
             <selectorColor>${overlay.colorset}33</selectorColor>
@@ -380,7 +380,7 @@ By Helmic
 	
         <menuTextSmall name="menutextsmall">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <fontSize>0.032</fontSize>
+            <fontSize>0.031</fontSize>
         </menuTextSmall>
 
         <menuBackground name="menubg">
@@ -391,10 +391,10 @@ By Helmic
 
         <menuGroup name="menugroup">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <fontSize>0.032</fontSize>
+            <fontSize>0.031</fontSize>
             <color>${overlay.colorset}</color>
             <separatorColor>00000000</separatorColor>
-            <backgroundColor>303030</backgroundColor>
+            <backgroundColor>00000000</backgroundColor>
             <lineSpacing>1.2</lineSpacing>
         </menuGroup>	
 

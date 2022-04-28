@@ -86,6 +86,9 @@ By Helmic
         <lang.yes>yes</lang.yes>
         <lang.yes lang="fr">oui</lang.yes>
 
+        <lang.cut>cut sound too</lang.cut>
+        <lang.cut lang="fr">couper aussi le son</lang.cut>
+
 		<lang.randomArt>random marquees (+ resources)</lang.randomArt>
 		<lang.randomArt lang="fr">logos aléatoires (+ gourmand)</lang.randomArt>
 
@@ -308,6 +311,7 @@ By Helmic
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
+        <include name="cut" displayName="${lang.cut}"/>
    </subset>
   
     <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel" ifSubset="mdVideo:yes">
@@ -966,7 +970,7 @@ By Helmic
 
 	<view name="detailed,grid,gamecarousel">
 
-        <video name="md_video" ifSubset="mdVideo:yes">
+        <video name="md_video" ifSubset="mdVideo:yes|no">
 			<showSnapshotNoVideo>false</showSnapshotNoVideo>
 			<showSnapshotDelay>false</showSnapshotDelay>
 			<origin>0.5 0.5</origin>
@@ -977,6 +981,7 @@ By Helmic
             <color>ffffff</color>
 			<size ifSubset="mdVideoRatio:stretched">1 1</size>
 			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
+			<opacity>0</opacity>
 		</video>
 
 		<rating name="md_rating">
@@ -1049,6 +1054,32 @@ By Helmic
             <y>0.63</y>
 		</rating>
 
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="2500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
+		</video>
+		
 	</view>
 
 	<view name="grid">
@@ -1134,6 +1165,30 @@ By Helmic
                 <animation property="opacity" to="0" duration="1" mode="easeIn"/>
             </storyboard>
 		</text>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="2500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+ 
+           </storyboard>
+		
+		</video>
 	
 	</view>
 
@@ -1163,6 +1218,32 @@ By Helmic
 		<rating name="md_rating">
             <y>0.025</y>
 		</rating>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="2500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetY" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetY" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
+		</video>
 	
 	</view>
 
@@ -1225,8 +1306,30 @@ By Helmic
 
 		</image>
 
-        <video name="md_video" ifSubset="mdVideo:yes">
-            <delay>3.5</delay>
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="4000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="4000"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
 		</video>
 	
 	</customView>
@@ -1262,9 +1365,31 @@ By Helmic
             </storyboard>
 
 		</image>
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-            <delay>3.5</delay>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="4000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="4000"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetY" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetY" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
 		</video>
 
 	</customView>
@@ -1323,9 +1448,29 @@ By Helmic
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>
             </storyboard>
 		</image>
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-            <delay>3.5</delay>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="4000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="4000"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+ 
+           </storyboard>
+		
 		</video>
 
 	</customView>
@@ -1380,9 +1525,29 @@ By Helmic
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>
             </storyboard>
 		</image>
-  
-        <video name="md_video" ifSubset="mdVideo:yes">
-            <delay>3.5</delay>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="4000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="4000"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+ 
+           </storyboard>
+		
 		</video>
 
 	</customView>
@@ -1435,6 +1600,32 @@ By Helmic
 		<text name="md_name">
            <pos>0.5 0.875</pos>
 		</text>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="2500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
+		</video>
 
 	</customView>
 

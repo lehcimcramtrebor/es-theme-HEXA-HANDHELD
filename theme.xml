@@ -309,8 +309,8 @@ By Helmic
 	</subset>
 
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
-        <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
+        <include name="yes" displayName="${lang.yes}"/>
         <include name="cut" displayName="${lang.cut}"/>
    </subset>
   

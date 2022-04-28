@@ -718,133 +718,56 @@ By Helmic
 
 <!-----------------------------------------------------------------------RANDOM ARTS----------------------------------------------------------------------------------------------->
 
-		<image name="randomArt01,randomArt02,randomArt03,randomArt04,randomArt05,randomArt06,randomArt07,randomArt08,randomArt09,randomArt10,randomArt11,randomArt12,randomArt13" extra="true" ifSubset="randomArt:yes">
+		<image name="randomArt01,randomArt02" extra="true" ifSubset="randomArt:yes">
 			<linearSmooth>true</linearSmooth>
-            <maxSize>0.3 0.3</maxSize>
+            <maxSize>0.4 0.4</maxSize>
             <pos>0.99 0.95</pos>
 			<origin>1 1</origin>
 			<zIndex>115</zIndex>
 			<path>{random:marquee}</path>
-			<color>ffffff</color>
+			<color>000000</color>
 			<offsetX>0.31</offsetX>
 		</image>
  
 		<image name="randomArt01" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="4250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="4250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="5750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="24000" mode="linear" begin="6000"/>
+			<storyboard repeatAt="10000">
+                <animation property="offsetX" from="0.41" to="0.41" duration="5000" mode="linear"/>
+                <animation property="offsetX" from="0.41" to="0" duration="250" mode="easeOut" begin="5000"/>
+                <animation property="color" to="ffffff" duration="250" mode="easeOut" begin="5000"/>
+                <animation property="offsetX" from="0" to="0.41" duration="250" mode="easeIn" begin="9750"/>
+                <animation property="color" to="000000" duration="250" mode="easeIn" begin="9750"/>
+                <animation property="offsetX" from="0.41" to="0.41" duration="5000" mode="linear" begin="10000"/>
+                <animation property="offsetX" from="0.41" to="0" duration="250" mode="easeOut" begin="15000"/>
+                <animation property="color" to="ffffff" duration="250" mode="easeOut" begin="15000"/>
+                <animation property="offsetX" from="0" to="0.41" duration="250" mode="easeIn" begin="19750"/>
+                <animation property="color" to="000000" duration="250" mode="easeIn" begin="19750"/>
+
+        		<animation property="color" to="00000000" begin="5500" duration="10" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="7000" duration="20" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="8000" duration="10" repeat="5" autoreverse="true" mode="easeInOut"/>				
+
+        		<animation property="color" to="00000000" begin="15500" duration="10" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="17000" duration="20" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="18000" duration="10" repeat="5" autoreverse="true" mode="easeInOut"/>				
             </storyboard>
 		</image>
  
 		<image name="randomArt02" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="6250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="6250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="7750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="22000" mode="linear" begin="8000"/>
-            </storyboard>
-		</image>
-  
-		<image name="randomArt03" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="8250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="8250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="9750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="20000" mode="linear" begin="10000"/>
-            </storyboard>
-		</image>
-  
-		<image name="randomArt04" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="10250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="10250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="11750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="18000" mode="linear" begin="12000"/>
-            </storyboard>
-		</image>
-  
-		<image name="randomArt05" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="12250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="12250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="13750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="16000" mode="linear" begin="14000"/>
-            </storyboard>
-		</image>
-   
-		<image name="randomArt06" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="14250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="14250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="15750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="14000" mode="linear" begin="16000"/>
-            </storyboard>
-		</image>
-   
-		<image name="randomArt07" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="16250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="16250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="17750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="12000" mode="linear" begin="18000"/>
-            </storyboard>
-		</image>
-    
-		<image name="randomArt08" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="18250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="18250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="19750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="10000" mode="linear" begin="20000"/>
-            </storyboard>
-		</image>
-     
-		<image name="randomArt09" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="20250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="20250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="21750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="8000" mode="linear" begin="22000"/>
-            </storyboard>
-		</image>
-     
-		<image name="randomArt10" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="22250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="22250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="23750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="6000" mode="linear" begin="24000"/>
-            </storyboard>
-		</image>
-      
-		<image name="randomArt11" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="24250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="24250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="25750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="4000" mode="linear" begin="26000"/>
-            </storyboard>
-		</image>
-      
-		<image name="randomArt12" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="26250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="26250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="27750"/>
-                <animation property="offsetX" from="0.31" to="0.31" duration="2000" mode="linear" begin="28000"/>
-            </storyboard>
-		</image>
-       
-		<image name="randomArt13" extra="true">
-			<storyboard repeatAt="1">
-                <animation property="offsetX" from="0.31" to="0.31" duration="28250" mode="linear"/>
-                <animation property="offsetX" from="0.31" to="0" duration="250" mode="easeOut" begin="28250"/>
-                <animation property="offsetX" from="0" to="0.31" duration="250" mode="easeIn" begin="29750"/>
-            </storyboard>
-		</image>
+			<storyboard repeatAt="10000">
+                <animation property="offsetX" from="0.41" to="0.41" duration="10000" mode="linear"/>
+                <animation property="offsetX" from="0.41" to="0" duration="250" mode="easeOut" begin="10000"/>
+                <animation property="color" to="ffffff" duration="250" mode="easeOut" begin="10000"/>
+                <animation property="offsetX" from="0" to="0.41" duration="250" mode="easeIn" begin="14750"/>
+                <animation property="color" to="000000" duration="250" mode="easeIn" begin="14750"/>
+                <animation property="offsetX" from="0.41" to="0.41" duration="5000" mode="linear" begin="15000"/>
 
+        		<animation property="color" to="00000000" begin="10500" duration="10" repeat="2" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="12000" duration="20" repeat="3" autoreverse="true" mode="easeInOut"/>				
+        		<animation property="color" to="00000000" begin="13000" duration="10" repeat="5" autoreverse="true" mode="easeInOut"/>				
+
+            </storyboard>
+		</image>
+  
 	</view>
 
 

@@ -309,8 +309,8 @@ By Helmic
 	</subset>
 
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
-        <include name="no" displayName="${lang.no}"/>
         <include name="yes" displayName="${lang.yes}"/>
+        <include name="no" displayName="${lang.no}"/>
         <include name="cut" displayName="${lang.cut}"/>
    </subset>
   
@@ -909,13 +909,92 @@ By Helmic
 
 		<rating name="md_rating">
             <color>ffff00</color>
-            <x>0.445</x>
+            <x>0.435</x>
             <origin>0 0.5</origin>
             <zIndex>110</zIndex>
 			<w>0.5</w>
             <h>0.036</h>
 			<opacity>0</opacity>
 		</rating>
+		
+		<image name="md_savestate,md_nosavestate">
+			<origin>0.5 0.5</origin>
+			<path>./_inc/savestate.png</path>
+			<path>./_inc/savestate-${lang}.png</path>
+			<x>0.3</x>
+			<maxSize>1 0.0333333333333333</maxSize>
+			<color>ffffff</color>
+			<zIndex>113</zIndex>
+		</image>
+
+		<image name="ghost_savestate" extra="true">
+			<origin>0.5 0.5</origin>
+			<path>./_inc/savestate.png</path>
+			<path>./_inc/savestate-${lang}.png</path>
+			<x>0.3</x>
+			<maxSize>1 0.0333333333333333</maxSize>
+			<color>80808066</color>
+			<zIndex>112</zIndex>
+			<storyboard event="open">
+                <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+            </storyboard>
+			<storyboard event="activateNext">
+                 <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" from="0" to="0" duration="1" mode="easeIn"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" from="0" to="0" duration="1" mode="easeIn"/>
+            </storyboard>
+		</image>
+  
+		<image name="md_nosavestate">
+			<color>00000000</color>
+		</image>
+	
+		<image name="md_cheevos,md_notcheevos">
+			<origin>0.5 0.5</origin>
+			<path>./_inc/achievements.png</path>
+			<path>./_inc/achievements-${lang}.png</path>
+			<x>0.7</x>
+			<maxSize>1 0.0333333333333333</maxSize>
+			<color>ffffff</color>
+			<zIndex>113</zIndex>
+		</image>
+ 		
+		<image name="ghost_cheevos" extra="true">
+			<origin>0.5 0.5</origin>
+			<path>./_inc/achievements.png</path>
+			<path>./_inc/achievements-${lang}.png</path>
+			<x>0.7</x>
+			<maxSize>1 0.0333333333333333</maxSize>
+			<color>80808066</color>
+			<zIndex>112</zIndex>
+			<storyboard event="open">
+                <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+            </storyboard>
+			<storyboard event="activateNext">
+                 <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" from="0" to="0" duration="1" mode="easeIn"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" from="0" to="0" duration="1" mode="easeIn"/>
+            </storyboard>
+		</image>
+
+		<image name="md_notcheevos">
+			<color>00000000</color>
+		</image> 
+	
 	
 	</view>
 	
@@ -976,6 +1055,14 @@ By Helmic
 		<rating name="md_rating">
             <y>0.63</y>
 		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+		<y>0.6325</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+		<y>0.6325</y>
+		</image>
 
 		<video name="md_video" ifSubset="mdVideo:yes">
 
@@ -1053,8 +1140,16 @@ By Helmic
     </image>
 
 		<rating name="md_rating">
-            <y>0.94</y>
+            <y>0.9415</y>
 		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+		<y>0.944</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+		<y>0.944</y>
+		</image>
 
 		<text name="md_name">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
@@ -1141,6 +1236,14 @@ By Helmic
 		<rating name="md_rating">
             <y>0.025</y>
 		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+		<y>0.0275</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+		<y>0.0275</y>
+		</image>
 
 		<video name="md_video" ifSubset="mdVideo:yes">
 
@@ -1517,8 +1620,16 @@ By Helmic
 		</ninepatch>
 
 		<rating name="md_rating">
-            <y>0.91</y>
+            <y>0.92</y>
 		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+		<y>0.9225</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+		<y>0.9225</y>
+		</image>
 
 		<text name="md_name">
            <pos>0.5 0.875</pos>

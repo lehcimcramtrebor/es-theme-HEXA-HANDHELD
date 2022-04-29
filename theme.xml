@@ -923,7 +923,7 @@ By Helmic
 			<path>./_inc/savestate-${lang}.png</path>
 			<x>0.3</x>
 			<maxSize>1 0.0333333333333333</maxSize>
-			<color>ffffff</color>
+			<color>ffff00</color>
 			<zIndex>113</zIndex>
 		</image>
 
@@ -956,13 +956,19 @@ By Helmic
 			<color>00000000</color>
 		</image>
 	
+		<image name="md_savestate">
+			<storyboard>
+                <animation property="color" from="ffff00" to="808000" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
+            </storyboard>
+		</image>
+	
 		<image name="md_cheevos,md_notcheevos">
 			<origin>0.5 0.5</origin>
 			<path>./_inc/achievements.png</path>
 			<path>./_inc/achievements-${lang}.png</path>
 			<x>0.7</x>
 			<maxSize>1 0.0333333333333333</maxSize>
-			<color>ffffff</color>
+			<color>ffff00</color>
 			<zIndex>113</zIndex>
 		</image>
  		
@@ -995,6 +1001,11 @@ By Helmic
 			<color>00000000</color>
 		</image> 
 	
+		<image name="md_cheevos">
+			<storyboard>
+                <animation property="color" from="ffff00" to="808000" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
+            </storyboard>
+		</image> 
 	
 	</view>
 	

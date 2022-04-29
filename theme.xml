@@ -905,6 +905,7 @@ By Helmic
 			<size ifSubset="mdVideoRatio:stretched">1 1</size>
 			<maxSize ifSubset="mdVideoRatio:original">1 1</maxSize>
 			<opacity>0</opacity>
+			<loops>0</loops>
 		</video>
 
 		<rating name="md_rating">

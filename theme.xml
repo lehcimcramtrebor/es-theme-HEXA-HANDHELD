@@ -113,6 +113,12 @@ By Helmic
 		<lang.boxCarousel>cover flow</lang.boxCarousel>
 		<lang.boxCarousel lang="fr">cover flow</lang.boxCarousel>
 
+		<lang.gridCarousel>marquees list (grid)</lang.gridCarousel>
+		<lang.gridCarousel lang="fr">liste logos (grille)</lang.gridCarousel>
+
+		<lang.gridCarouselFullBox>marquees list (grid) + full box</lang.gridCarouselFullBox>
+		<lang.gridCarouselFullBox lang="fr">liste logos (grille) + boîte plein écran</lang.gridCarouselFullBox>
+
 		<lang.mdVideoRatio>video ratio</lang.mdVideoRatio>
 		<lang.mdVideoRatio lang="fr">ratio vidéo</lang.mdVideoRatio>
 
@@ -1668,6 +1674,185 @@ By Helmic
 			<storyboard event="deactivatePrev">
                 <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
                 <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+ 
+           </storyboard>
+		
+		</video>
+
+	</customView>
+
+
+	<customView name="gridCarousel" inherits="grid" displayName="${lang.gridCarousel}">
+
+		<imagegrid name="gamegrid">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<autoLayout>1 1</autoLayout>
+			<margin>0.15 0.05</margin>
+			<padding>0.3 0.35 0.3 0.35</padding>
+			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+			<zIndex>105</zIndex>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
+			<scrollDirection>vertical</scrollDirection>
+			<imageSource>marquee</imageSource>
+			<scrollLoop>true</scrollLoop>
+		</imagegrid>
+
+
+		<gridtile name="default">
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<backgroundCornerSize>32 32</backgroundCornerSize>
+			<selectionMode>video</selectionMode>
+			<padding>0 0</padding>
+			<imageColor>dddddd80</imageColor>
+			<reflexion>0 0</reflexion>	  
+			<imageSizeMode>maxSize</imageSizeMode>
+		</gridtile>
+	
+		<gridtile name="selected">
+			<backgroundCenterColor>00000000</backgroundCenterColor>
+			<backgroundEdgeColor>00000000</backgroundEdgeColor>	
+			<imageColor>ffffff</imageColor>
+		</gridtile>
+
+		<ninepatch name="gridtile.background:selected">
+			<animateColor>${overlay.colorset}</animateColor>
+			<cornerSize>0 0</cornerSize>
+		</ninepatch>
+
+		<image name="gridtile.favorite">
+			<path>./_inc/favorite.png</path>
+			<pos>1 0</pos>
+			<maxSize>0.1 0.1</maxSize>
+			<origin>1 0</origin>
+			<horizontalAlignment>right</horizontalAlignment>
+			<color>ffffff</color>
+    </image>
+
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="2500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="1500"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1500"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+ 
+           </storyboard>
+	
+		</video>
+
+	</customView>
+	
+	<customView name="gridCarouselFullBox" inherits="grid" displayName="${lang.gridCarouselFullBox}">
+
+		<imagegrid name="gamegrid">
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<autoLayout>1 1</autoLayout>
+			<margin>0.15 0.05</margin>
+			<padding>0.3 0.35 0.3 0.35</padding>
+			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
+			<animateSelection>false</animateSelection>
+			<zIndex>105</zIndex>
+			<scrollSound>./_inc/gamelist.wav</scrollSound>
+			<scrollDirection>vertical</scrollDirection>
+			<imageSource>marquee</imageSource>
+			<scrollLoop>true</scrollLoop>
+		</imagegrid>
+
+
+		<gridtile name="default">
+			<backgroundColor>FFFFFF00</backgroundColor>
+			<backgroundCornerSize>32 32</backgroundCornerSize>
+			<selectionMode>video</selectionMode>
+			<padding>0 0</padding>
+			<imageColor>dddddd80</imageColor>
+			<reflexion>0 0</reflexion>	  
+			<imageSizeMode>maxSize</imageSizeMode>
+		</gridtile>
+	
+		<gridtile name="selected">
+			<backgroundCenterColor>00000000</backgroundCenterColor>
+			<backgroundEdgeColor>00000000</backgroundEdgeColor>	
+			<imageColor>ffffff</imageColor>
+		</gridtile>
+
+		<ninepatch name="gridtile.background:selected">
+			<animateColor>${overlay.colorset}</animateColor>
+			<cornerSize>0 0</cornerSize>
+		</ninepatch>
+
+		<image name="gridtile.favorite">
+			<path>./_inc/favorite.png</path>
+			<pos>1 0</pos>
+			<maxSize>0.1 0.1</maxSize>
+			<origin>1 0</origin>
+			<horizontalAlignment>right</horizontalAlignment>
+			<color>ffffff</color>
+    </image>
+
+		<image name="md_thumbnail">
+            <linearSmooth>true</linearSmooth>
+			<maxSize>1 1</maxSize>
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.5</pos>
+			<zIndex>114</zIndex>
+			<color>ffffff</color>
+			<opacity>0</opacity>			
+			<reflexion>0.125 0</reflexion>
+			<storyboard event="open">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                 <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+		</image>
+
+		<video name="md_video" ifSubset="mdVideo:yes">
+
+			<storyboard event="open">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="4000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="4000"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="offsetX" from="0.2" duration="250" mode="easeOut" begin="3000"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="3000"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="150" mode="easeOut"/>
  
            </storyboard>
 		

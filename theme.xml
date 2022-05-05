@@ -1685,15 +1685,10 @@ By Helmic
 	<customView name="gridCarousel" inherits="grid" displayName="${lang.gridCarousel}">
 
 		<imagegrid name="gamegrid">
-			<pos>0 0</pos>
-			<size>1 1</size>
 			<autoLayout>1 1</autoLayout>
 			<margin>0.15 0.05</margin>
 			<padding>0.3 0.35 0.3 0.35</padding>
 			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
-			<animateSelection>false</animateSelection>
-			<zIndex>105</zIndex>
-			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<scrollDirection>vertical</scrollDirection>
 			<imageSource>marquee</imageSource>
 			<scrollLoop>true</scrollLoop>
@@ -1701,10 +1696,6 @@ By Helmic
 
 
 		<gridtile name="default">
-			<backgroundColor>FFFFFF00</backgroundColor>
-			<backgroundCornerSize>32 32</backgroundCornerSize>
-			<selectionMode>video</selectionMode>
-			<padding>0 0</padding>
 			<imageColor>dddddd80</imageColor>
 			<reflexion>0 0</reflexion>	  
 			<imageSizeMode>maxSize</imageSizeMode>
@@ -1713,21 +1704,12 @@ By Helmic
 		<gridtile name="selected">
 			<backgroundCenterColor>00000000</backgroundCenterColor>
 			<backgroundEdgeColor>00000000</backgroundEdgeColor>	
-			<imageColor>ffffff</imageColor>
 		</gridtile>
 
-		<ninepatch name="gridtile.background:selected">
-			<animateColor>${overlay.colorset}</animateColor>
-			<cornerSize>0 0</cornerSize>
-		</ninepatch>
-
 		<image name="gridtile.favorite">
-			<path>./_inc/favorite.png</path>
 			<pos>1 0</pos>
 			<maxSize>0.1 0.1</maxSize>
 			<origin>1 0</origin>
-			<horizontalAlignment>right</horizontalAlignment>
-			<color>ffffff</color>
     </image>
 
 
@@ -1760,15 +1742,10 @@ By Helmic
 	<customView name="gridCarouselFullBox" inherits="grid" displayName="${lang.gridCarouselFullBox}">
 
 		<imagegrid name="gamegrid">
-			<pos>0 0</pos>
-			<size>1 1</size>
 			<autoLayout>1 1</autoLayout>
 			<margin>0.15 0.05</margin>
 			<padding>0.3 0.35 0.3 0.35</padding>
 			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
-			<animateSelection>false</animateSelection>
-			<zIndex>105</zIndex>
-			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<scrollDirection>vertical</scrollDirection>
 			<imageSource>marquee</imageSource>
 			<scrollLoop>true</scrollLoop>
@@ -1776,10 +1753,6 @@ By Helmic
 
 
 		<gridtile name="default">
-			<backgroundColor>FFFFFF00</backgroundColor>
-			<backgroundCornerSize>32 32</backgroundCornerSize>
-			<selectionMode>video</selectionMode>
-			<padding>0 0</padding>
 			<imageColor>dddddd80</imageColor>
 			<reflexion>0 0</reflexion>	  
 			<imageSizeMode>maxSize</imageSizeMode>
@@ -1788,21 +1761,12 @@ By Helmic
 		<gridtile name="selected">
 			<backgroundCenterColor>00000000</backgroundCenterColor>
 			<backgroundEdgeColor>00000000</backgroundEdgeColor>	
-			<imageColor>ffffff</imageColor>
 		</gridtile>
 
-		<ninepatch name="gridtile.background:selected">
-			<animateColor>${overlay.colorset}</animateColor>
-			<cornerSize>0 0</cornerSize>
-		</ninepatch>
-
 		<image name="gridtile.favorite">
-			<path>./_inc/favorite.png</path>
 			<pos>1 0</pos>
 			<maxSize>0.1 0.1</maxSize>
 			<origin>1 0</origin>
-			<horizontalAlignment>right</horizontalAlignment>
-			<color>ffffff</color>
     </image>
 
 		<image name="md_thumbnail">

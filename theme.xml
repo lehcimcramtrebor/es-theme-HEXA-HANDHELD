@@ -243,7 +243,7 @@ By Helmic
 
 
 
-    <subset name="regionChoice" displayName="${lang.regionChoice}" appliesTo="system,basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
+    <subset name="regionChoice" displayName="${lang.regionChoice}" appliesTo="system,basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
 		<include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
     </subset>
@@ -314,18 +314,18 @@ By Helmic
 		<include name="no" displayName="${lang.no}"/>
 	</subset>
 
-    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
+    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
         <include name="cut" displayName="${lang.cut}"/>
    </subset>
   
-    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel" ifSubset="mdVideo:yes">
+    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="mdVideo:yes">
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
    </subset>
 
- 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel">
+ 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
 		<include name="animeLogo" displayName="${lang.animeLogo}"/>
         <include name="animeName" displayName="${lang.animeName}"/>
     </subset>

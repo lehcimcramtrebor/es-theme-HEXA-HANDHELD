@@ -1710,8 +1710,12 @@ By Helmic
 			<pos>1 0</pos>
 			<maxSize>0.1 0.1</maxSize>
 			<origin>1 0</origin>
-    </image>
+		</image>
 
+		<image name="gridtile.image">
+			<linearSmooth>true</linearSmooth>
+		</image>
+  
 
 		<video name="md_video" ifSubset="mdVideo:yes">
 
@@ -1769,6 +1773,10 @@ By Helmic
 			<origin>1 0</origin>
     </image>
 
+		<image name="gridtile.image">
+			<linearSmooth>true</linearSmooth>
+		</image>
+ 
 		<image name="md_thumbnail">
             <linearSmooth>true</linearSmooth>
 			<maxSize>1 1</maxSize>

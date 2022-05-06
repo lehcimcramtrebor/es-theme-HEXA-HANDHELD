@@ -646,11 +646,16 @@ By Helmic
 		</controllerActivity>
 	
 		<text name="clock">
-			<color>00000000</color>
+			<pos>0.01 0</pos>
+			<size>1 0.050</size>
+			<color>cccccc</color>
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontSize>0.026</fontSize>
+			<alignment>left</alignment>
 		</text>
 
 		<batteryIndicator name="batteryIndicator">
-			<pos>0.94 0.004</pos>
+			<pos>0.94 0.002</pos>
 			<size>0.050 0.050</size>
 			<color>cccccc</color>
 		</batteryIndicator>

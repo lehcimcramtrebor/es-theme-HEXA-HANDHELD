@@ -1048,7 +1048,7 @@ By Helmic
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
-			<pos>0.35 0.02</pos>
+			<pos>0.3 0.02</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
@@ -1063,7 +1063,7 @@ By Helmic
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
-			<pos>0.35 0.02</pos>
+			<pos>0.3 0.02</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>
@@ -1078,7 +1078,7 @@ By Helmic
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
-			<pos>0.7 0.02</pos>
+			<pos>0.725 0.02</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
@@ -1093,7 +1093,7 @@ By Helmic
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
-			<pos>0.7 0.02</pos>
+			<pos>0.725 0.02</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>

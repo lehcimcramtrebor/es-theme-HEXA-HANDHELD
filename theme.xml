@@ -1044,11 +1044,11 @@ By Helmic
 
 <!---- TOP METADATAS -->
 		<text name="md_lbl_lastplayed">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.02</fontSize>
-			<pos>0.3 0.02</pos>
+            <fontSize>0.024</fontSize>
+			<pos>0.35 0.025</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
@@ -1059,11 +1059,11 @@ By Helmic
 		</text>
 
 		<datetime name="md_lastplayed">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.02</fontSize>
-			<pos>0.3 0.02</pos>
+            <fontSize>0.024</fontSize>
+			<pos>0.35 0.025</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>
@@ -1074,11 +1074,11 @@ By Helmic
 		</datetime>
 
 		<text name="md_lbl_gametime">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.02</fontSize>
-			<pos>0.725 0.02</pos>
+            <fontSize>0.024</fontSize>
+			<pos>0.7 0.025</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
@@ -1089,11 +1089,11 @@ By Helmic
 		</text>
 
 		<text name="md_gametime">
-            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.02</fontSize>
-			<pos>0.725 0.02</pos>
+            <fontSize>0.024</fontSize>
+			<pos>0.7 0.025</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>

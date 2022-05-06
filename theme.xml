@@ -1042,6 +1042,69 @@ By Helmic
             </storyboard>
 		</image> 
 
+<!---- TOP METADATAS -->
+		<text name="md_lbl_lastplayed">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>ffff00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+			<pos>0.35 0.02</pos>
+            <origin>1 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>right</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.205</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</text>
+
+		<datetime name="md_lastplayed">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>ffff00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+			<pos>0.35 0.02</pos>
+            <origin>0 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>left</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.4</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</datetime>
+
+		<text name="md_lbl_gametime">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>ffff00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+			<pos>0.7 0.02</pos>
+            <origin>1 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>right</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.205</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</text>
+
+		<text name="md_gametime">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>ffff00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+			<pos>0.7 0.02</pos>
+            <origin>0 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>left</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.4</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</text>
+		
+<!-- END OF TOP METADATAS -->
+
 		<datetime name="md_releasedate">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <color>ffff00</color>
@@ -1052,7 +1115,7 @@ By Helmic
             <zIndex>114</zIndex>
 			<alignment>center</alignment>
 			<forceUppercase>true</forceUppercase>
-			<w>0.205</w>
+			<w>0.2</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
 		</datetime>
@@ -1067,7 +1130,7 @@ By Helmic
             <zIndex>114</zIndex>
 			<alignment>center</alignment>
 			<forceUppercase>true</forceUppercase>
-			<w>0.205</w>
+			<w>0.2</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
 		</text>
@@ -1772,5 +1835,26 @@ By Helmic
 
 	</customView>
 
+	<customView name="detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxesFullBox,gridCarouselFullBox">
+
+		<control name="md_lbl_lastplayed,md_lastplayed,md_lbl_gametime,md_gametime,md_publisher,md_releasedate">
+			<storyboard event="open">
+                <animation property="opacity" to="0" duration="350" mode="easeIn" begin="2500"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" to="0" duration="350" mode="easeIn" begin="1000"/>
+          </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" to="0" duration="350" mode="easeIn" begin="1000"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="O" duration="1" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="O" duration="1" mode="easeOut"/>
+            </storyboard>
+		</control>
+
+	</customView>
 	
 </theme>

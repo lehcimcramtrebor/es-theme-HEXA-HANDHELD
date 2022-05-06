@@ -1075,7 +1075,9 @@ By Helmic
 			<textlist name="gamelist">
 			<origin>0.5 1</origin>
 			<pos>0.5 0.935</pos>
+			<pos ifHelpPrompts="false">0.5 1</pos>
 			<size>1 0.27</size>
+			<size ifHelpPrompts="false">1 0.35</size>
 			<selectedColor>ffffff</selectedColor>
             <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
             <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
@@ -1084,12 +1086,14 @@ By Helmic
 			<selectorColor>${overlay.colorset}ea</selectorColor>	  		
 			<fontPath>./_inc/conthrax-sb.ttf</fontPath>
 			<fontSize>0.036</fontSize>
+			<fontSize ifHelpPrompts="false">0.033</fontSize>
 			<alignment>center</alignment>
 			<horizontalMargin>0.005</horizontalMargin>
 			<forceUppercase>true</forceUppercase>
 			<scrollSound>./_inc/gamelist.wav</scrollSound>
 			<zIndex>113</zIndex>
 			<lines>3</lines>
+			<lines ifHelpPrompts="false">5</lines>
  			</textlist>
 
 		<image name="md_thumbnail">
@@ -1194,22 +1198,27 @@ By Helmic
 
 		<rating name="md_rating">
             <y>0.9415</y>
+            <y ifHelpPrompts="false">0.9715</y>
 		</rating>
 
 		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
-		<y>0.944</y>
+			<y>0.944</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
-		<y>0.944</y>
+			<y>0.944</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<datetime name="md_releasedate">
             <y>0.9415</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</datetime>
 
 		<text name="md_publisher">
             <y>0.9415</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</text>
 
 		<text name="md_name">
@@ -1218,6 +1227,7 @@ By Helmic
             <glowColor>00000005</glowColor>
             <fontSize>0.028</fontSize>
             <pos>0.5 0.905</pos>
+            <pos ifHelpPrompts="false">0.5 0.925</pos>
             <origin>0.5 0.5</origin>
             <zIndex>114</zIndex>
 			<alignment>center</alignment>
@@ -1272,22 +1282,27 @@ By Helmic
 
 		<rating name="md_rating">
             <y>0.9415</y>
+            <y ifHelpPrompts="false">0.9715</y>
 		</rating>
 
 		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
-		<y>0.944</y>
+			<y>0.944</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
-		<y>0.944</y>
+			<y>0.944</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<datetime name="md_releasedate">
             <y>0.9415</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</datetime>
 
 		<text name="md_publisher">
             <y>0.9415</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</text>
 
 		<text name="md_name">
@@ -1296,6 +1311,7 @@ By Helmic
             <glowColor>00000005</glowColor>
             <fontSize>0.028</fontSize>
             <pos>0.5 0.905</pos>
+            <pos ifHelpPrompts="false">0.5 0.935</pos>
             <origin>0.5 0.5</origin>
             <zIndex>114</zIndex>
 			<alignment>center</alignment>
@@ -1600,26 +1616,32 @@ By Helmic
 
 		<rating name="md_rating">
             <y>0.92</y>
+            <y ifHelpPrompts="false">0.9715</y>
 		</rating>
 
 		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
-		<y>0.9225</y>
+			<y>0.9225</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
-		<y>0.9225</y>
+			<y>0.9225</y>
+			<y ifHelpPrompts="false">0.974</y>
 		</image>
 
 		<datetime name="md_releasedate">
             <y>0.92</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</datetime>
 
 		<text name="md_publisher">
             <y>0.92</y>
+			<y ifHelpPrompts="false">0.9715</y>
 		</text>
 
 		<text name="md_name">
-           <pos>0.5 0.875</pos>
+			<pos>0.5 0.875</pos>
+			<pos ifHelpPrompts="false">0.5 0.905</pos>
 		</text>
 
 	</customView>

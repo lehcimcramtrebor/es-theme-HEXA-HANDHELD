@@ -1039,7 +1039,7 @@ By Helmic
 
 		<datetime name="md_releasedate">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <color>cccc00</color>
+            <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
             <x>0</x>
@@ -1052,9 +1052,9 @@ By Helmic
 			<opacity>1</opacity>
 		</datetime>
 
-		<text name="md_developer">
+		<text name="md_publisher">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <color>cccc00</color>
+            <color>ffff00</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
             <x>1</x>
@@ -1139,7 +1139,7 @@ By Helmic
             <y>0.63</y>
 		</datetime>
 
-		<text name="md_developer">
+		<text name="md_publisher">
             <y>0.63</y>
 		</text>
 		
@@ -1208,7 +1208,7 @@ By Helmic
             <y>0.9415</y>
 		</datetime>
 
-		<text name="md_developer">
+		<text name="md_publisher">
             <y>0.9415</y>
 		</text>
 
@@ -1286,7 +1286,7 @@ By Helmic
             <y>0.9415</y>
 		</datetime>
 
-		<text name="md_developer">
+		<text name="md_publisher">
             <y>0.9415</y>
 		</text>
 
@@ -1614,7 +1614,7 @@ By Helmic
             <y>0.92</y>
 		</datetime>
 
-		<text name="md_developer">
+		<text name="md_publisher">
             <y>0.92</y>
 		</text>
 

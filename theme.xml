@@ -152,6 +152,15 @@ By Helmic
 		<lang.releasedYear>year</lang.releasedYear>
 		<lang.releasedYear lang="fr">année</lang.releasedYear>
 
+		<lang.focus>focus</lang.focus>
+		<lang.focus lang="fr">focus</lang.focus>
+
+		<lang.gamelists>on gamelists</lang.gamelists>
+		<lang.gamelists lang="fr">sur les listes de jeux</lang.gamelists>
+
+		<lang.allViews>on all views</lang.allViews>
+		<lang.allViews lang="fr">sur toutes les vues</lang.allViews>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -320,6 +329,12 @@ By Helmic
 		<include name="visualName" displayName="${lang.visualName}"/>
         <include name="visualLogo" displayName="${lang.visualLogo}"/>
     </subset>
+ 
+	<subset name="focus" displayName="${lang.focus}">
+		<include name="gamelists" displayName="${lang.gamelists}"/>
+		<include name="allViews" displayName="${lang.allViews}"/>
+		<include name="no" displayName="${lang.no}"/>
+	</subset>
  
 	<subset name="transition" displayName="${lang.transition}">
 		<include name="yes" displayName="${lang.yes}"/>
@@ -646,7 +661,7 @@ By Helmic
 		</controllerActivity>
 	
 		<text name="clock">
-			<pos>0.01 0</pos>
+			<pos>0.01 -0.005</pos>
 			<size>1 0.050</size>
 			<color>cccccc</color>
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
@@ -655,7 +670,7 @@ By Helmic
 		</text>
 
 		<batteryIndicator name="batteryIndicator">
-			<pos>0.94 0.002</pos>
+			<pos>0.94 -0.003</pos>
 			<size>0.050 0.050</size>
 			<color>cccccc</color>
 		</batteryIndicator>
@@ -804,10 +819,40 @@ By Helmic
 	</view>
 
 
+	<view name="system,basic,detailed,gamecarousel,grid" ifSubset="focus:allViews">
 
+		<image name="focus" extra="true">
+			<path>./_inc/focus.png</path>
+			<size>1 1</size>
+            <zIndex>104</zIndex>
+            <color>000000</color>
+		</image>
 
+	</view>
 
+	<view name="basic,detailed,gamecarousel,grid" ifSubset="focus:gamelists">
+
+		<image name="focus" extra="true">
+			<path>./_inc/focus.png</path>
+			<size>1 1</size>
+            <zIndex>104</zIndex>
+            <color>000000</color>
+		</image>
+
+	</view>
+	
+	
 	<view name="basic,detailed,gamecarousel,grid" ifSubset="transition:yes">
+
+		<image name="focusTransition" extra="true" ifSubset="focus:allViews">
+			<path>./_inc/focus.png</path>
+			<size>1 1</size>
+            <zIndex>1001</zIndex>
+            <color>000000</color>
+			<storyboard>
+                <animation property="opacity" to="0" duration="350" mode="linear" begin="850"/>
+             </storyboard>
+ 		</image>
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
@@ -834,7 +879,7 @@ By Helmic
             <origin>0.5 0</origin>
             <color>ffffff</color>
             <opacity>1</opacity>
-            <zIndex>1001</zIndex>
+            <zIndex>1002</zIndex>
 			<storyboard>
                 <animation property="opacity" to="0" duration="350" mode="linear" begin="750"/>
              </storyboard>
@@ -1043,17 +1088,18 @@ By Helmic
 		</image> 
 
 <!---- TOP METADATAS -->
+		
 		<text name="md_lbl_lastplayed">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.024</fontSize>
-			<pos>0.35 0.025</pos>
+            <fontSize>0.026</fontSize>
+			<pos>0.35 0.02</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
-			<forceUppercase>true</forceUppercase>
-			<w>0.205</w>
+			<forceUppercase>false</forceUppercase>
+			<w>0.25</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
 		</text>
@@ -1062,12 +1108,12 @@ By Helmic
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.024</fontSize>
-			<pos>0.35 0.025</pos>
+            <fontSize>0.026</fontSize>
+			<pos>0.35 0.02</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>
-			<forceUppercase>true</forceUppercase>
+			<forceUppercase>false</forceUppercase>
 			<w>0.4</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
@@ -1077,12 +1123,12 @@ By Helmic
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.024</fontSize>
-			<pos>0.7 0.025</pos>
+            <fontSize>0.026</fontSize>
+			<pos>0.7 0.02</pos>
             <origin>1 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>right</alignment>
-			<forceUppercase>true</forceUppercase>
+			<forceUppercase>false</forceUppercase>
 			<w>0.205</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
@@ -1092,12 +1138,12 @@ By Helmic
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <color>ffff00</color>
             <glowColor>00000005</glowColor>
-            <fontSize>0.024</fontSize>
-			<pos>0.7 0.025</pos>
+            <fontSize>0.026</fontSize>
+			<pos>0.7 0.02</pos>
             <origin>0 0.45</origin>
             <zIndex>114</zIndex>
 			<alignment>left</alignment>
-			<forceUppercase>true</forceUppercase>
+			<forceUppercase>false</forceUppercase>
 			<w>0.4</w>
 			<h>0.036</h>
 			<opacity>1</opacity>

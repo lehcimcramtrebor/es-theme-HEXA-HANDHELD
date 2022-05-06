@@ -941,7 +941,7 @@ By Helmic
             <color>ffff00</color>
             <x>0.435</x>
             <origin>0 0.5</origin>
-            <zIndex>110</zIndex>
+            <zIndex>114</zIndex>
 			<w>0.5</w>
             <h>0.036</h>
 			<opacity>0</opacity>
@@ -954,7 +954,7 @@ By Helmic
 			<x>0.3</x>
 			<maxSize>1 0.0333333333333333</maxSize>
 			<color>ffff00</color>
-			<zIndex>113</zIndex>
+			<zIndex>115</zIndex>
 		</image>
 
 		<image name="ghost_savestate" extra="true">
@@ -964,7 +964,7 @@ By Helmic
 			<x>0.3</x>
 			<maxSize>1 0.0333333333333333</maxSize>
 			<color>80808066</color>
-			<zIndex>112</zIndex>
+			<zIndex>114</zIndex>
 			<storyboard event="open">
                 <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
             </storyboard>
@@ -999,7 +999,7 @@ By Helmic
 			<x>0.7</x>
 			<maxSize>1 0.0333333333333333</maxSize>
 			<color>ffff00</color>
-			<zIndex>113</zIndex>
+			<zIndex>115</zIndex>
 		</image>
  		
 		<image name="ghost_cheevos" extra="true">
@@ -1009,7 +1009,7 @@ By Helmic
 			<x>0.7</x>
 			<maxSize>1 0.0333333333333333</maxSize>
 			<color>80808066</color>
-			<zIndex>112</zIndex>
+			<zIndex>114</zIndex>
 			<storyboard event="open">
                 <animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
             </storyboard>
@@ -1036,6 +1036,36 @@ By Helmic
                 <animation property="color" from="ffff00" to="808000" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
             </storyboard>
 		</image> 
+
+		<datetime name="md_releasedate">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>cccc00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+            <x>0</x>
+            <origin>0 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.205</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</datetime>
+
+		<text name="md_developer">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>cccc00</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.02</fontSize>
+            <x>1</x>
+            <origin>1 0.45</origin>
+            <zIndex>114</zIndex>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.205</w>
+			<h>0.036</h>
+			<opacity>1</opacity>
+		</text>
 	
 	</view>
 	
@@ -1067,7 +1097,7 @@ By Helmic
 			<maxSize>0.4 0.55</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.325</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>1</opacity>			
 			<reflexion>0.125 0</reflexion>
@@ -1104,6 +1134,14 @@ By Helmic
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
 		<y>0.6325</y>
 		</image>
+
+		<datetime name="md_releasedate">
+            <y>0.63</y>
+		</datetime>
+
+		<text name="md_developer">
+            <y>0.63</y>
+		</text>
 		
 	</view>
 
@@ -1113,8 +1151,8 @@ By Helmic
 			<pos>0 0</pos>
 			<size>1 1</size>
 			<autoLayout>3 2</autoLayout>
-			<margin>0.02 0.1</margin>
-			<padding>0.02 0.02 0.02 0.115</padding>
+			<margin>0.02 0.12</margin>
+			<padding>0.02 0.045 0.02 0.1175</padding>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<animateSelection>false</animateSelection>
 			<zIndex>105</zIndex>
@@ -1166,6 +1204,14 @@ By Helmic
 		<y>0.944</y>
 		</image>
 
+		<datetime name="md_releasedate">
+            <y>0.9415</y>
+		</datetime>
+
+		<text name="md_developer">
+            <y>0.9415</y>
+		</text>
+
 		<text name="md_name">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <color>ffffff</color>
@@ -1173,7 +1219,7 @@ By Helmic
             <fontSize>0.028</fontSize>
             <pos>0.5 0.905</pos>
             <origin>0.5 0.5</origin>
-            <zIndex>110</zIndex>
+            <zIndex>114</zIndex>
 			<alignment>center</alignment>
 			<forceUppercase>true</forceUppercase>
 			<w>0.99</w>
@@ -1225,17 +1271,58 @@ By Helmic
         </text>     
 
 		<rating name="md_rating">
-            <y>0.025</y>
+            <y>0.9415</y>
 		</rating>
 
 		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
-		<y>0.0275</y>
+		<y>0.944</y>
 		</image>
 
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
-		<y>0.0275</y>
+		<y>0.944</y>
 		</image>
 
+		<datetime name="md_releasedate">
+            <y>0.9415</y>
+		</datetime>
+
+		<text name="md_developer">
+            <y>0.9415</y>
+		</text>
+
+		<text name="md_name">
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+            <color>ffffff</color>
+            <glowColor>00000005</glowColor>
+            <fontSize>0.028</fontSize>
+            <pos>0.5 0.905</pos>
+            <origin>0.5 0.5</origin>
+            <zIndex>114</zIndex>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<w>0.99</w>
+			<w ifSubset="themeRatio:54|43">0.6</w>
+			<h>0.034</h>
+			<storyboard event="open">
+                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
+                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
+            </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
+                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
+                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
+           </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="opacity" to="0" duration="1" mode="linear"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="opacity" to="0" duration="1" mode="easeIn"/>
+            </storyboard>
+		</text>
+	
 		<image name="backMarquee" extra="true" ifSubset="backMarquee:yes">
 			<path>./_inc/backMarquee.png</path>
 			<size>1 1</size>
@@ -1257,7 +1344,7 @@ By Helmic
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>1</opacity>			
 			<reflexion>0.125 0</reflexion>
@@ -1318,7 +1405,7 @@ By Helmic
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>0</opacity>			
 			<reflexion>0.125 0</reflexion>
@@ -1381,7 +1468,7 @@ By Helmic
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>0</opacity>			
 			<reflexion>0.125 0</reflexion>
@@ -1439,7 +1526,7 @@ By Helmic
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>0</opacity>			
 			<reflexion>0.125 0</reflexion>
@@ -1475,7 +1562,7 @@ By Helmic
 		<imagegrid name="gamegrid">
 			<size>1 0.85</size>
 			<autoLayout>3 1</autoLayout>
-			<padding>-0.2 0.02 -0.2 0</padding>
+			<padding>-0.2 0.04 -0.2 0</padding>
 			<margin>0 0.1</margin>
 			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
 			<imageSource>thumbnail</imageSource>
@@ -1522,6 +1609,14 @@ By Helmic
 		<image name="ghost_savestate,ghost_cheevos" extra="true">
 		<y>0.9225</y>
 		</image>
+
+		<datetime name="md_releasedate">
+            <y>0.92</y>
+		</datetime>
+
+		<text name="md_developer">
+            <y>0.92</y>
+		</text>
 
 		<text name="md_name">
            <pos>0.5 0.875</pos>
@@ -1612,7 +1707,7 @@ By Helmic
 			<maxSize>1 1</maxSize>
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
-			<zIndex>114</zIndex>
+			<zIndex>116</zIndex>
 			<color>ffffff</color>
 			<opacity>0</opacity>			
 			<reflexion>0.125 0</reflexion>

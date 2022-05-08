@@ -433,6 +433,7 @@ By Helmic
  	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
 		<include name="animeLogo" displayName="${lang.animeLogo}"/>
         <include name="animeName" displayName="${lang.animeName}"/>
+        <include name="no" displayName="${lang.no}"/>
     </subset>
 
 

@@ -1,0 +1,44 @@
+Move or copy "_hexaCustom" folder to 2 level parent folder just at same level then "themes" folder.
+Now you can customize background(s), gamelist animated logo, name displayed in gamelist transition
+and tile displayed in gamelist transition.
+
+Note after you move and customize your folder you can update theme without loosing customizations.
+
+
+
+BACKGROUND(S) (480p file is perfect):
+
+Place a "custom.jpg" file in backgrounds folder and this will display this image as background in all
+theme.
+
+Or place multiples files named by theme name (example: "megadrive.jpg" , "snes.jpg" etc..) and this
+will display custom backgrounds by system.
+
+Note if you use at same time a file named "custom.jpg" and a file named "snes.jpg", this will display
+"custom" in all theme and only snes will be different.
+
+
+
+
+GAMELIST ANIMATED LOGO (240p file is perfect):
+
+Place a file named "custom.png" in "logo" folder and this will display your custom logo as background
+animation in gamelists (only if you choose good option in theme).
+
+
+
+
+NAME:
+
+Modify the "custom.xml" file in "name" folder to display what you want on second line in gamelist
+transitions.
+
+
+
+
+TILE:
+
+Create your own tile with gimp file in "HEXA-HANDHELD-GIMP-TILE.7z" archive and export as png in
+"tile" folder as "custom.png", this will display your custom tile in all gamelist transitions.
+
+

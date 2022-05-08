@@ -31,6 +31,9 @@ By Helmic
 
 		<lang.overlayColorset>colorset</lang.overlayColorset>
         <lang.overlayColorset lang="fr">jeu de couleurs</lang.overlayColorset>
+
+		<lang.hexaCustom>allow custom folder</lang.hexaCustom>
+        <lang.hexaCustom lang="fr">autoriser les customs</lang.hexaCustom>
           
         <lang.noColor>monochrome</lang.noColor>
         <lang.noColor lang="fr">monochrome</lang.noColor>

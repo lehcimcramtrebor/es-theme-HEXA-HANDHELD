@@ -161,6 +161,30 @@ By Helmic
 		<lang.allViews>on all views</lang.allViews>
 		<lang.allViews lang="fr">sur toutes les vues</lang.allViews>
 
+		<lang.topMetadatas>display top metadatas</lang.topMetadatas>
+		<lang.topMetadatas lang="fr">afficher métadonnées haut</lang.topMetadatas>
+
+		<lang.topMetadatasColor>color top metadatas</lang.topMetadatasColor>
+		<lang.topMetadatasColor lang="fr">couleur métadonnées haut</lang.topMetadatasColor>
+
+		<lang.metadatas>display bottom metadatas</lang.metadatas>
+		<lang.metadatas lang="fr">afficher métadonnées bas</lang.metadatas>
+
+		<lang.metadatasColor>color bottom metadatas</lang.metadatasColor>
+		<lang.metadatasColor lang="fr">couleur métadonnées bas</lang.metadatasColor>
+
+		<lang.ratingColor>color rating</lang.ratingColor>
+		<lang.ratingColor lang="fr">couleur notation</lang.ratingColor>
+
+		<lang.saveStateCheevosColor>color save state / achievments</lang.saveStateCheevosColor>
+		<lang.saveStateCheevosColor lang="fr">couleur sauvegarde / succès</lang.saveStateCheevosColor>
+
+		<lang.white>white</lang.white>
+		<lang.white lang="fr">blanc</lang.white>
+
+		<lang.colorsetAdaptive>adaptive</lang.colorsetAdaptive>
+		<lang.colorsetAdaptive lang="fr">adaptif</lang.colorsetAdaptive>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -355,6 +379,50 @@ By Helmic
     <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="mdVideo:yes|yesDelay">
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
+   </subset>
+
+
+  
+    <subset name="topMetadatas" displayName="${lang.topMetadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+        <include name="yes" displayName="${lang.yes}"/>
+        <include name="no" displayName="${lang.no}"/>
+   </subset>
+  
+    <subset name="topMetadatasColor" displayName="${lang.topMetadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="topMetadatas:yes">
+        <include name="white" displayName="${lang.white}"/>
+        <include name="yellow" displayName="${lang.yellow}"/>
+        <include name="green" displayName="${lang.green}"/>
+        <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
+   </subset>
+
+
+  
+    <subset name="metadatas" displayName="${lang.metadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+        <include name="yes" displayName="${lang.yes}"/>
+        <include name="no" displayName="${lang.no}"/>
+   </subset>
+  
+    <subset name="metadatasColor" displayName="${lang.metadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="metadatas:yes">
+        <include name="white" displayName="${lang.white}"/>
+        <include name="yellow" displayName="${lang.yellow}"/>
+        <include name="green" displayName="${lang.green}"/>
+        <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
+   </subset>
+
+
+  
+    <subset name="ratingColor" displayName="${lang.ratingColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+        <include name="yellow" displayName="${lang.yellow}"/>
+        <include name="white" displayName="${lang.white}"/>
+        <include name="green" displayName="${lang.green}"/>
+        <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
+   </subset>
+  
+    <subset name="saveStateCheevosColor" displayName="${lang.saveStateCheevosColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+        <include name="white" displayName="${lang.white}"/>
+        <include name="yellow" displayName="${lang.yellow}"/>
+        <include name="green" displayName="${lang.green}"/>
+        <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
    </subset>
 
  	<subset name="backMarquee" displayName="${lang.backMarquee}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
@@ -988,7 +1056,10 @@ By Helmic
 		</video>
 
 		<rating name="md_rating">
-            <color>ffff00</color>
+            <color ifSubset="ratingColor:white">ffffff</color>
+            <color ifSubset="ratingColor:yellow">ffff00</color>
+            <color ifSubset="ratingColor:green">00ff00</color>
+            <color ifSubset="ratingColor:colorsetAdaptive">${overlay.colorset}</color>
             <x>0.435</x>
             <origin>0 0.5</origin>
             <zIndex>114</zIndex>
@@ -1003,7 +1074,10 @@ By Helmic
 			<path>./_inc/savestate-${lang}.png</path>
 			<x>0.3</x>
 			<maxSize>1 0.0333333333333333</maxSize>
-			<color>ffff00</color>
+            <color ifSubset="saveStateCheevosColor:white">ffffff</color>
+            <color ifSubset="saveStateCheevosColor:yellow">ffff00</color>
+            <color ifSubset="saveStateCheevosColor:green">00ff00</color>
+            <color ifSubset="saveStateCheevosColor:colorsetAdaptive">${overlay.colorset}</color>
 			<zIndex>115</zIndex>
 		</image>
 
@@ -1038,7 +1112,7 @@ By Helmic
 	
 		<image name="md_savestate">
 			<storyboard>
-                <animation property="color" from="ffff00" to="808000" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
+                <animation property="opacity" from="0" to="1" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
             </storyboard>
 		</image>
 	
@@ -1048,7 +1122,10 @@ By Helmic
 			<path>./_inc/achievements-${lang}.png</path>
 			<x>0.7</x>
 			<maxSize>1 0.0333333333333333</maxSize>
-			<color>ffff00</color>
+            <color ifSubset="saveStateCheevosColor:white">ffffff</color>
+            <color ifSubset="saveStateCheevosColor:yellow">ffff00</color>
+            <color ifSubset="saveStateCheevosColor:green">00ff00</color>
+            <color ifSubset="saveStateCheevosColor:colorsetAdaptive">${overlay.colorset}</color>
 			<zIndex>115</zIndex>
 		</image>
  		
@@ -1083,15 +1160,22 @@ By Helmic
 	
 		<image name="md_cheevos">
 			<storyboard>
-                <animation property="color" from="ffff00" to="808000" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
+                <animation property="opacity" from="0" to="1" duration="125"  autoreverse="true" repeat="forever" mode="easeInOut"/>
             </storyboard>
 		</image> 
+	
+	</view>
 
 <!---- TOP METADATAS -->
-		
-		<text name="md_lbl_lastplayed">
+	
+	<view name="detailed,grid,gamecarousel" ifSubset="topMetadatas:yes">	
+
+			<text name="md_lbl_lastplayed">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="topMetadatasColor:white">ffffff</color>
+            <color ifSubset="topMetadatasColor:yellow">ffff00</color>
+            <color ifSubset="topMetadatasColor:green">00ff00</color>
+            <color ifSubset="topMetadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.026</fontSize>
 			<pos>0.35 0.02</pos>
@@ -1106,7 +1190,10 @@ By Helmic
 
 		<datetime name="md_lastplayed">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="topMetadatasColor:white">ffffff</color>
+            <color ifSubset="topMetadatasColor:yellow">ffff00</color>
+            <color ifSubset="topMetadatasColor:green">00ff00</color>
+            <color ifSubset="topMetadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.026</fontSize>
 			<pos>0.35 0.02</pos>
@@ -1121,7 +1208,10 @@ By Helmic
 
 		<text name="md_lbl_gametime">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="topMetadatasColor:white">ffffff</color>
+            <color ifSubset="topMetadatasColor:yellow">ffff00</color>
+            <color ifSubset="topMetadatasColor:green">00ff00</color>
+            <color ifSubset="topMetadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.026</fontSize>
 			<pos>0.7 0.02</pos>
@@ -1136,7 +1226,10 @@ By Helmic
 
 		<text name="md_gametime">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="topMetadatasColor:white">ffffff</color>
+            <color ifSubset="topMetadatasColor:yellow">ffff00</color>
+            <color ifSubset="topMetadatasColor:green">00ff00</color>
+            <color ifSubset="topMetadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.026</fontSize>
 			<pos>0.7 0.02</pos>
@@ -1149,11 +1242,20 @@ By Helmic
 			<opacity>1</opacity>
 		</text>
 		
+	</view>
+
 <!-- END OF TOP METADATAS -->
+
+<!-- RELEASEDATE PUBLISHER -->
+
+	<view name="detailed,grid,gamecarousel" ifSubset="metadatas:yes">	
 
 		<datetime name="md_releasedate">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="metadatasColor:white">ffffff</color>
+            <color ifSubset="metadatasColor:yellow">ffff00</color>
+            <color ifSubset="metadatasColor:green">00ff00</color>
+            <color ifSubset="metadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
             <x>0</x>
@@ -1168,7 +1270,10 @@ By Helmic
 
 		<text name="md_publisher">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
-            <color>ffff00</color>
+            <color ifSubset="metadatasColor:white">ffffff</color>
+            <color ifSubset="metadatasColor:yellow">ffff00</color>
+            <color ifSubset="metadatasColor:green">00ff00</color>
+            <color ifSubset="metadatasColor:colorsetAdaptive">${overlay.colorset}</color>
             <glowColor>00000005</glowColor>
             <fontSize>0.02</fontSize>
             <x>1</x>
@@ -1180,10 +1285,11 @@ By Helmic
 			<h>0.036</h>
 			<opacity>1</opacity>
 		</text>
-	
+
 	</view>
-	
-	
+
+<!-- END OF RELEASEDATE PUBLISHER -->
+
 	<view name="detailed">
 
 			<textlist name="gamelist">
@@ -1191,7 +1297,7 @@ By Helmic
 			<pos>0.5 0.935</pos>
 			<pos ifHelpPrompts="false">0.5 1</pos>
 			<size>1 0.27</size>
-			<size ifHelpPrompts="false">1 0.35</size>
+			<size ifHelpPrompts="false">1 0.34</size>
 			<selectedColor>ffffff</selectedColor>
             <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
             <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		

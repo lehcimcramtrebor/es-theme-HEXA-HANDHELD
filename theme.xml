@@ -365,6 +365,11 @@ By Helmic
 		<include name="no" displayName="${lang.no}"/>
 	</subset>
 
+    <subset name="hexaCustom" displayName="${lang.hexaCustom}">
+		<include name="yes" displayName="${lang.yes}"/>
+		<include name="no" displayName="${lang.no}"/>
+    </subset>
+
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="yesDelay" displayName="${lang.yesDelay}"/>
@@ -444,8 +449,8 @@ By Helmic
         <image name="background" extra="true">
 			<linearSmooth>true</linearSmooth>
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <path>./../../_hexaCustom/backgrounds/custom.jpg</path>
-            <path>./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
             <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -720,7 +725,7 @@ By Helmic
 	
 		<image name="logoAnime" extra="true" ifSubset="logoAnime:animeLogo">
 
-			<path>./../../_hexaCustom/logo/custom.png</path>
+			<path ifSubset="hexaCustom:yes">./../../_hexaCustom/logo/custom.png</path>
 	
 		</image>
 
@@ -933,8 +938,8 @@ By Helmic
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <path>./../../_hexaCustom/backgrounds/custom.jpg</path>
-            <path>./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
             <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -953,7 +958,7 @@ By Helmic
             <path>./default/color-${lang}.png</path>
             <path>./${system.theme}/color.png</path>
             <path>./${system.theme}/color-${lang}.png</path>
-            <path>./../../_hexaCustom/tile/custom.png</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/tile/custom.png</path>
             <maxSize>1 0.8</maxSize>
             <pos>0.5 0</pos>
             <origin>0.5 0</origin>
@@ -2021,6 +2026,8 @@ By Helmic
 
 	</customView>
 
-	<include>./../../_hexaCustom/name/custom.xml</include>
+    <subset name="hexaCustom" displayName="${lang.hexaCustom}">
+		<include name="yes" displayName="${lang.yes}">./../../_hexaCustom/name/custom.xml</include>
+    </subset>
 		
 </theme>

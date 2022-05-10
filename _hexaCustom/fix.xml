@@ -1,0 +1,29 @@
+<!--
+HEXA HANDHELD EDITION CUSTOMS BACKGROUNDS FIX
+By Helmic
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<formatVersion>7</formatVersion>
+
+	<view name="system,basic,detailed,gamecarousel,grid">
+ 
+        <image name="background" extra="true">
+            <color>000000</color>
+            <colorEnd>000000</colorEnd>
+       </image>
+	
+	</view>
+	
+	<view name="basic,detailed,gamecarousel,grid" ifSubset="transition:yes">
+
+        <image name="transition" extra="true">
+            <color>000000</color>
+            <colorEnd>000000</colorEnd>
+		</image>
+
+	</view>
+
+
+</theme>

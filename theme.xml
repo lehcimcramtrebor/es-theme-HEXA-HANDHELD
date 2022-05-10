@@ -34,6 +34,9 @@ By Helmic
 
 		<lang.hexaCustom>allow custom folder</lang.hexaCustom>
         <lang.hexaCustom lang="fr">autoriser les customs</lang.hexaCustom>
+ 
+		<lang.lighterBackground>lighten custom backgrounds</lang.lighterBackground>
+        <lang.lighterBackground lang="fr">éclaircir les fonds customs</lang.lighterBackground>
           
         <lang.noColor>monochrome</lang.noColor>
         <lang.noColor lang="fr">monochrome</lang.noColor>
@@ -373,6 +376,11 @@ By Helmic
 		<include name="no" displayName="${lang.no}"/>
     </subset>
 
+    <subset name="lighterBackground" displayName="${lang.lighterBackground}" ifSubset="hexaCustom:yes">
+		<include name="no" displayName="${lang.no}"/>
+		<include name="yes" displayName="${lang.yes}"/>
+    </subset>
+
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="yesDelay" displayName="${lang.yesDelay}"/>
@@ -459,6 +467,8 @@ By Helmic
             <origin>0.5 0.5</origin>
             <color>808080</color>
             <colorEnd>303030</colorEnd>
+            <color ifSubset="hexaCustom:yes,lighterBackground:yes">ffffff</color>
+            <colorEnd ifSubset="hexaCustom:yes,lighterBackground:yes">808080</colorEnd>
             <gradientType>vertical</gradientType>
             <opacity>1</opacity>
             <zIndex>100</zIndex>
@@ -948,6 +958,8 @@ By Helmic
             <origin>0.5 0.5</origin>
             <color>808080</color>
             <colorEnd>303030</colorEnd>
+            <color ifSubset="hexaCustom:yes,lighterBackground:yes">ffffff</color>
+            <colorEnd ifSubset="hexaCustom:yes,lighterBackground:yes">808080</colorEnd>
             <gradientType>vertical</gradientType>
             <opacity>1</opacity>
             <zIndex>1000</zIndex>
@@ -1993,8 +2005,8 @@ By Helmic
 
 	</customView>
 
-    <subset name="hexaCustom" displayName="${lang.hexaCustom}">
-		<include name="yes" displayName="${lang.yes}">./../../_hexaCustom/name/custom.xml</include>
+    <subset name="hexaCustom">
+		<include name="yes">./../../_hexaCustom/name/custom.xml</include>
     </subset>
 		
 </theme>

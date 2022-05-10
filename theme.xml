@@ -1475,24 +1475,6 @@ By Helmic
 			<w>0.99</w>
 			<w ifSubset="themeRatio:54|43">0.6</w>
 			<h>0.034</h>
-			<storyboard event="open">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-            </storyboard>
-			<storyboard event="activateNext">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-            </storyboard>
-			<storyboard event="activatePrev">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-           </storyboard>
-			<storyboard event="deactivateNext">
-                <animation property="opacity" to="0" duration="1" mode="linear"/>
-            </storyboard>
-			<storyboard event="deactivatePrev">
-                <animation property="opacity" to="0" duration="1" mode="easeIn"/>
-            </storyboard>
 		</text>
 	
 	</view>
@@ -1559,24 +1541,6 @@ By Helmic
 			<w>0.99</w>
 			<w ifSubset="themeRatio:54|43">0.6</w>
 			<h>0.034</h>
-			<storyboard event="open">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-            </storyboard>
-			<storyboard event="activateNext">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-            </storyboard>
-			<storyboard event="activatePrev">
-                <animation property="opacity" from="0" to="0" duration="125" mode="easeOut"/>
-                <animation property="opacity" from="0" to="1" duration="125" mode="easeOut" begin="125"/>
-           </storyboard>
-			<storyboard event="deactivateNext">
-                <animation property="opacity" to="0" duration="1" mode="linear"/>
-            </storyboard>
-			<storyboard event="deactivatePrev">
-                <animation property="opacity" to="0" duration="1" mode="easeIn"/>
-            </storyboard>
 		</text>
 	
 		<image name="backMarquee" extra="true" ifSubset="backMarquee:yes">

@@ -191,6 +191,9 @@ By Helmic
 		<lang.colorsetAdaptive>adaptive</lang.colorsetAdaptive>
 		<lang.colorsetAdaptive lang="fr">adaptif</lang.colorsetAdaptive>
 
+        <lang.neogeoaes>force neo geo aes</lang.neogeoaes>
+        <lang.neogeoaes lang="fr">forcer neo geo aes</lang.neogeoaes>
+
 		<!--wall choice-->
 
         <lang.wall>wallpaper</lang.wall>
@@ -299,7 +302,11 @@ By Helmic
         <include name="no" displayName="${lang.no}"/>
     </subset>
 
- 
+ 	<subset name="neogeoaes" displayName="${lang.neogeoaes}">
+		<include name="no" displayName="${lang.no}"/>
+        <include name="yes" displayName="${lang.yes}"/>
+	</subset>
+
 	<subset name="ambiance" displayName="${lang.ambiance}">
 		<include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
@@ -685,6 +692,7 @@ By Helmic
 
 			<path>./_inc/logos/${system.theme}.png</path>
 			<path>./_inc/logos/${system.theme}-${lang}.png</path>
+			<path ifSubset="neogeoaes:yes">./_inc/logos/${system.theme}aes.png</path>
 
 			<storyboard repeatAt="1">
                 <animation property="maxSize" to="99 0.5" duration="1" mode="linear" begin="2"/>
@@ -801,6 +809,7 @@ By Helmic
             <path>./default/color-${lang}.png</path>
             <path>./${system.theme}/color.png</path>
             <path>./${system.theme}/color-${lang}.png</path>
+            <path ifSubset="neogeoaes:yes">./${system.theme}/color-aes.png</path>
 
 			<storyboard event="activate" repeatAt="950">
         		<animation property="offsetY" to="-0.015" autoreverse="true" duration="200" mode="easeOutCubic" begin="5950"/>
@@ -973,6 +982,7 @@ By Helmic
             <path>./default/color-${lang}.png</path>
             <path>./${system.theme}/color.png</path>
             <path>./${system.theme}/color-${lang}.png</path>
+            <path ifSubset="neogeoaes:yes">./${system.theme}/color-aes.png</path>
             <path ifSubset="hexaCustom:yes">./../../_hexaCustom/tile/custom.png</path>
             <maxSize>1 0.8</maxSize>
             <pos>0.5 0</pos>

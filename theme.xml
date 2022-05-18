@@ -303,7 +303,7 @@ By Helmic
 
 
 
-    <subset name="regionChoice" displayName="${lang.regionChoice}" appliesTo="system,basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="regionChoice" displayName="${lang.regionChoice}" appliesTo="system,basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
 		<include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
     </subset>
@@ -394,30 +394,30 @@ By Helmic
 		<include name="yes" displayName="${lang.yes}"/>
     </subset>
 
-    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="yesDelay" displayName="${lang.yesDelay}"/>
         <include name="no" displayName="${lang.no}"/>
    </subset>
   
-    <subset name="loops" displayName="${lang.loops}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="mdVideo:yes|yesDelay|no">
+    <subset name="loops" displayName="${lang.loops}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="mdVideo:yes|yesDelay|no">
         <include name="once" displayName="${lang.once}"/>
         <include name="forever" displayName="${lang.forever}"/>
    </subset>
   
-    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="mdVideo:yes|yesDelay">
+    <subset name="mdVideoRatio" displayName="${lang.mdVideoRatio}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="mdVideo:yes|yesDelay">
         <include name="stretched" displayName="${lang.stretched}"/>
         <include name="original" displayName="${lang.original}"/>
    </subset>
 
 
   
-    <subset name="topMetadatas" displayName="${lang.topMetadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="topMetadatas" displayName="${lang.topMetadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
    </subset>
   
-    <subset name="topMetadatasColor" displayName="${lang.topMetadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="topMetadatas:yes">
+    <subset name="topMetadatasColor" displayName="${lang.topMetadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="topMetadatas:yes">
         <include name="white" displayName="${lang.white}"/>
         <include name="yellow" displayName="${lang.yellow}"/>
         <include name="green" displayName="${lang.green}"/>
@@ -426,12 +426,12 @@ By Helmic
 
 
   
-    <subset name="metadatas" displayName="${lang.metadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="metadatas" displayName="${lang.metadatas}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
         <include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
    </subset>
   
-    <subset name="metadatasColor" displayName="${lang.metadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox" ifSubset="metadatas:yes">
+    <subset name="metadatasColor" displayName="${lang.metadatasColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="metadatas:yes">
         <include name="white" displayName="${lang.white}"/>
         <include name="yellow" displayName="${lang.yellow}"/>
         <include name="green" displayName="${lang.green}"/>
@@ -440,26 +440,26 @@ By Helmic
 
 
   
-    <subset name="ratingColor" displayName="${lang.ratingColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="ratingColor" displayName="${lang.ratingColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
         <include name="yellow" displayName="${lang.yellow}"/>
         <include name="white" displayName="${lang.white}"/>
         <include name="green" displayName="${lang.green}"/>
         <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
    </subset>
   
-    <subset name="saveStateCheevosColor" displayName="${lang.saveStateCheevosColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+    <subset name="saveStateCheevosColor" displayName="${lang.saveStateCheevosColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
         <include name="white" displayName="${lang.white}"/>
         <include name="yellow" displayName="${lang.yellow}"/>
         <include name="green" displayName="${lang.green}"/>
         <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
    </subset>
 
- 	<subset name="backMarquee" displayName="${lang.backMarquee}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+ 	<subset name="backMarquee" displayName="${lang.backMarquee}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
 		<include name="yes" displayName="${lang.yes}"/>
         <include name="no" displayName="${lang.no}"/>
     </subset>
 
- 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox">
+ 	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
 		<include name="animeLogo" displayName="${lang.animeLogo}"/>
         <include name="animeName" displayName="${lang.animeName}"/>
         <include name="no" displayName="${lang.no}"/>
@@ -2127,7 +2127,7 @@ By Helmic
 	</customView>
 
 
-	<customView name="detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxesFullBox,gridCarouselFullBox">
+	<customView name="detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxesFullBox,gridCarouselFullBox,bigListFullBox">
 
 		<control name="md_lbl_lastplayed,md_lastplayed,md_lbl_gametime,md_gametime,md_publisher,md_releasedate">
 			<storyboard event="open">

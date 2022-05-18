@@ -2016,7 +2016,7 @@ By Helmic
 		</image>
 
         <video name="md_video" ifSubset="mdVideo:yes|yesDelay">
-           <delay ifSubset="mdVideo:yes">2.5</delay>
+           <delay ifSubset="mdVideo:yes">1.5</delay>
            <delay ifSubset="mdVideo:yesDelay">4</delay>
 		</video>
 

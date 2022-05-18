@@ -4,7 +4,7 @@ By Helmic
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
-<theme defaultView="detailedFullBox">
+<theme defaultView="bigList">
 <formatVersion>7</formatVersion>
 
     <!--REGION DEFAULT (CHANGE "eu" to "jp" or "us")-->

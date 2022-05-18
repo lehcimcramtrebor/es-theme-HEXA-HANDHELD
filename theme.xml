@@ -134,6 +134,12 @@ By Helmic
 		<lang.gridCarouselFullBox>marquees list (grid) + full box</lang.gridCarouselFullBox>
 		<lang.gridCarouselFullBox lang="fr">liste logos (grille) + boîte plein écran</lang.gridCarouselFullBox>
 
+		<lang.bigList>big list</lang.bigList>
+		<lang.bigList lang="fr">grande liste</lang.bigList>
+
+		<lang.bigListFullBox>big list + full box</lang.bigListFullBox>
+		<lang.bigListFullBox lang="fr">grande liste + boîte plein écran</lang.bigListFullBox>
+
 		<lang.backMarquee>back frame marquees</lang.backMarquee>
 		<lang.backMarquee lang="fr">arrière-plan logo de jeux</lang.backMarquee>
 
@@ -1992,6 +1998,134 @@ By Helmic
 		</image>
 
 	</customView>
+
+	<customView name="bigList" inherits="detailed" displayName="${lang.bigList}">
+
+		<textlist name="gamelist">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.49</pos>
+			<pos ifHelpPrompts="false">0.5 0.5</pos>
+			<size>1 0.88</size>
+			<fontSize>0.036</fontSize>
+			<zIndex>113</zIndex>
+			<lines>9</lines>
+ 		</textlist>
+
+		<image name="md_thumbnail">
+			<visible>false</visible>
+		</image>
+
+        <video name="md_video" ifSubset="mdVideo:yes|yesDelay">
+           <delay ifSubset="mdVideo:yes">2.5</delay>
+           <delay ifSubset="mdVideo:yesDelay">4</delay>
+		</video>
+
+		<rating name="md_rating">
+            <y>0.9315</y>
+            <y ifHelpPrompts="false">0.9715</y>
+		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+			<y>0.934</y>
+			<y ifHelpPrompts="false">0.974</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+			<y>0.934</y>
+			<y ifHelpPrompts="false">0.974</y>
+		</image>
+
+		<datetime name="md_releasedate">
+            <y>0.9315</y>
+			<y ifHelpPrompts="false">0.9715</y>
+		</datetime>
+
+		<text name="md_publisher">
+            <y>0.9315</y>
+			<y ifHelpPrompts="false">0.9715</y>
+		</text>
+
+	</customView>
+
+	<customView name="bigListFullBox" inherits="detailed" displayName="${lang.bigListFullBox}">
+
+		<textlist name="gamelist">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.49</pos>
+			<pos ifHelpPrompts="false">0.5 0.5</pos>
+			<size>1 0.88</size>
+			<fontSize>0.036</fontSize>
+			<zIndex>113</zIndex>
+			<lines>9</lines>
+ 		</textlist>
+		<image name="md_thumbnail">
+			<maxSize>0 0</maxSize>
+			<origin>0.5 0.5</origin>
+			<pos>2 2</pos>
+			<storyboard event="open">
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="2500"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="2550"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="2550"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="2550"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="2550"/>
+             </storyboard>
+			<storyboard event="activateNext">
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
+            </storyboard>
+			<storyboard event="activatePrev">
+                <animation property="opacity" from="1" to="0" duration="50" mode="easeOut" begin="1000"/>
+                <animation property="maxSize" to="1 1" duration="1" mode="linear" begin="1050"/>
+                <animation property="pos" to="0.5 0.5" duration="1" mode="linear" begin="1050"/>
+                <animation property="opacity" to="1" duration="250" mode="easeIn" begin="1050"/>
+                <animation property="offsetX" from="0.05" duration="250" mode="easeOut" begin="1050"/>
+            </storyboard>
+			<storyboard event="deactivateNext">
+                <animation property="offsetX" to="-1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+			<storyboard event="deactivatePrev">
+                <animation property="offsetX" to="1" duration="350" mode="easeOut"/>
+                <animation property="opacity" to="O" duration="350" mode="easeOut"/>
+            </storyboard>
+
+		</image>
+
+        <video name="md_video" ifSubset="mdVideo:yes|yesDelay">
+           <delay ifSubset="mdVideo:yes">4</delay>
+           <delay ifSubset="mdVideo:yesDelay">6.5</delay>
+		</video>
+
+		<rating name="md_rating">
+            <y>0.9315</y>
+            <y ifHelpPrompts="false">0.9715</y>
+		</rating>
+
+		<image name="md_savestate,md_nosavestate,md_cheevos,md_notcheevos">
+			<y>0.934</y>
+			<y ifHelpPrompts="false">0.974</y>
+		</image>
+
+		<image name="ghost_savestate,ghost_cheevos" extra="true">
+			<y>0.934</y>
+			<y ifHelpPrompts="false">0.974</y>
+		</image>
+
+		<datetime name="md_releasedate">
+            <y>0.9315</y>
+			<y ifHelpPrompts="false">0.9715</y>
+		</datetime>
+
+		<text name="md_publisher">
+            <y>0.9315</y>
+			<y ifHelpPrompts="false">0.9715</y>
+		</text>
+
+	</customView>
+
 
 	<customView name="detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxesFullBox,gridCarouselFullBox">
 

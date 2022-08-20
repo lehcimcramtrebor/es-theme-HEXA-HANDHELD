@@ -395,9 +395,9 @@ By Helmic
     </subset>
 
     <subset name="mdVideo" displayName="${lang.mdVideo}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
+        <include name="no" displayName="${lang.no}"/>
         <include name="yes" displayName="${lang.yes}"/>
         <include name="yesDelay" displayName="${lang.yesDelay}"/>
-        <include name="no" displayName="${lang.no}"/>
    </subset>
   
     <subset name="loops" displayName="${lang.loops}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="mdVideo:yes|yesDelay|no">

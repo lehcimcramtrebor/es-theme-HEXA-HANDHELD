@@ -330,6 +330,8 @@ By Helmic
    </subset>
 
     <subset name="wall" displayName="${lang.wall}">
+        <include name="wallFlatGrey" displayName="${lang.wallFlatGrey}">./_inc/wallpapers/wallFlatGrey.xml</include>
+        <include name="wallFlatDark" displayName="${lang.wallFlatDark}">./_inc/wallpapers/wallFlatDark.xml</include>
 		<include name="wallDefault" displayName="${lang.wallDefault}">./_inc/wallpapers/wall.xml</include>
 		<include name="wallBrushedPlate" displayName="${lang.wallBrushedPlate}">./_inc/wallpapers/wallBrushedPlate.xml</include>
         <include name="wallPlates" displayName="${lang.wallPlates}">./_inc/wallpapers/wallPlates.xml</include>
@@ -339,8 +341,6 @@ By Helmic
         <include name="wallDiagonalPlates2" displayName="${lang.wallDiagonalPlates2}">./_inc/wallpapers/wallDiagonalPlates2.xml</include>
 		<include name="wallLight" displayName="${lang.wallLight}">./_inc/wallpapers/wallLight.xml</include>
 		<include name="wallDark" displayName="${lang.wallDark}">./_inc/wallpapers/wallDark.xml</include>
-        <include name="wallFlatGrey" displayName="${lang.wallFlatGrey}">./_inc/wallpapers/wallFlatGrey.xml</include>
-        <include name="wallFlatDark" displayName="${lang.wallFlatDark}">./_inc/wallpapers/wallFlatDark.xml</include>
         <include name="wallColorBlue" displayName="${lang.wallColorBlue}">./_inc/wallpapers/wallColorBlue.xml</include>
         <include name="wallColorGreen" displayName="${lang.wallColorGreen}">./_inc/wallpapers/wallColorGreen.xml</include>
         <include name="wallColorRed" displayName="${lang.wallColorRed}">./_inc/wallpapers/wallColorRed.xml</include>
@@ -460,9 +460,9 @@ By Helmic
     </subset>
 
  	<subset name="logoAnime" displayName="${lang.logoAnime}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
+        <include name="no" displayName="${lang.no}"/>
 		<include name="animeLogo" displayName="${lang.animeLogo}"/>
         <include name="animeName" displayName="${lang.animeName}"/>
-        <include name="no" displayName="${lang.no}"/>
     </subset>
 
 

@@ -494,6 +494,7 @@ By Helmic
 		<helpsystem name="help">
 			<textColor>dddddd</textColor>
 			<fontSize>0.0312</fontSize>
+            <fontSize tinyScreen="false">0.020</fontSize>
 			<origin>0 0.5</origin>
 			<pos>0.004 0.982</pos>
 			<fontPath>./_inc/DJB Get Digital.ttf</fontPath>
@@ -513,13 +514,15 @@ By Helmic
         <menuText name="menufooter">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.026</fontSize>
+            <fontSize tinyScreen="false">0.016</fontSize>
             <color>${overlay.colorset}</color>
         </menuText>
 
         <menuText name="menutext">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.031</fontSize>
-            <color>aaaaaa</color>
+            <fontSize tinyScreen="false">0.016</fontSize>
+			<color>aaaaaa</color>
             <separatorColor>161616</separatorColor>
             <selectorColor>${overlay.colorset}</selectorColor>
             <selectedColor>ffffff</selectedColor>		
@@ -531,6 +534,7 @@ By Helmic
         <menuTextSmall name="menutextsmall">
             <fontPath>./_inc/DJB Get Digital.ttf</fontPath>
             <fontSize>0.03</fontSize>
+            <fontSize tinyScreen="false">0.014</fontSize>
 			<color>ffffff</color>
         </menuTextSmall>
 
@@ -543,6 +547,7 @@ By Helmic
         <menuGroup name="menugroup">
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.031</fontSize>
+            <fontSize tinyScreen="false">0.022</fontSize>
             <color>${overlay.colorset}</color>
             <separatorColor>00000000</separatorColor>
             <backgroundColor>00000000</backgroundColor>
@@ -615,6 +620,7 @@ By Helmic
 	<image name="logoAssist" extra="true" ifSubset="logoVisualAssistance:visualLogo">
 
 		<maxSize>0.5 0.25</maxSize>
+		<maxSize tinyScreen="false">0.25 0.25</maxSize>
 		<linearSmooth>true</linearSmooth>
 		<zIndex>199</zIndex>
 		<origin>0.5 0.5</origin>
@@ -761,7 +767,7 @@ By Helmic
 -->
 <!----------------------------------------------------------------------END OF ANIME------------------------------------------------------------------------------------------------>
 
-	<view name="screen">
+	<view name="screen" tinyScreen="true">
 
 		<controllerActivity name="controllerActivity">
 			<color>00000000</color>
@@ -783,6 +789,35 @@ By Helmic
 			<size>0.050 0.050</size>
 			<color>cccccc</color>
 		</batteryIndicator>
+
+	</view>
+
+	<view name="screen" tinyScreen="false">
+		
+		<controllerActivity name="controllerActivity">
+			<pos>0.002 0.006</pos>
+			<size>0.065 0.020</size>
+			<itemSpacing>0.003</itemSpacing>
+			<imagePath>./_inc/gamepad.svg</imagePath>
+			<gunPath>./_inc/gun.svg</gunPath>
+			<color>dddddd</color>
+			<activityColor>808080</activityColor>
+			<hotkeyColor>ff8080</hotkeyColor>
+		</controllerActivity>
+
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.975 0.006</pos>
+			<size>0.020 0.020</size>
+			<color>cccccc</color>
+		</batteryIndicator>
+	
+		<text name="clock">
+			<fontSize>0.02</fontSize>
+			<color>dddddd</color>
+            <fontPath>./_inc/conthrax-sb.ttf</fontPath>
+			<pos>0.945 0.968</pos>
+			<pos tinyScreen="true">0.945 0.964</pos>
+		</text>
 
 	</view>
 
@@ -851,6 +886,7 @@ By Helmic
             <color>ffffff</color>
             <fontPath>./_inc/conthrax-sb.ttf</fontPath>
             <fontSize>0.030</fontSize>
+            <fontSize tinyScreen="false">0.020</fontSize>
             <glowColor>00000005</glowColor>
             <zIndex>120</zIndex>
             <opacity>0</opacity>
@@ -879,7 +915,8 @@ By Helmic
 		<image name="randomArt01,randomArt02" extra="true" ifSubset="randomArt:yes">
 			<linearSmooth>true</linearSmooth>
             <maxSize>0.4 0.4</maxSize>
-            <pos>0.99 0.95</pos>
+            <maxSize tinyScreen="false">0.22 0.15</maxSize>
+             <pos>0.99 0.95</pos>
 			<origin>1 1</origin>
 			<zIndex>115</zIndex>
 			<path>{random:marquee}</path>
@@ -1066,6 +1103,7 @@ By Helmic
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.5</pos>
 			<size>1 0.88</size>
+			<size tinyScreen="false">1 0.92</size>
 			<selectedColor>ffffff</selectedColor>
             <selectedColor ifSubset="overlayColorset:yellow|purple|pink">202020</selectedColor>		
             <selectedColor ifSubset="overlayColorset:noColor|green">202020</selectedColor>		
@@ -1104,6 +1142,7 @@ By Helmic
 		</video>
 
 		<rating name="md_rating">
+			<linearSmooth tinyScreen="false">true</linearSmooth>
             <color ifSubset="ratingColor:white">ffffff</color>
             <color ifSubset="ratingColor:yellow">ffff00</color>
             <color ifSubset="ratingColor:green">00ff00</color>
@@ -1117,6 +1156,7 @@ By Helmic
 		</rating>
 		
 		<image name="md_savestate,md_nosavestate">
+			<linearSmooth tinyScreen="false">true</linearSmooth>
 			<origin>0.5 0.5</origin>
 			<path>./_inc/savestate.png</path>
 			<path>./_inc/savestate-${lang}.png</path>
@@ -1130,6 +1170,7 @@ By Helmic
 		</image>
 
 		<image name="ghost_savestate" extra="true">
+			<linearSmooth tinyScreen="false">true</linearSmooth>
 			<origin>0.5 0.5</origin>
 			<path>./_inc/savestate.png</path>
 			<path>./_inc/savestate-${lang}.png</path>
@@ -1165,6 +1206,7 @@ By Helmic
 		</image>
 	
 		<image name="md_cheevos,md_notcheevos">
+			<linearSmooth tinyScreen="false">true</linearSmooth>
 			<origin>0.5 0.5</origin>
 			<path>./_inc/achievements.png</path>
 			<path>./_inc/achievements-${lang}.png</path>
@@ -1178,6 +1220,7 @@ By Helmic
 		</image>
  		
 		<image name="ghost_cheevos" extra="true">
+			<linearSmooth tinyScreen="false">true</linearSmooth>
 			<origin>0.5 0.5</origin>
 			<path>./_inc/achievements.png</path>
 			<path>./_inc/achievements-${lang}.png</path>
@@ -1515,6 +1558,7 @@ By Helmic
 			<size>1 1</size>
 			<origin>0.5 0.5</origin>
 			<logoScale>3</logoScale>
+			<logoScale tinyScreen="false">1.5</logoScale>
 			<logoSize>0.300 0.24</logoSize>
 			<logoAlignment>center</logoAlignment>
 			<maxLogoCount>3</maxLogoCount>
@@ -1808,7 +1852,9 @@ By Helmic
 	<customView name="boxCarousel" inherits="grid" displayName="${lang.boxCarousel}">
 
 		<imagegrid name="gamegrid">
+			<pos tinyScreen="false">0 0.05</pos>
 			<size>1 0.85</size>
+			<size tinyScreen="false">1 0.75</size>
 			<autoLayout>3 1</autoLayout>
 			<padding>-0.2 0.04 -0.2 0</padding>
 			<margin>0 0.1</margin>
@@ -1886,6 +1932,7 @@ By Helmic
 			<margin>0.15 0.05</margin>
 			<padding>0.3 0.35 0.3 0.35</padding>
 			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
+			<autoLayoutSelectedZoom tinyScreen="false">1.2</autoLayoutSelectedZoom>
 			<scrollDirection>vertical</scrollDirection>
 			<imageSource>marquee</imageSource>
 			<scrollLoop>true</scrollLoop>
@@ -1929,6 +1976,7 @@ By Helmic
 			<margin>0.15 0.05</margin>
 			<padding>0.3 0.35 0.3 0.35</padding>
 			<autoLayoutSelectedZoom>2</autoLayoutSelectedZoom>
+			<autoLayoutSelectedZoom tinyScreen="false">1.2</autoLayoutSelectedZoom>
 			<scrollDirection>vertical</scrollDirection>
 			<imageSource>marquee</imageSource>
 			<scrollLoop>true</scrollLoop>
@@ -2005,7 +2053,7 @@ By Helmic
 			<origin>0.5 0.5</origin>
 			<pos>0.5 0.49</pos>
 			<pos ifHelpPrompts="false">0.5 0.5</pos>
-			<size>1 0.88</size>
+			<size>1 0.8</size>
 			<fontSize>0.036</fontSize>
 			<zIndex>113</zIndex>
 			<lines>9</lines>
@@ -2152,5 +2200,7 @@ By Helmic
     <subset name="hexaCustom">
 		<include name="yes">./../../_hexaCustom/name/custom.xml</include>
     </subset>
-		
+
+<!--CROSS-->
+	<include>./../es-theme-HEXA/_inc/cross/detection.xml</include>
 </theme>

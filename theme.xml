@@ -385,8 +385,8 @@ By Helmic
 	</subset>
 
     <subset name="hexaCustom" displayName="${lang.hexaCustom}">
-		<include name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
+		<include name="yes" displayName="${lang.yes}"/>
     </subset>
 
     <subset name="lighterBackground" displayName="${lang.lighterBackground}" ifSubset="hexaCustom:yes">

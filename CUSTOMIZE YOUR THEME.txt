@@ -1,4 +1,5 @@
-Move or copy "_hexaCustom" folder to 2 level parent folder just at same level then "themes" folder.
+Move or copy "_hexaHandheldCustom" folder to 2 level parent folder just at same level then "themes" folder. (Root of SHARE partition in Batocera)
+If you use Retrobat, you can move or copy to root of Retrobat folder.
 Now you can customize background(s), gamelist animated logo, name displayed in gamelist transition
 and tile displayed in gamelist transition.
 

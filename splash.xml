@@ -13,6 +13,7 @@
 	<image name="background" extra="true">
 		<linearSmooth>true</linearSmooth>
 		<path>./_inc/splash.jpg</path>
+		<path tinyScreen="false">./../es-theme-HEXA/_inc/splash.jpg</path>
 		<origin>0.5 0.5</origin>
 		<pos>0.5 0.5</pos>
         <color>808080</color>
@@ -24,6 +25,7 @@
 
 	<text name="theme" extra="true">
 		<text>hexa</text>
+		<text tinyScreen="false">hexa handheld</text>
 		<color>dddddd</color>
 		<alignment>center</alignment>
 		<fontPath>./_inc/conthrax-sb.ttf</fontPath>
@@ -50,6 +52,7 @@ batocera  -  emuelec  -  amberelec</text>
 		<origin>0.5 0.5</origin>
 		<alignment>center</alignment>
 		<fontSize>0.030</fontSize>
+		<fontSize tinyScreen="false">0.022</fontSize>
 		<glowSize>1</glowSize>
 		<glowColor>00000015</glowColor>
 		<glowOffset>0</glowOffset>

@@ -473,8 +473,12 @@ By Helmic
         <image name="background" extra="true">
 			<linearSmooth>true</linearSmooth>
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/custom.jpg</path>
-            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
             <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -758,7 +762,9 @@ By Helmic
 	
 		<image name="logoAnime" extra="true" ifSubset="logoAnime:animeLogo">
 
-			<path ifSubset="hexaCustom:yes">./../../_hexaCustom/logo/custom.png</path>
+			<path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/logo/custom.png</path>
+			<path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/logo/custom.png</path>
+			<path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/logo/custom.png</path>
 	
 		</image>
 
@@ -1003,8 +1009,12 @@ By Helmic
  
         <image name="transition" extra="true">
             <path>./_inc/wallpapers/${wallpaper}.jpg</path>
-            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/custom.jpg</path>
-            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/backgrounds/custom.jpg</path>
+            <path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
+            <path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/backgrounds/${system.theme}.jpg</path>
             <maxSize>99 1</maxSize>
             <pos>0.5 0.5</pos>
             <origin>0.5 0.5</origin>
@@ -1026,7 +1036,9 @@ By Helmic
             <path>./${system.theme}/color.png</path>
             <path>./${system.theme}/color-${lang}.png</path>
             <path ifSubset="neogeoaes:yes">./${system.theme}/color-aes.png</path>
-            <path ifSubset="hexaCustom:yes">./../../_hexaCustom/tile/custom.png</path>
+            <path ifSubset="hexaCustom:yes">./_hexaHandheldCustom/tile/custom.png</path>
+            <path ifSubset="hexaCustom:yes">./../../_hexaHandheldCustom/tile/custom.png</path>
+            <path ifSubset="hexaCustom:yes">./../../../../_hexaHandheldCustom/tile/custom.png</path>
             <maxSize>1 0.8</maxSize>
             <pos>0.5 0</pos>
             <origin>0.5 0</origin>
@@ -2198,7 +2210,9 @@ By Helmic
 	</customView>
 
     <subset name="hexaCustom">
-		<include name="yes">./../../_hexaCustom/name/custom.xml</include>
+		<include name="yes">./_hexaHandheldCustom/name/custom.xml</include>
+		<include name="yes">./../../_hexaHandheldCustom/name/custom.xml</include>
+		<include name="yes">./../../../../_hexaHandheldCustom/name/custom.xml</include>
     </subset>
 
 <!--CROSS-->

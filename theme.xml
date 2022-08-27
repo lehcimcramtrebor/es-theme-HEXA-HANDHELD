@@ -365,11 +365,13 @@ By Helmic
     </subset>
 
 	<subset name="randomArt" displayName="${lang.randomArt}">
+		<include tinyScreen="false" name="yes" displayName="${lang.yes}"/>
 		<include name="no" displayName="${lang.no}"/>
 		<include name="yes" displayName="${lang.yes}"/>
 	</subset>
 
     <subset name="logoVisualAssistance" displayName="${lang.logoVisualAssistance}">
+        <include tinyScreen="false" name="visualLogo" displayName="${lang.visualLogo}"/>
 		<include name="visualName" displayName="${lang.visualName}"/>
         <include name="visualLogo" displayName="${lang.visualLogo}"/>
     </subset>

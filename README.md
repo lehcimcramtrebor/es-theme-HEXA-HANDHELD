@@ -1,6 +1,14 @@
 # es-theme-HEXA-HANDHELD
 Emulationstation handheld theme for Batocera V32+ / Emuelec / Amberelec
 
+BARTOP HEXA CROSS MODE:
+
+HEXA Handheld detect if HEXA is installed too and active CROSS MODE, wich transform theme in a cool
+BARTOP THEME with big texts and HD images.
+![Base Profile Screenshot 2022 11 05 - 09 41 07 36](https://user-images.githubusercontent.com/59354081/200111423-6e0ffa47-d0ea-44c8-9daa-028ad5db8be9.png)
+![Base Profile Screenshot 2022 11 05 - 09 41 13 62](https://user-images.githubusercontent.com/59354081/200111429-c563e042-ee09-4c82-8b47-84c4e2430275.png)
+![Base Profile Screenshot 2022 11 05 - 09 41 28 87](https://user-images.githubusercontent.com/59354081/200111436-69b4ae56-0dbe-45dd-8a9b-a3ae5e2a12d9.png)
+
 
 ![EmulationStation 21-04-2022 11-31-23-693](https://user-images.githubusercontent.com/59354081/164426395-a5c118e8-0942-4b5a-89da-6109a1e4893d.png)
 ![EmulationStation 21-04-2022 11-31-57-904](https://user-images.githubusercontent.com/59354081/164426402-931f4960-24f8-4df1-9d6f-d9dc183901ea.png)

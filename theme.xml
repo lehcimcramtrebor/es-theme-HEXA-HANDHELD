@@ -585,24 +585,6 @@ By Helmic
 
     <view name="system">
 
-	<image name="logoAssistFocus" extra="true" ifSubset="logoVisualAssistance:visualLogo|visualName">
-		<linearSmooth>true</linearSmooth>
-		<zIndex>198</zIndex>
-		<size>1 1</size>
-		<origin>0.5 0.5</origin>
-		<pos>0.5 0.5</pos>
-		<path>./_inc/white.png</path>
-		<color>00000000</color>
-		<colorEnd>00000066</colorEnd>
-		<gradientType>vertical</gradientType>
-		<opacity>0</opacity>
-			<storyboard>
-                <animation property="opacity" from="0" to="1" duration="100" mode="linear"/>
-                <animation property="opacity" from="1" to="1" duration="150" mode="linear" begin="100"/>
-                <animation property="opacity" from="1" to="0" duration="250" mode="easeIn" begin="250"/>
-            </storyboard>
-	</image>
-
 	<text name="logoAssist" extra="true" ifSubset="logoVisualAssistance:visualName">
         <fontPath>./_inc/conthrax-sb.ttf</fontPath>
 		<fontSize>0.046</fontSize>

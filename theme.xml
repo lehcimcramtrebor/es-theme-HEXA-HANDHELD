@@ -29,6 +29,30 @@ By Helmic
         <overlay.colorset ifSubset="overlayColorset:blue">0062cc</overlay.colorset>
         <overlay.colorset ifSubset="overlayColorset:red">b53737</overlay.colorset>
 
+        <lang.dateFormat>release date format</lang.dateFormat>
+        <lang.dmys>day/month/year</lang.dmys>
+        <lang.dmyp>day.month.year</lang.dmyp>
+        <lang.dmyt>day-month-year</lang.dmyt>
+        <lang.mdys>month/day/year</lang.mdys>
+        <lang.mdyp>month.day.year</lang.mdyp>
+        <lang.mdyt>month-day-year</lang.mdyt>
+        <lang.ymds>year/month/day</lang.ymds>
+        <lang.ymdp>year.month.day</lang.ymdp>
+        <lang.ymdt>year-month-day</lang.ymdt>
+        <lang.onlyYear>just year</lang.onlyYear>
+
+        <lang.dateFormat lang="fr">format de la date de sortie</lang.dateFormat>
+        <lang.dmys lang="fr">jour/mois/année</lang.dmys>
+        <lang.dmyp lang="fr">jour.mois.année</lang.dmyp>
+        <lang.dmyt lang="fr">jour-mois-année</lang.dmyt>
+        <lang.mdys lang="fr">mois/jour/année</lang.mdys>
+        <lang.mdyp lang="fr">mois.jour.année</lang.mdyp>
+        <lang.mdyt lang="fr">mois-jour-année</lang.mdyt>
+        <lang.ymds lang="fr">année/mois/jour</lang.ymds>
+        <lang.ymdp lang="fr">année.mois.jour</lang.ymdp>
+        <lang.ymdt lang="fr">année-mois-jour</lang.ymdt>
+        <lang.onlyYear lang="fr">juste l'année</lang.onlyYear>
+
 		<lang.overlayColorset>colorset</lang.overlayColorset>
         <lang.overlayColorset lang="fr">jeu de couleurs</lang.overlayColorset>
 
@@ -441,6 +465,18 @@ By Helmic
         <include name="colorsetAdaptive" displayName="${lang.colorsetAdaptive}"/>
    </subset>
 
+    <subset name="dateFormat" displayName="${lang.dateFormat}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox" ifSubset="metadatas:yes">
+        <include name="dmys" displayName="${lang.dmys}"/>
+        <include name="dmyp" displayName="${lang.dmyp}"/>
+        <include name="dmyt" displayName="${lang.dmyt}"/>
+        <include name="mdys" displayName="${lang.mdys}"/>
+        <include name="mdyp" displayName="${lang.mdyp}"/>
+        <include name="mdyt" displayName="${lang.mdyt}"/>
+        <include name="ymds" displayName="${lang.ymds}"/>
+        <include name="ymdp" displayName="${lang.ymdp}"/>
+        <include name="ymdt" displayName="${lang.ymdt}"/>
+        <include name="onlyYear" displayName="${lang.onlyYear}"/>
+    </subset>
 
   
     <subset name="ratingColor" displayName="${lang.ratingColor}" appliesTo="basic,detailed,grid,gamecarousel,detailedFullBox,gamecarouselFullBox,gridFullBox,gridBoxes,boxCarousel,gridCarousel,gridCarouselFullBox,bigList,bigListFullBox">
@@ -1354,6 +1390,16 @@ By Helmic
 			<w>0.2</w>
 			<h>0.036</h>
 			<opacity>1</opacity>
+			<format ifSubset="dateFormat:dmys">%d/%m/%Y</format>
+			<format ifSubset="dateFormat:dmyp">%d.%m.%Y</format>
+			<format ifSubset="dateFormat:dmyt">%d-%m-%Y</format>
+			<format ifSubset="dateFormat:mdys">%m/%d/%Y</format>
+			<format ifSubset="dateFormat:mdyp">%m.%d.%Y</format>
+			<format ifSubset="dateFormat:mdyt">%m-%d-%Y</format>
+			<format ifSubset="dateFormat:ymds">%Y/%m/%d</format>
+			<format ifSubset="dateFormat:ymdp">%Y.%m.%d</format>
+			<format ifSubset="dateFormat:ymdt">%Y.%m.%d</format>
+			<format ifSubset="dateFormat:onlyYear">%Y</format>
 		</datetime>
 
 		<text name="md_publisher">

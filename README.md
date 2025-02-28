@@ -1,4 +1,6 @@
 # es-theme-HEXA-HANDHELD
+# no longer maintained
+
 Emulationstation handheld theme for Batocera V32+ / Emuelec / Amberelec
 
 BARTOP HEXA CROSS MODE:
